@@ -6,27 +6,29 @@ input {
 	display: block;
 }
 
+/* all of this just to get footer position at the end of the page */
 html, body {
-   margin:0;
-   padding:0;
-   height:100%;
+   margin: 0;
+   padding: 0;
+   height: 100%;
 }
 #container {
-   min-height:100%;
-   position:relative;
+   min-height: 100%;
+   position: relative;
 }
 #header {
-   background:#ff0;
-   padding:10px;
+   padding: 1em;
 }
 #body {
-   padding:10px;
-   padding-bottom:5em;   /* more than the height of the footer, to leave some space when screen full */
+   padding: 1em;
+   padding-bottom: 5em;	/* more than the height of the footer, to leave some space when screen full */
 }
 #footer {
-   position:absolute;
-   bottom:0;
-   width:100%;
-   height:3em;   /* Height of the footer */
-   background:#6cf;
+   position: absolute;
+   bottom: 0;
+   padding-left: 1%;
+   padding-right: 1%;
+   width: 98%;
+   height: 3em;		/* Height of the footer */
+   background: #6cf;
 }
