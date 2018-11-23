@@ -5,28 +5,42 @@ function loadTable() {
 	document.getElementById('tablica').innerHTML = '<tr><td colspan=5>Initializing...</td></tr>';
 
 	// svaka izmjena podataka neka radi novi izracun
-	document.getElementById('vt_kwh').onchange = recalc_table();
-	document.getElementById('nt_kwh').onchange = recalc_table();
+	document.getElementById('vt_kwh').onchange = recalc_table;
+	document.getElementById('nt_kwh').onchange = recalc_table;
+	document.getElementById('period').onchange = recalc_table;
 	recalc_table();
 
 	// popunjavanje tablice
 	function recalc_table() {
 		// dodaj jedan red za jednog opskrbljivaca
 		function addRow(op) {
+			var calc_energija = 123;	// FIXME all hadcoded for test
+			var calc_mrezarina = 456;
+			var calc_total = 789;
+			var calc_usteda = 90;
+
 			var row='<tr>' + 
-				'<td>' + op.naziv +  '</td>' +
-				'<td>' + '123' +  '</td>' +
-				'<td>' + '234' +  '</td>' +
-				'<td>' + '567' +  '</td>' +
-				'<td>' + '88' +  '</td>' +
+				'<td>' + op.naziv +	  '</td>' +
+				'<td>' + calc_energija +  '</td>' +
+				'<td>' + calc_mrezarina + '</td>' +
+				'<td>' + calc_total +	  '</td>' +
+				'<td>' + calc_usteda +	  '</td>' +
 				'</tr>';
 			return row;
 		}
 
-		document.getElementById('h_energija').innerHTML  = 'Godišnje energija [kn]';
-		document.getElementById('h_mrezarina').innerHTML = 'Godišnje korištenje mreže [kn]';
-		document.getElementById('h_total').innerHTML = 'Ukupno godišnje [kn]';
-		document.getElementById('h_usteda').innerHTML = 'Godišnja ušteda u odnosu na HEP-Univerzalnu [kn]';
+		var period='godišnje';
+		if (document.getElementById('period').value == 'month') {
+			period='mjesečno';
+		}
+		document.getElementById('h_energija').innerHTML  = 'Energija ' + period + ' [kn]';
+		document.getElementById('h_mrezarina').innerHTML = 'Mrežarina ' + period + ' [kn]';
+		document.getElementById('h_total').innerHTML = 'Ukupno ' + period + ' [kn]';
+		document.getElementById('h_usteda').innerHTML = 'Ušteda ' + period + ' [kn]';;
+
+
+		document.getElementById('l_vt').childNodes[0].nodeValue='Potrošnja ' + period + ' VT [kWh]';	// modifying .innerText also nukes <input> field in FF60 :(
+		document.getElementById('l_nt').childNodes[0].nodeValue='Potrošnja ' + period + ' NT [kWh]';
 
 		var tablica = '';
 		var i = 0;

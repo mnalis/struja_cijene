@@ -2,8 +2,15 @@ th {
 	font-weight: bold;
 }
 
-input {
+label {
 	display: block;
+}
+input {
+	margin-left: 2em;
+}
+
+table {
+	margin-top: 1em;
 }
 
 /* all of this just to get footer position at the end of the page */
