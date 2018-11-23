@@ -1,8 +1,12 @@
 footer { 
-	position: fixed; 
+	position: fixed; 	/* FIXME sto ako je ekran pun? */
 	bottom: 0; 
 }
 
 th {
 	font-weight: bold;
+}
+
+input {
+	display: block;
 }

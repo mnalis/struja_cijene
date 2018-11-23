@@ -10,17 +10,19 @@
 </head>
 <body>
 	<h1>Izračun cijena struje u Hrvatskoj</h1>
-	<form>
+	<form id=energija>
+		<label>Godišnja potrošnja VT (kWh)<input type="text" id="vt_kwh" name="vt_kwh" pattern="[0-9]*" size=6 value="1470" required</label>
+		<label>Godišnja potrošnja NT (kWh)<input type="text" id="nt_kwh" name="nt_kwh" pattern="[0-9]*" size=6 value="1696" required</label>
 	</form>
 
 	<table border="1">
 		<thead>
 		<tr>
 			<th>Opskrbljivač i model</th>
-			<th>Godišnji iznos za energiju [kn]</th>
-			<th>Godišnji iznos naknade za korištenje mreže [kn]</th>
-			<th>Ukupan godišnji iznos računa sa svim naknadama i porezima [kn]</th>
-			<th>Godišnja ušteda u odnosu na opskrbu u okviru univerzalne usluge [kn]</th>
+			<th>Godišnje energija [kn]</th>
+			<th>Godišnje korištenje mreže [kn]</th>
+			<th>Ukupno godišnje [kn]</th>
+			<th>Ušteda u odnosu na HEP-Univerzalnu [kn]</th>
 		</tr>
 		</thead>
 		

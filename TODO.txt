@@ -1,0 +1,9 @@
+- search FIXME
+- solidarne naknade provjeri tko ima
+- fix hardcoded iznose VT/NT
+
+- stavi mogucnost mj. ili god. izracuna
+- stavi mogucnost 1tarifnog ili 2tarifnog brojila
+- stavi mogucnost izracuna kako bi izgledalo da promijenis jenotarifno u dvotarifno i obratno 
+- mogucnost odabira popusta (kao posebni modeli ili?)
+- stavi i skuplje modele iz ponude radi kompletnosti?
