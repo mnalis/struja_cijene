@@ -1,12 +1,32 @@
-footer { 
-	position: fixed; 	/* FIXME sto ako je ekran pun? */
-	bottom: 0; 
-}
-
 th {
 	font-weight: bold;
 }
 
 input {
 	display: block;
+}
+
+html, body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#container {
+   min-height:100%;
+   position:relative;
+}
+#header {
+   background:#ff0;
+   padding:10px;
+}
+#body {
+   padding:10px;
+   padding-bottom:5em;   /* more than the height of the footer, to leave some space when screen full */
+}
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:3em;   /* Height of the footer */
+   background:#6cf;
 }

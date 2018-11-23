@@ -9,7 +9,12 @@
 	<link href="struja.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 <body>
-	<h1>Izračun cijena struje u Hrvatskoj</h1>
+	<div id=container>
+	<div id=header>
+		<h1>Izračun cijena struje u Hrvatskoj</h1>
+	</div>
+	
+	<main id=body>
 	<form id=energija>
 		<label>Godišnja potrošnja VT (kWh)<input type="text" id="vt_kwh" name="vt_kwh" pattern="[0-9]*" size=6 value="1470" required</label>
 		<label>Godišnja potrošnja NT (kWh)<input type="text" id="nt_kwh" name="nt_kwh" pattern="[0-9]*" size=6 value="1696" required</label>
@@ -30,11 +35,14 @@
 			<tr><td colspan=5>Loading (requires Javascript)...</td></tr>
 		</tbody>
 	</table>
+	</main>
 
 
-	<footer>
+	<footer id=footer>
 		Updated: <span id="zadnji_update">[računam...]</span><br>
 		Ovaj <A HREF="https://github.com/mnalis/struja_cijene">slobodan softver</A> je napravljen jer <A HREF="https://www.hera.hr/hr/tarifni-kalkulator-eek/">HERA kalkulator</A> ne uračunava popuste automatski.
 	</footer>
+	
+	</div>
 </body>
 </html>
