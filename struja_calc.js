@@ -23,6 +23,11 @@ function loadTable() {
 			return row;
 		}
 
+		document.getElementById('h_energija').innerHTML  = 'Godišnje energija [kn]';
+		document.getElementById('h_mrezarina').innerHTML = 'Godišnje korištenje mreže [kn]';
+		document.getElementById('h_total').innerHTML = 'Ukupno godišnje [kn]';
+		document.getElementById('h_usteda').innerHTML = 'Godišnja ušteda u odnosu na HEP-Univerzalnu [kn]';
+
 		var tablica = '';
 		var i = 0;
 		while (i < opskrbljivaci.cfg.length) {
