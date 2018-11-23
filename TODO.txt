@@ -1,9 +1,10 @@
-- search FIXME
-- solidarne naknade provjeri tko ima
+- search FIXME svugdje
+- solidarne naknade provjeri tko ima (mailaj i zovi po FIXME u opskrbljvaci.js)
 - fix hardcoded iznose VT/NT
 
+- mogucnost inline expanda tablice da se vide detalji
 - stavi mogucnost mj. ili god. izracuna
 - stavi mogucnost 1tarifnog ili 2tarifnog brojila
-- stavi mogucnost izracuna kako bi izgledalo da promijenis jenotarifno u dvotarifno i obratno 
+- stavi mogucnost izracuna kako bi izgledalo da promijenis jednotarifno u dvotarifno i obratno 
 - mogucnost odabira popusta (kao posebni modeli ili?)
 - stavi i skuplje modele iz ponude radi kompletnosti?
