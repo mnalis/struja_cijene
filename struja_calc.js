@@ -41,13 +41,14 @@ function loadTable() {
 			var calc_total	   = calc_osnovica + calc_porez;
 			if (total_univerzalna == 'UNDEF') { total_univerzalna = calc_total; }
 			var calc_usteda    = total_univerzalna - calc_total;
+			var class_usteda   = calc_usteda > 0 ? 'plus' : 'minus';
 
 			var row='<tr>' + 
-				'<td>' + op.naziv			+ '</td>' +
-				'<td>' + calc_energija.toFixed(2)	+ '</td>' +
-				'<td>' + calc_mrezarina.toFixed(2)	+ '</td>' +
-				'<td>' + calc_total.toFixed(2)		+ '</td>' +
-				'<td>' + calc_usteda.toFixed(2)		+ '</td>' +
+				'<td>' + op.naziv						+ '</td>' +
+				'<td>' + calc_energija.toFixed(2)				+ '</td>' +
+				'<td>' + calc_mrezarina.toFixed(2)				+ '</td>' +
+				'<td>' + calc_total.toFixed(2)					+ '</td>' +
+				'<td class="' + class_usteda + '">' + calc_usteda.toFixed(2)	+ '</td>' +
 				'</tr>';
 			return row;
 		}

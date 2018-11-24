@@ -20,13 +20,12 @@ tr:hover td {
 }
 
 th {
-	font-size:13px;
-	font-weight:normal;
-	background:#b9c9fe;
-	border-top:4px solid #aabcfe;
-	border-bottom:1px solid #fff;
-	color:#039;
-	padding:8px;
+	font-weight: bold;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: #039;
+	padding: 8px;
 }
 
 td {
@@ -38,6 +37,14 @@ td {
 	background: #e8edff;
 	color: #669;
 	padding: 8px;
+}
+
+.plus {
+	color: green;
+}
+
+.minus {
+	color: red;
 }
 
 /* all of this just to get footer position at the end of the page */
