@@ -21,16 +21,17 @@ input[type=number] {
 table {
 	margin-top: 1em;
 	border-collapse: collapse;
+	margin: 0.5em;
 }
 
-@media (max-width: 375px) {
+// small viewport, optimize to avoid horizontal scroll
+@media (max-width: 80rem) {
 	table {
 		font-size: x-small;
+		margin: 0;
 	}
-}
-@media (min-width: 1024px) {
-	main, table {
-		margin: 0.5em;
+	.naziv {
+		width: 25%;
 	}
 }
 

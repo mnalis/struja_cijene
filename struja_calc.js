@@ -46,7 +46,7 @@ function loadTable() {
 			var class_usteda   = calc_usteda > 0 ? 'plus' : 'minus';
 
 			var row='<tr title="' + op.notes  + '">' + 
-				'<td>' + op.naziv						+ '</td>' +
+				'<td style="naziv">' + op.naziv					+ '</td>' +
 				'<td>' + calc_energija.toFixed(2)				+ '</td>' +
 				'<td>' + calc_mrezarina.toFixed(2)				+ '</td>' +
 				'<td>' + calc_total.toFixed(2)					+ '</td>' +
