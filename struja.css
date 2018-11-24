@@ -17,6 +17,9 @@ input {
 	font-size: larger;
 	margin-right: 0.5em;
 }
+input[type=number] {
+	width: 6em;
+}
 
 table {
 	margin-top: 1em;
