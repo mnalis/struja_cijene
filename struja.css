@@ -51,7 +51,8 @@ input[type=number] {
 table {
 	margin-top: 1em;
 	border-collapse: collapse;
-	margin: 0.5em;
+	font-size: x-small;
+	margin: 0;
 }
 
 
@@ -89,15 +90,17 @@ td {
 	color: red;
 }
 
+.naziv {
+        width: 25%;
+}
 
-
-// small viewport, optimize to avoid horizontal scroll
-@media (max-width: 80rem) {
-	table {
-		font-size: x-small;
-		margin: 0;
-	}
+/* comfy viewport (desktop), use bigger stuff */
+@media (min-width: 80em) {
 	.naziv {
-		width: 25%;
+		width: 30%;
+	}
+	table {
+		font-size: medium;
+		margin: 0.5em;
 	}
 }
