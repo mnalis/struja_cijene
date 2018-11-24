@@ -2,6 +2,8 @@
 -? solidarne naknade provjeri tko ima (mailaj i zovi po FIXME u opskrbljvaci.js)
    ako je vjerovati gen-i kalkulatoru, nitko ih nema
 
+- delete hardcoded vrijednosti moje struje u .htmlu (a stavi attribute da firefox to pamti vrijednosti ako nije default)
+
 - mogucnost inline expanda tablice da se vide detalji izracuna
 - provjeri doma sa HT racunima tocnost za mj. izracun
 
