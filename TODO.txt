@@ -1,6 +1,12 @@
+- spomeni stari TOKElen (i URL?) kao i trenutni HERA/GEN-I u README.md, kao
+da ovaj uzima u obzir sve popuste.
+
 - search FIXME svugdje
--? solidarne naknade provjeri tko ima (mailaj i zovi po FIXME u opskrbljvaci.js)
-   ako je vjerovati gen-i kalkulatoru, nitko ih nema
+
+- HEPI vidi za detalje oko onog kluba (zovi ih?)
+
+-? solidarne naknade provjeri tko ima (mailaj i zovi po FIXME u opskrbljivaci.js)
+   (ako je vjerovati gen-i kalkulatoru, nitko ih nema)
 
 - delete hardcoded vrijednosti moje struje u .htmlu (a stavi attribute da firefox to pamti vrijednosti ako nije default)
 
