@@ -1,3 +1,33 @@
+/* all of this just to get footer position at the end of the page */
+html, body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+}
+#container {
+   min-height: 100%;
+   position: relative;
+}
+#header {
+   padding: 1em;
+}
+main {
+   padding: 0;
+   padding-bottom: 7em;	/* more than the height of the footer, to leave some space when screen full */
+}
+footer {
+   position: absolute;
+   bottom: 0;
+   display: table;
+   padding-left: 1%;
+   padding-right: 1%;
+   width: 98%;
+   height: 4em;		/* Height of the footer */
+   background: #6cf;
+}
+
+
+
 h1 {
 	margin: 0;
 }
@@ -24,16 +54,6 @@ table {
 	margin: 0.5em;
 }
 
-// small viewport, optimize to avoid horizontal scroll
-@media (max-width: 80rem) {
-	table {
-		font-size: x-small;
-		margin: 0;
-	}
-	.naziv {
-		width: 25%;
-	}
-}
 
 tr:hover td {
 	background: #d0dafd;
@@ -69,31 +89,15 @@ td {
 	color: red;
 }
 
-/* all of this just to get footer position at the end of the page */
-html, body {
-   margin: 0;
-   padding: 0;
-   height: 100%;
-}
-#container {
-   min-height: 100%;
-   position: relative;
-}
-#header {
-   padding: 1em;
-}
-main {
-   padding: 0;
-   padding-bottom: 7em;	/* more than the height of the footer, to leave some space when screen full */
-}
-footer {
-   position: absolute;
-   bottom: 0;
-   display: table;
-   padding-left: 1%;
-   padding-right: 1%;
-   width: 98%;
-   height: 4em;		/* Height of the footer */
-   background: #6cf;
-}
 
+
+// small viewport, optimize to avoid horizontal scroll
+@media (max-width: 80rem) {
+	table {
+		font-size: x-small;
+		margin: 0;
+	}
+	.naziv {
+		width: 25%;
+	}
+}
