@@ -7,6 +7,10 @@
 
 - dodaj zvjezdicu (i tooltip na nju) ako ima neki "notes" sa zvjezdicom u sebi. za popuste.
 
+- ljepse formatiranje HTML-a 
+
+- odabir internih parametara u skrivenom expand-on-click dijelu HTMLa (za svakog providera?)
+
 - nekad mi fula za lipu, zasto? npr.
   http://www.jeftinastruja.hr/za-ku%c4%87anstva/jeftina-struja/izra%c4%8dunajte-svoju-u%c5%a1tedu/precizan-izra%c4%8dun-u%c5%a1tede/
   za 63 VT + 89 NT  ODS kaze 51.06, kao i moj kalkulator, a HT racun tvrdi 51.07 = 63*0.475(=29.93) + 89*80.2375(=21.14)
