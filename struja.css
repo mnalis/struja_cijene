@@ -2,20 +2,16 @@ h1 {
 	margin: 0;
 }
 
-th {
-	font-weight: bold;
-}
-
 label {
 	display: block;
 	font-family: monospace;
 	font-size: x-large;
 	margin: 3px;
 }
-input {
-	margin-left: 0.5em;
-	font-size: x-large;
+input, select {
+	margin-left:  0.5em;
 	margin-right: 0.5em;
+	font-size: x-large;
 }
 input[type=number] {
 	width: 5em;
@@ -33,6 +29,7 @@ tr:hover td {
 
 th {
 	font-weight: bold;
+	text-align: center;
 	background: #b9c9fe;
 	border-top: 4px solid #aabcfe;
 	border-bottom: 1px solid #fff;
@@ -72,11 +69,11 @@ html, body {
 #header {
    padding: 1em;
 }
-#body {
-   padding: 1em;
-   padding-bottom: 6em;	/* more than the height of the footer, to leave some space when screen full */
+main {
+   padding: 0;
+   padding-bottom: 7em;	/* more than the height of the footer, to leave some space when screen full */
 }
-#footer {
+footer {
    position: absolute;
    bottom: 0;
    display: table;
@@ -86,3 +83,4 @@ html, body {
    height: 4em;		/* Height of the footer */
    background: #6cf;
 }
+
