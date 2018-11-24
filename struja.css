@@ -11,10 +11,33 @@ input {
 
 table {
 	margin-top: 1em;
+	border-collapse: collapse;
+}
+
+tr:hover td {
+	background: #d0dafd;
+	color: #339;
+}
+
+th {
+	font-size:13px;
+	font-weight:normal;
+	background:#b9c9fe;
+	border-top:4px solid #aabcfe;
+	border-bottom:1px solid #fff;
+	color:#039;
+	padding:8px;
 }
 
 td {
-	  text-align: right;
+	text-align: right;
+	border-bottom: 1px solid #fff;
+	border-top: 1px solid transparent;
+	border-right: 1px solid #aabcfe;
+	border-left: 1px solid #aabcfe;
+	background: #e8edff;
+	color: #669;
+	padding: 8px;
 }
 
 /* all of this just to get footer position at the end of the page */
