@@ -97,10 +97,10 @@ td {
 /* comfy viewport (desktop), use bigger stuff */
 @media (min-width: 80em) {
 	.naziv {
+		font-size: medium;
 		width: 30%;
 	}
 	table {
-		font-size: medium;
 		margin: 0.5em;
 	}
 }
