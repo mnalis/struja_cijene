@@ -11,6 +11,7 @@ label {
 input, select {
 	margin-left:  0.5em;
 	margin-right: 0.5em;
+	margin-top: 3px;
 	font-size: x-large;
 }
 input[type=number] {
@@ -20,6 +21,17 @@ input[type=number] {
 table {
 	margin-top: 1em;
 	border-collapse: collapse;
+}
+
+@media (max-width: 375px) {
+	table {
+		font-size: x-small;
+	}
+}
+@media (min-width: 1024px) {
+	main, table {
+		margin: 0.5em;
+	}
 }
 
 tr:hover td {
@@ -34,7 +46,7 @@ th {
 	border-top: 4px solid #aabcfe;
 	border-bottom: 1px solid #fff;
 	color: #039;
-	padding: 8px;
+	padding: 2px;
 }
 
 td {
@@ -45,7 +57,7 @@ td {
 	border-left: 1px solid #aabcfe;
 	background: #e8edff;
 	color: #669;
-	padding: 8px;
+	padding: 4px;
 }
 
 .plus {
