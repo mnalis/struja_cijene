@@ -9,10 +9,12 @@ th {
 label {
 	display: block;
 	font-family: monospace;
+	font-size: larger;
 	margin: 3px;
 }
 input {
 	margin-left: 2em;
+	font-size: larger;
 	margin-right: 0.5em;
 }
 
@@ -69,14 +71,15 @@ html, body {
 }
 #body {
    padding: 1em;
-   padding-bottom: 5em;	/* more than the height of the footer, to leave some space when screen full */
+   padding-bottom: 6em;	/* more than the height of the footer, to leave some space when screen full */
 }
 #footer {
    position: absolute;
    bottom: 0;
+   display: table;
    padding-left: 1%;
    padding-right: 1%;
    width: 98%;
-   height: 3em;		/* Height of the footer */
+   height: 4em;		/* Height of the footer */
    background: #6cf;
 }
