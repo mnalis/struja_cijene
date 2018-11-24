@@ -13,6 +13,10 @@ table {
 	margin-top: 1em;
 }
 
+td {
+	  text-align: right;
+}
+
 /* all of this just to get footer position at the end of the page */
 html, body {
    margin: 0;

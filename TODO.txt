@@ -4,7 +4,7 @@
 
 - mogucnost inline expanda tablice da se vide detalji
 - stavi mogucnost mj. ili god. izracuna
-- stavi mogucnost 1tarifnog ili 2tarifnog brojila
+- stavi mogucnost 1tarifnog (JT) ili 2tarifnog brojila (VT+NT)
 - stavi mogucnost izracuna kako bi izgledalo da promijenis jednotarifno u dvotarifno i obratno 
 - mogucnost odabira popusta (kao posebni modeli ili?)
 - stavi i skuplje modele iz ponude radi kompletnosti?
