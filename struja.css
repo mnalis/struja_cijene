@@ -1,12 +1,19 @@
+h1 {
+	margin: 0;
+}
+
 th {
 	font-weight: bold;
 }
 
 label {
 	display: block;
+	font-family: monospace;
+	margin: 3px;
 }
 input {
 	margin-left: 2em;
+	margin-right: 0.5em;
 }
 
 table {
