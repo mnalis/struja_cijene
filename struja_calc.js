@@ -1,3 +1,5 @@
+// Matija Nalis <mnalis-git@voyager.hr> started 20181123 under GPLv3+
+// on https://github.com/mnalis/struja_cijene
 function loadTable() {
 	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode
 	'use strict';
@@ -43,7 +45,7 @@ function loadTable() {
 			var calc_usteda    = total_univerzalna - calc_total;
 			var class_usteda   = calc_usteda > 0 ? 'plus' : 'minus';
 
-			var row='<tr>' + 
+			var row='<tr title="' + op.notes  + '">' + 
 				'<td>' + op.naziv						+ '</td>' +
 				'<td>' + calc_energija.toFixed(2)				+ '</td>' +
 				'<td>' + calc_mrezarina.toFixed(2)				+ '</td>' +

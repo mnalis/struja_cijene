@@ -55,7 +55,7 @@ var opskrbljivaci = {
 	'pct_pdv': default_pdv,
 	'web_site': 'http://www.hep.hr/elektra/',
 	'web_cjenik': 'http://www.hep.hr/elektra/kucanstvo/tarifne-stavke-cijene/1547',
-	'notes': 'Defaultni opskrbljivač za sva kućanstva koja nisu mijenjala opskrblivača.',
+	'notes': 'Defaultni opskrbljivač za sva kućanstva koja nisu mijenjala opskrbljivača.',
 },
 
 {       'naziv': 'GEN-I - Jeftina struja',
