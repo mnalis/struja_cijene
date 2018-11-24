@@ -26,8 +26,8 @@ function loadTable() {
 		document.getElementById('h_total').innerHTML = 'Ukupno ' + period + ' [kn]';
 		document.getElementById('h_usteda').innerHTML = 'Ušteda ' + period + ' [kn]';;
 
-		document.getElementById('l_vt').childNodes[0].nodeValue='Potrošnja ' + period + ' VT';	// modifying .innerText also nukes <input> field in FF60 :(
-		document.getElementById('l_nt').childNodes[0].nodeValue='Potrošnja ' + period + ' NT';
+		document.getElementById('l_vt').childNodes[0].nodeValue='Potrošnja ' + period + ' VT:';	// modifying .innerText also nukes <input> field in FF60 :(
+		document.getElementById('l_nt').childNodes[0].nodeValue='Potrošnja ' + period + ' NT:';
 
 		var vt_kwh = +document.getElementById('vt_kwh').value;		// convert string to number, otherwise vt_kwh+nt_kwh becomes a huge number!
 		var nt_kwh = +document.getElementById('nt_kwh').value;

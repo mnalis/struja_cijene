@@ -9,16 +9,16 @@ th {
 label {
 	display: block;
 	font-family: monospace;
-	font-size: larger;
+	font-size: x-large;
 	margin: 3px;
 }
 input {
-	margin-left: 2em;
-	font-size: larger;
+	margin-left: 0.5em;
+	font-size: x-large;
 	margin-right: 0.5em;
 }
 input[type=number] {
-	width: 6em;
+	width: 5em;
 }
 
 table {
