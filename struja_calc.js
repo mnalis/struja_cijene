@@ -45,13 +45,46 @@ function loadTable() {
 			var calc_usteda    = total_univerzalna - calc_total;
 			var class_usteda   = calc_usteda > 0 ? 'plus' : 'minus';
 
+			var subTotal = 0;
+			function addSubRow_html() {
+				var klasa=arguments[0];
+				var htmlRow='<tr>';
+				if (klasa) { htmlRow = '<tr class="' + klasa + '">' }
+				for (var i=1, numArgs = arguments.length; i<numArgs; i++){
+					htmlRow = htmlRow + '<td>' + arguments[i] + '</td>';
+				}
+				return htmlRow + '</tr>';
+			}
+			function addSubRow_mul(key, mul) {
+				var iznos = (mul * op[key]).toFixed(2);
+				subTotal += +iznos;
+				return addSubRow_html ('', key, mul, op[key], iznos);
+			}
+
 			var row='<tr title="' + op.notes  + '">' + 
 				'<td class="naziv">' + op.naziv					+ '</td>' +
 				'<td>' + calc_energija.toFixed(2)				+ '</td>' +
 				'<td>' + calc_mrezarina.toFixed(2)				+ '</td>' +
 				'<td>' + calc_total.toFixed(2)					+ '</td>' +
 				'<td class="' + class_usteda + '">' + calc_usteda.toFixed(2)	+ '</td>' +
-				'</tr>';
+				'</tr>' +
+				'<tr><td></td>' +
+				'<td colspan=4>' +
+				'<table style="width: 98%;">' +
+				addSubRow_mul ('kwh_ods_vt_cijena', vt_kwh) +
+				addSubRow_mul ('kwh_ods_nt_cijena', nt_kwh) +
+				addSubRow_mul ('kwh_vt_cijena', vt_kwh) +
+				addSubRow_mul ('kwh_nt_cijena', nt_kwh) +
+				addSubRow_mul ('kwh_oieik', vt_kwh+nt_kwh) +
+				addSubRow_mul ('kwh_solidarna', vt_kwh+nt_kwh) +
+				addSubRow_mul ('mj_naknada_omm', mjeseci) +
+				addSubRow_mul ('mj_naknada_opskrba', mjeseci) +
+				addSubRow_mul ('mj_popust', -mjeseci) +
+				addSubRow_mul ('pct_pdv', subTotal/100) +
+				addSubRow_html ('total', 'Total', '', '', subTotal) +
+				'</table>' +
+				'</td>' +
+				'</tr>'
 			return row;
 		}
 

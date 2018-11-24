@@ -94,6 +94,10 @@ td {
         width: 25%;
 }
 
+.total {
+	font-weight: bold;
+}
+
 /* comfy viewport (desktop), use bigger stuff */
 @media (min-width: 80em) {
 	.naziv {
