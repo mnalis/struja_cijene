@@ -1,9 +1,19 @@
 - search FIXME svugdje
-- solidarne naknade provjeri tko ima (mailaj i zovi po FIXME u opskrbljvaci.js)
-- fix hardcoded iznose VT/NT
+-? solidarne naknade provjeri tko ima (mailaj i zovi po FIXME u opskrbljvaci.js)
+   ako je vjerovati gen-i kalkulatoru, nitko ih nema
 
-- mogucnost inline expanda tablice da se vide detalji
-- stavi mogucnost mj. ili god. izracuna
+- mogucnost inline expanda tablice da se vide detalji izracuna
+- provjeri doma sa HT racunima tocnost za mj. izracun
+
+- dodaj zvjezdicu (i tooltip na nju) ako ima neki "notes" sa zvjezdicom u sebi. za popuste.
+
+- nekad mi fula za lipu, zasto? npr.
+  http://www.jeftinastruja.hr/za-ku%c4%87anstva/jeftina-struja/izra%c4%8dunajte-svoju-u%c5%a1tedu/precizan-izra%c4%8dun-u%c5%a1tede/
+  za 63 VT + 89 NT  ODS kaze 51.06, kao i moj kalkulator, a HT racun tvrdi 51.07 = 63*0.475(=29.93) + 89*80.2375(=21.14)
+  a precizno je 29.925 + 21.1375 (HT zaokruzuje na svakom koraku)
+
+- radi citljivosti, odvoji dobavljaca od modela  
+
 - stavi mogucnost 1tarifnog (JT) ili 2tarifnog brojila (VT+NT)
 - stavi mogucnost izracuna kako bi izgledalo da promijenis jednotarifno u dvotarifno i obratno 
 - mogucnost odabira popusta (kao posebni modeli ili?)
