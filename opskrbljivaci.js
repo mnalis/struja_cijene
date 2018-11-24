@@ -2,7 +2,7 @@
 // lista opskrbljivaca sa cijenama i popustima
 //
 
-var last_updated='2018-11-23';
+var last_updated='2018-11-24';
 
 var default_naknada_omm = 10;
 var default_naknada_opskrba = 7.40;
