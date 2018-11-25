@@ -27,7 +27,7 @@
 - table captions? 
 - html5 verify?
 
-- detail sve stavke obojaj crveno ili zeleno ako su losije ili bolje od HEP Elektra univerzalne usluge
+- details sve stavke obojaj crveno ili zeleno ako su losije ili bolje od HEP Elektra univerzalne usluge
 
 - nekad mi fula za lipu, zasto? npr.
   http://www.jeftinastruja.hr/za-ku%c4%87anstva/jeftina-struja/izra%c4%8dunajte-svoju-u%c5%a1tedu/precizan-izra%c4%8dun-u%c5%a1tede/
@@ -36,9 +36,9 @@
   bug u javascriptu? 
     (82.175).toFixed(2) = "82.17" grrrr
 
-- odabir internih parametara u skrivenom expand-on-click dijelu HTMLa (za svakog providera?)
+- maybe: odabir internih parametara u skrivenom expand-on-click dijelu HTMLa (za svakog providera?)
 
-- radi citljivosti, odvoji dobavljaca od modela   (ako ce mi stati toliko kolona na mobitel?)
+- maybe: radi citljivosti, odvoji dobavljaca od modela   (ako ce mi stati toliko kolona na mobitel?)
 
 - stavi i mogucnost 1tarifnog (JT), a ne samo 2tarifnog brojila (VT+NT)
 - stavi mogucnost izracuna kako bi izgledalo da promijenis jednotarifno u dvotarifno i obratno 
