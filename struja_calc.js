@@ -117,8 +117,10 @@ function loadTable() {
 				addSmallRow_subtotal ('Ostale naknade') +
 				addSmallRow_total ('Osnovica') +
 				addSmallRow_mul ('pct_pdv', allTotal.toFixed(2)) +
-				addSmallRow_total ('Total') +
-				(op.notes ? '<tr><td colspan=4>Notes: ' + op.notes + '</td></tr>' : '') +
+				addSmallRow_total ('Total iznos računa') +
+				addSmallRow_mul ('mj_trosak_uplate', mjeseci) +
+				addSmallRow_total ('Sveukupni trošak') +
+				'<tr><td>Notes</td><td colspan=3 class="notes">' + op.notes + '</td></tr>' +
 				'</table>' +
 				'</td>' +
 				'</tr>'

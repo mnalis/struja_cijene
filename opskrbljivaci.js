@@ -4,6 +4,8 @@
 
 var last_updated='2018-11-25';
 
+var default_mj_trosak_uplate = 2.25;	// npr. PBZ naknada internet bankarstvo 2018/11
+
 var default_naknada_omm = 10;
 var default_naknada_opskrba = 7.40;
 var default_oieik_cijena = 0.105;
@@ -41,6 +43,7 @@ var opskrbljivaci = {
 	'solidarna naknada (cijena 1 kWh)',
 	'iznos mjesečnog popusta',
 	'porez na dodanu vrijednost',
+	'trošak plaćanja računa (npr. najpovoljnija provizija u banci, pošti i sl. ako nema mogućnosti besplatne uplate negdje)',
 	'web stranice',
 	'web cjenik',
 	'opaska',
@@ -63,6 +66,7 @@ var opskrbljivaci = {
 	'kwh_solidarna': 0,
 	'mj_popust': 0,
 	'pct_pdv': default_pdv,
+	'mj_trosak_uplate': default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.hep.hr/elektra/',
 	'web_cjenik': 'http://www.hep.hr/elektra/kucanstvo/tarifne-stavke-cijene/1547',
 	'notes': 'Defaultni opskrbljivač za sva kućanstva koja nisu mijenjala opskrbljivača.',
@@ -84,6 +88,7 @@ var opskrbljivaci = {
 	'kwh_solidarna': 0,
 	'mj_popust': 0,
 	'pct_pdv': default_pdv,
+	'mj_trosak_uplate': default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.jeftinastruja.hr/',
 	'web_cjenik': 'http://www.jeftinastruja.hr/za-ku%C4%87anstva/cijene-i-tarife/cjenik/',
 	'notes': 'FIXME - nema više prvi mjesec besplatno? bilo je do 31. listopada 2018, možda će opet biti',
@@ -105,9 +110,10 @@ var opskrbljivaci = {
 	'kwh_solidarna': 0,
 	'mj_popust': 0,
 	'pct_pdv': default_pdv,
+	'mj_trosak_uplate': 0,
 	'web_site': 'http://hepi.hep.hr/',
 	'web_cjenik': 'http://hepi.hep.hr/UserDocsImages/Cjenici/Hepi-cjenik-9_17.pdf',
-	'notes': 'FIXME - dodatni popusti za HEPI club?',
+	'notes': 'Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije. FIXME - dodatni popusti za HEPI club?',
 },
 
 {       'naziv': 'HEP Opskrba - HEPI+samoočitanje',
@@ -126,9 +132,10 @@ var opskrbljivaci = {
 	'kwh_solidarna': 0,
 	'mj_popust': 0,
 	'pct_pdv': default_pdv,
+	'mj_trosak_uplate': 0,
 	'web_site': 'http://hepi.hep.hr/',
 	'web_cjenik': 'http://hepi.hep.hr/UserDocsImages/Cjenici/Hepi-cjenik-9_17.pdf',
-	'notes': 'FIXME - dodatni popusti za HEPI club?',
+	'notes': 'Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije. FIXME - dodatni popusti za HEPI club?',
 },
 
 {       'naziv': 'Hrvatski telekom - 2 godine',
@@ -147,9 +154,10 @@ var opskrbljivaci = {
 	'kwh_solidarna': 0,
 	'mj_popust': 12,
 	'pct_pdv': default_pdv,
+	'mj_trosak_uplate': 0,
 	'web_site': 'https://www.hrvatskitelekom.hr/energija/struja',
 	'web_cjenik': 'https://www.hrvatskitelekom.hr/ResourceManager/FileDownload.aspx?rId=8309&rType=2',
-	'notes': 'gasi se; od 11/2018 korisnici prebačeni na RWE',
+	'notes': 'Račune bez naknade možete plaćati na HT Platomatima. Gasi se; od 11/2018 korisnici prebačeni na RWE',
 },
 
 {       'naziv': 'RWE - IDEAL 3 godine (A-10%)',
@@ -168,6 +176,7 @@ var opskrbljivaci = {
 	'kwh_solidarna': 0, /*default_solidarna_cijena, FIXME ima li solidarnu? */
 	'mj_popust': 0,
 	'pct_pdv': default_pdv,
+	'mj_trosak_uplate': default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
 	'notes': '',
@@ -189,6 +198,7 @@ var opskrbljivaci = {
 	'kwh_solidarna': 0, /*default_solidarna_cijena, FIXME ima li solidarnu? */
 	'mj_popust': 0,
 	'pct_pdv': default_pdv,
+	'mj_trosak_uplate': default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
 	'notes': '',
@@ -210,6 +220,7 @@ var opskrbljivaci = {
 	'kwh_solidarna': 0, /*default_solidarna_cijena, FIXME ima li solidarnu? */
 	'mj_popust': 0,
 	'pct_pdv': default_pdv,
+	'mj_trosak_uplate': default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
 	'notes': '',
@@ -231,6 +242,7 @@ var opskrbljivaci = {
 	'kwh_solidarna': 0, /*default_solidarna_cijena, FIXME ima li solidarnu? */
 	'mj_popust': 0,
 	'pct_pdv': default_pdv,
+	'mj_trosak_uplate': default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.220v.hr/',
 	'web_cjenik': 'http://220v.hr/#!/kucanstva',
 	'notes': 'FIXME da li ga isto kupuje RWE 11/2018+?',
@@ -252,6 +264,7 @@ var opskrbljivaci = {
 	'kwh_solidarna': 0, /*default_solidarna_cijena, FIXME ima li solidarnu? */
 	'mj_popust': 0,
 	'pct_pdv': default_pdv,
+	'mj_trosak_uplate': default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'https://www.proenergy.eu/hr/elektricna-energija/',
 	'web_cjenik': 'https://www.proenergy.eu/assets/pdf/struja/hr/Cijene%20elektri%C4%8Dne%20energije%20-%20ku%C4%87anstvo%20-%20green.pdf',
 	'notes': '100% energije iz obnovljivih izvora (sa certifikatom)',
@@ -273,6 +286,7 @@ var opskrbljivaci = {
 	'kwh_solidarna': 0, /*default_solidarna_cijena, FIXME ima li solidarnu? */
 	'mj_popust': 0,
 	'pct_pdv': default_pdv,
+	'mj_trosak_uplate': default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'https://www.proenergy.eu/hr/elektricna-energija/',
 	'web_cjenik': 'https://www.proenergy.eu/assets/pdf/struja/hr/Cijene%20elektri%C4%8Dne%20energije%20-%20ku%C4%87anstvo%20-%20green.pdf',
 	'notes': '100% energije iz obnovljivih izvora (sa certifikatom) - JT',

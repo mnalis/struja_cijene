@@ -1,12 +1,16 @@
-- spomeni stari TOKElen (i URL?) kao i trenutni HERA/GEN-I u README.md, kao
+- spomeni stari TOKElen (i URL na archive.org?) kao i trenutni HERA/GEN-I u README.md (i index.html?), kao
   i cinjenicu da ovaj uzima u obzir sve moguce popuste.
+  https://web.archive.org/web/20160407075057/http://zastita-potrosaca.org/tokelen/TOKelen/brojilo.html
 
-- advanced - cijena placanja mjesecnog racuna (i oni gdje mozes bez toga)
+- advanced - dodaj expandable tab za mogucnost promjene cijene placanja mjesecnog racuna (za one gdje ne mozes bez toga, inace ostavi da je 0!)
 
 - avoid double calculation (za summary, pa za details) - a pogotovo jer se razlikuju za lipu-dvije na kraju
 
+- web_Site i web cjenik stavi negdje pod details
 
 - search FIXME svugdje
+
+- opisi stavi da su tooltipovi na kolone
 
 - HEPI vidi za detalje oko onog kluba (zovi ih?)
 
@@ -14,6 +18,7 @@
    (ako je vjerovati gen-i kalkulatoru, nitko ih nema)
 
 - delete hardcoded vrijednosti moje struje u .htmlu (a stavi attribute da firefox to pamti vrijednosti ako nije default)
+  i mozda onaj opis da pise grey ako nije nista ukucano (kao default)
 
 - mogucnost inline expanda tablice da se vide detalji izracuna
 - provjeri doma sa HT racunima tocnost za mj. izracun
@@ -22,6 +27,8 @@
 
 - ljepse formatiranje HTML-a 
 
+- table captions? 
+- html5 verify?
 
 - detail sve stavke obojaj crveno ili zeleno ako su losije ili bolje od HEP Elektra univerzalne usluge
 
