@@ -118,6 +118,7 @@ function loadTable() {
 				addSmallRow_total ('Osnovica') +
 				addSmallRow_mul ('pct_pdv', allTotal.toFixed(2)) +
 				addSmallRow_total ('Total') +
+				(op.notes ? '<tr><td colspan=4>Notes: ' + op.notes + '</td></tr>' : '') +
 				'</table>' +
 				'</td>' +
 				'</tr>'

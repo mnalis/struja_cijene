@@ -170,7 +170,7 @@ var opskrbljivaci = {
 	'pct_pdv': default_pdv,
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
-	'notes': 'FIXME placa li se solidarna naknada?',
+	'notes': '',
 },
 
 {       'naziv': 'RWE - BONUS 2 godine (A-7%)',
@@ -191,7 +191,7 @@ var opskrbljivaci = {
 	'pct_pdv': default_pdv,
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
-	'notes': 'FIXME placa li se solidarna naknada?',
+	'notes': '',
 },
 
 {       'naziv': 'RWE - KLASIK (B cjenik)',
@@ -212,7 +212,7 @@ var opskrbljivaci = {
 	'pct_pdv': default_pdv,
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
-	'notes': 'FIXME placa li se solidarna naknada?',
+	'notes': '',
 },
 
 {       'naziv': '220v - RACIO (8%)',
@@ -233,7 +233,7 @@ var opskrbljivaci = {
 	'pct_pdv': default_pdv,
 	'web_site': 'http://www.220v.hr/',
 	'web_cjenik': 'http://220v.hr/#!/kucanstva',
-	'notes': 'FIXME placa li se solidarna naknada? FIXME da li ga isto kupuje RWE 11/2018+?',
+	'notes': 'FIXME da li ga isto kupuje RWE 11/2018+?',
 },
 
 {       'naziv': 'Proenergy - GREEN',
@@ -254,7 +254,7 @@ var opskrbljivaci = {
 	'pct_pdv': default_pdv,
 	'web_site': 'https://www.proenergy.eu/hr/elektricna-energija/',
 	'web_cjenik': 'https://www.proenergy.eu/assets/pdf/struja/hr/Cijene%20elektri%C4%8Dne%20energije%20-%20ku%C4%87anstvo%20-%20green.pdf',
-	'notes': '100% energije iz obnovljivih izvora (sa certifikatom). FIXME placa li se solidarna naknada?',
+	'notes': '100% energije iz obnovljivih izvora (sa certifikatom)',
 },
 
 {       'naziv': 'Proenergy - GREEN Flat',
@@ -275,7 +275,7 @@ var opskrbljivaci = {
 	'pct_pdv': default_pdv,
 	'web_site': 'https://www.proenergy.eu/hr/elektricna-energija/',
 	'web_cjenik': 'https://www.proenergy.eu/assets/pdf/struja/hr/Cijene%20elektri%C4%8Dne%20energije%20-%20ku%C4%87anstvo%20-%20green.pdf',
-	'notes': '100% energije iz obnovljivih izvora (sa certifikatom). FIXME placa li se solidarna naknada?',
+	'notes': '100% energije iz obnovljivih izvora (sa certifikatom) - JT',
 },
 
 ] };

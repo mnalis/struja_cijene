@@ -1,11 +1,10 @@
 - spomeni stari TOKElen (i URL?) kao i trenutni HERA/GEN-I u README.md, kao
-da ovaj uzima u obzir sve popuste.
+  i cinjenicu da ovaj uzima u obzir sve moguce popuste.
 
 - advanced - cijena placanja mjesecnog racuna (i oni gdje mozes bez toga)
 
 - avoid double calculation (za summary, pa za details) - a pogotovo jer se razlikuju za lipu-dvije na kraju
 
-- detail sve stavke obojaj crveno ili zeleno ako su losije ili bolje od HEP Elektra univerzalne usluge
 
 - search FIXME svugdje
 
@@ -23,7 +22,8 @@ da ovaj uzima u obzir sve popuste.
 
 - ljepse formatiranje HTML-a 
 
-- odabir internih parametara u skrivenom expand-on-click dijelu HTMLa (za svakog providera?)
+
+- detail sve stavke obojaj crveno ili zeleno ako su losije ili bolje od HEP Elektra univerzalne usluge
 
 - nekad mi fula za lipu, zasto? npr.
   http://www.jeftinastruja.hr/za-ku%c4%87anstva/jeftina-struja/izra%c4%8dunajte-svoju-u%c5%a1tedu/precizan-izra%c4%8dun-u%c5%a1tede/
@@ -32,7 +32,9 @@ da ovaj uzima u obzir sve popuste.
   bug u javascriptu? 
     (82.175).toFixed(2) = "82.17" grrrr
 
-- radi citljivosti, odvoji dobavljaca od modela  
+- odabir internih parametara u skrivenom expand-on-click dijelu HTMLa (za svakog providera?)
+
+- radi citljivosti, odvoji dobavljaca od modela   (ako ce mi stati toliko kolona na mobitel?)
 
 - stavi i mogucnost 1tarifnog (JT), a ne samo 2tarifnog brojila (VT+NT)
 - stavi mogucnost izracuna kako bi izgledalo da promijenis jednotarifno u dvotarifno i obratno 
