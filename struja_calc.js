@@ -97,6 +97,15 @@ function loadTable() {
 				return addSmallRow_mul3 (key_name, jed_cijena, kolicina);
 			}
 
+			// returns row with some big description
+			function addSmallRow_notes(desc,value) {
+				return '<tr><td>' + desc + '</td><td colspan=3 class="notes">' + value + '</td></tr>';
+			}
+			// returns row with HREF
+			function addSmallRow_href(desc,href) {
+				return '<tr><td>' + desc + '</td><td colspan=3 class="notes"><A target="_blank" HREF="' + href + '">Otvori</A></td></tr>';
+			}
+
 			var row='<tr title="' + op.notes  + '">' + 
 				'<td class="naziv">' + op.naziv					+ '</td>' +
 				'<td>' + calc_energija.toFixed(2)				+ '</td>' +
@@ -128,7 +137,9 @@ function loadTable() {
 				addSmallRow_total ('Total iznos računa') +
 				addSmallRow_mul3 ('mj_trosak_uplate', mj_trosak_uplate, mjeseci) +
 				addSmallRow_total ('Sveukupni trošak') +
-				'<tr><td>Notes</td><td colspan=3 class="notes">' + op.notes + '</td></tr>' +
+				addSmallRow_notes ('Notes', op.notes) +
+				addSmallRow_href  ('Homepage', op.web_site) +
+				addSmallRow_href  ('Cjenik', op.web_cjenik) +
 				'</table>' +
 				'</details>' +
 				'</td>' +
