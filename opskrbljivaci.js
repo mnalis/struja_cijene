@@ -8,7 +8,7 @@ var default_naknada_omm = 10;
 var default_naknada_opskrba = 7.40;
 var default_oieik_cijena = 0.105;
 var default_solidarna_cijena = 0.03;
-var default_pdv = 13;
+var default_pdv = 0.13;
 
 var default_kwh_ods_jt_cijena = 0.31;
 var default_kwh_ods_vt_cijena = 0.35;

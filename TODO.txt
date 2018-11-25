@@ -1,9 +1,15 @@
 - spomeni stari TOKElen (i URL?) kao i trenutni HERA/GEN-I u README.md, kao
 da ovaj uzima u obzir sve popuste.
 
-- search FIXME svugdje
-
+- details nicer PDV ispis
+- details nicer popusti ispis (umjesto -1 * 12, stavi  1 * -12 )
 - advanced - cijena placanja mjesecnog racuna (i oni gdje mozes bez toga)
+
+- izdvoji posebno distribucija, a posebno prijenos
+
+- avoid double calculation (za summary, pa za details)
+
+- search FIXME svugdje
 
 - HEPI vidi za detalje oko onog kluba (zovi ih?)
 
@@ -28,7 +34,7 @@ da ovaj uzima u obzir sve popuste.
 
 - radi citljivosti, odvoji dobavljaca od modela  
 
-- stavi mogucnost 1tarifnog (JT) ili 2tarifnog brojila (VT+NT)
+- stavi i mogucnost 1tarifnog (JT), a ne samo 2tarifnog brojila (VT+NT)
 - stavi mogucnost izracuna kako bi izgledalo da promijenis jednotarifno u dvotarifno i obratno 
 - mogucnost odabira popusta (kao posebni modeli ili?)
 - stavi i skuplje modele iz ponude radi kompletnosti?

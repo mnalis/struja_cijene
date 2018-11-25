@@ -34,19 +34,22 @@ function loadTable() {
 
 		var total_univerzalna = 'UNDEF';
 		// dodaj jedan red za jednog opskrbljivaca
-		function addRow(op) {
+		function addBigRow(op) {
 			var calc_energija  = vt_kwh * op.kwh_vt_cijena     + nt_kwh * op.kwh_nt_cijena;
 			var calc_mrezarina = vt_kwh * op.kwh_ods_vt_cijena + nt_kwh * op.kwh_ods_nt_cijena + mjeseci * op.mj_naknada_omm;
 			var calc_razno     = (vt_kwh + nt_kwh) * (op.kwh_solidarna + op.kwh_oieik) - op.mj_popust + mjeseci * op.mj_naknada_opskrba;
 			var calc_osnovica  = calc_energija + calc_mrezarina + calc_razno;
-			var calc_porez	   = calc_osnovica * op.pct_pdv / 100;
+			var calc_porez	   = calc_osnovica * op.pct_pdv;
 			var calc_total	   = calc_osnovica + calc_porez;
 			if (total_univerzalna == 'UNDEF') { total_univerzalna = calc_total; }
 			var calc_usteda    = total_univerzalna - calc_total;
 			var class_usteda   = calc_usteda > 0 ? 'plus' : 'minus';
 
-			var subTotal = 0;
-			function addSubRow_html() {
+			var allTotal = 0;	// total so far
+			var subTotal = 0;	// reset after every subtotal print
+
+			// first arguments is <tr> class if nonempty; all others are <td> values
+			function addSmallRow_html() {
 				var klasa=arguments[0];
 				var htmlRow='<tr>';
 				if (klasa) { htmlRow = '<tr class="' + klasa + '">' }
@@ -55,10 +58,32 @@ function loadTable() {
 				}
 				return htmlRow + '</tr>';
 			}
-			function addSubRow_mul(key, mul) {
+
+			// shows current Total (without changing allTotal or subTotal)
+			function addSmallRow_total(desc) {
+				var oldTotal = allTotal;
+				var oldsubTotal = subTotal;
+				var htmlRow = addSmallRow_html ('total', desc, '', '', allTotal.toFixed(2));
+				allTotal = oldTotal;
+				subTotal = oldsubTotal;
+				return htmlRow;
+			}
+
+			// shows current subTotal (and reset it to zero), without changing allTotal
+			function addSmallRow_subtotal(desc) {
+				var oldTotal = allTotal;
+				var htmlRow = addSmallRow_html ('total', desc, '', '', subTotal.toFixed(2));
+				allTotal = oldTotal;
+				subTotal = 0;
+				return htmlRow;
+			}
+
+			// returns op["key"] multiplied by "mul"
+			function addSmallRow_mul(key, mul) {
 				var iznos = (mul * op[key]).toFixed(2);
 				subTotal += +iznos;
-				return addSubRow_html ('', key, mul, op[key], iznos);
+				allTotal += +iznos;
+				return addSmallRow_html ('', key, mul, op[key], iznos);
 			}
 
 			var row='<tr title="' + op.notes  + '">' + 
@@ -71,17 +96,20 @@ function loadTable() {
 				'<tr><td></td>' +
 				'<td colspan=4>' +
 				'<table style="width: 98%;">' +
-				addSubRow_mul ('kwh_ods_vt_cijena', vt_kwh) +
-				addSubRow_mul ('kwh_ods_nt_cijena', nt_kwh) +
-				addSubRow_mul ('kwh_vt_cijena', vt_kwh) +
-				addSubRow_mul ('kwh_nt_cijena', nt_kwh) +
-				addSubRow_mul ('kwh_oieik', vt_kwh+nt_kwh) +
-				addSubRow_mul ('kwh_solidarna', vt_kwh+nt_kwh) +
-				addSubRow_mul ('mj_naknada_omm', mjeseci) +
-				addSubRow_mul ('mj_naknada_opskrba', mjeseci) +
-				addSubRow_mul ('mj_popust', -mjeseci) +
-				addSubRow_mul ('pct_pdv', subTotal/100) +
-				addSubRow_html ('total', 'Total', '', '', subTotal) +
+				addSmallRow_mul ('kwh_vt_cijena', vt_kwh) +
+				addSmallRow_mul ('kwh_nt_cijena', nt_kwh) +
+				addSmallRow_subtotal ('Opskrbljivač cijena električne energije') +
+				addSmallRow_mul ('kwh_ods_vt_cijena', vt_kwh) +
+				addSmallRow_mul ('kwh_ods_nt_cijena', nt_kwh) +
+				addSmallRow_mul ('mj_naknada_omm', mjeseci) +
+				addSmallRow_subtotal ('HEP ODS korištenje mreže') +
+				addSmallRow_mul ('kwh_oieik', vt_kwh+nt_kwh) +
+				addSmallRow_mul ('kwh_solidarna', vt_kwh+nt_kwh) +
+				addSmallRow_mul ('mj_naknada_opskrba', mjeseci) +
+				addSmallRow_mul ('mj_popust', -mjeseci) +
+				addSmallRow_total ('Osnovica') +
+				addSmallRow_mul ('pct_pdv', allTotal) +
+				addSmallRow_total ('Total') +
 				'</table>' +
 				'</td>' +
 				'</tr>'
@@ -91,7 +119,7 @@ function loadTable() {
 		var tablica = '';
 		var i = 0;
 		while (i < opskrbljivaci.cfg.length) {
-			tablica = tablica + addRow(opskrbljivaci.cfg[i++]);
+			tablica = tablica + addBigRow(opskrbljivaci.cfg[i++]);
 		};
 
 		document.getElementById('tablica').innerHTML = tablica;
