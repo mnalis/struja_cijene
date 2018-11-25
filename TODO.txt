@@ -1,7 +1,3 @@
-- spomeni stari TOKElen (i URL na archive.org?) kao i trenutni HERA/GEN-I u README.md (i index.html?), kao
-  i cinjenicu da ovaj uzima u obzir sve moguce popuste.
-  https://web.archive.org/web/20160407075057/http://zastita-potrosaca.org/tokelen/TOKelen/brojilo.html
-
 - avoid double calculation (za summary, pa za details) - a pogotovo jer se razlikuju za lipu-dvije na kraju
 
 - web_Site i web cjenik stavi negdje pod details
