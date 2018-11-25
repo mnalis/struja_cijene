@@ -8,6 +8,9 @@
 
 - search FIXME svugdje
 
+- mogucnost usporedbe s necim drugim, a ne samo HEP Elektra - Univerzalna usluga kao baseline
+  (za usporedbu da li se isplati prelaziti sa x na y)
+
 - opisi stavi da su tooltipovi na kolone
 
 - HEPI vidi za detalje oko onog kluba (zovi ih?)

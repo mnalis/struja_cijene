@@ -51,7 +51,7 @@ input[type=number] {
 table {
 	margin-top: 1em;
 	border-collapse: collapse;
-	margin: 0;
+	margin: 0.5em;
 }
 
 
@@ -90,8 +90,7 @@ td {
 }
 
 .naziv {
-	font-size: x-small;
-        width: 25%;
+	width: 30%;
 }
 
 .notes {
@@ -102,16 +101,16 @@ td {
 	font-weight: bold;
 }
 
-/* comfy viewport (desktop), use bigger stuff */
-@media (min-width: 80em) {
+/* mobile view has too little space for all the data */
+@media (max-width: 60em) {
 	.naziv {
-		font-size: medium;
-		width: 30%;
+		font-size: x-small;
+		width: 25%;
 	}
 	table {
-		margin: 0.5em;
+		margin: 0;
 	}
-	.detalji {
-		visibility: hidden;
+	tr.detalji {
+		visibility: collapse;
 	}
 }
