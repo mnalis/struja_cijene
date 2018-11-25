@@ -111,6 +111,6 @@ td {
 		margin: 0;
 	}
 	tr.detalji {
-		visibility: collapse;
+		display: none;
 	}
 }
