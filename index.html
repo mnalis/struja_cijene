@@ -4,8 +4,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<title>Izračun cijena struje u Hrvatskoj</title>
-	<script defer type="text/javascript" src="opskrbljivaci.js"></script>
-	<script defer type="text/javascript" src="struja_calc.js"></script>
+	<script defer src="opskrbljivaci.js"></script>
+	<script defer src="struja_calc.js"></script>
 	<link href="struja.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 <body>
@@ -22,8 +22,8 @@
 			<option value="month">Mjesečna potrošnja</option>
 			</select>
 		</label>
-		<label id="l_vt">&nbsp;<input type="number" id="vt_kwh" name="vt_kwh" pattern="[0-9]*" value="1470" required>kWh</label>
-		<label id="l_nt">&nbsp;<input type="number" id="nt_kwh" name="nt_kwh" pattern="[0-9]*" value="1696" required>kWh</label>
+		<label id="l_vt">&nbsp;<input type="number" id="vt_kwh" name="vt_kwh" value="1470" required>kWh</label>
+		<label id="l_nt">&nbsp;<input type="number" id="nt_kwh" name="nt_kwh" value="1696" required>kWh</label>
 		<details>
 			<summary>Napredno</summary>
 			<label id="l_uplata" title="trošak u banci/FINI/pošti/internet bankarstvu itd. za plaćanje jednog računa za struju">Trošak plaćanja računa: <input type="number" id="def_trosak_uplate" value="2.25" step="0.25" required>kn</label>
@@ -35,7 +35,7 @@
 		<tr>
 			<th>Opskrbljivač i model</th>
 			<th id="h_energija" title="Samo cijena električne energije Opskrbljivača, bez dodatnih troškova i popusta"></th>
-			<th id="h_mrezarina" title="Fiksni troškovi koji uvijek idu u HEP ODS, neovisni o Opskrbljivaču"></th>
+			<th id="h_mrezarina" title="Troškovi koji uvijek idu u HEP ODS, neovisni o Opskrbljivaču"></th>
 			<th id="h_total" title="Ukupan iznos troškova za navedeno razdoblje"></th>
 			<th id="h_usteda" title="Ušteda u odnosu na HEP Elektra univerzalnu uslugu"></th>
 		</tr>
