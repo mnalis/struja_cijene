@@ -4,7 +4,7 @@ function loadTable() {
 	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode
 	'use strict';
 
-	document.getElementById('tablica').innerHTML = '<tr><td colspan=5>Initializing...</td></tr>';
+	document.getElementById('table_opskrbljivaci').innerHTML = '<tr><td colspan=5>Initializing...</td></tr>';
 
 	// svaka izmjena podataka neka radi novi izracun
 	document.getElementById('vt_kwh').onchange = recalc_table;
@@ -99,6 +99,7 @@ function loadTable() {
 				'</tr>' +
 				'<tr><td></td>' +
 				'<td colspan=4>' +
+				'<details><summary>Detalji</summary>' +
 				'<table style="width: 98%;">' +
 				'<tr><th>Naziv</th><th>Količina</th><th>Cijena</th><th>Iznos</th></tr>' +
 				addSmallRow_mul ('kwh_vt_cijena', vt_kwh) +
@@ -122,18 +123,19 @@ function loadTable() {
 				addSmallRow_total ('Sveukupni trošak') +
 				'<tr><td>Notes</td><td colspan=3 class="notes">' + op.notes + '</td></tr>' +
 				'</table>' +
+				'</details>' +
 				'</td>' +
-				'</tr>'
+				'</tr>';
 			return row;
 		}
 
-		var tablica = '';
+		var table_opskrbljivaci = '';
 		var i = 0;
 		while (i < opskrbljivaci.cfg.length) {
-			tablica = tablica + addBigRow(opskrbljivaci.cfg[i++]);
+			table_opskrbljivaci = table_opskrbljivaci + addBigRow(opskrbljivaci.cfg[i++]);
 		};
 
-		document.getElementById('tablica').innerHTML = tablica;
+		document.getElementById('table_opskrbljivaci').innerHTML = table_opskrbljivaci;
 		document.getElementById('zadnji_update').innerHTML = last_updated;
 	}
 

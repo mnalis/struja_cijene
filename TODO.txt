@@ -20,7 +20,9 @@
 - delete hardcoded vrijednosti moje struje u .htmlu (a stavi attribute da firefox to pamti vrijednosti ako nije default)
   i mozda onaj opis da pise grey ako nije nista ukucano (kao default)
 
-- mogucnost inline expanda tablice da se vide detalji izracuna
+- mogucnost inline expanda tablice da se vide detalji izracuna - napraviti ljepse nego ovaj <detail><summary>
+  koji jede duple redove. v. https://stackoverflow.com/questions/15095933/pure-css-collapse-expand-div
+
 - provjeri doma sa HT racunima tocnost za mj. izracun
 
 - dodaj zvjezdicu (i tooltip na nju) ako ima neki "notes" sa zvjezdicom u sebi. za popuste.
