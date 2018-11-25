@@ -2,8 +2,6 @@
   i cinjenicu da ovaj uzima u obzir sve moguce popuste.
   https://web.archive.org/web/20160407075057/http://zastita-potrosaca.org/tokelen/TOKelen/brojilo.html
 
-- advanced - dodaj expandable tab za mogucnost promjene cijene placanja mjesecnog racuna (za one gdje ne mozes bez toga, inace ostavi da je 0!)
-
 - avoid double calculation (za summary, pa za details) - a pogotovo jer se razlikuju za lipu-dvije na kraju
 
 - web_Site i web cjenik stavi negdje pod details

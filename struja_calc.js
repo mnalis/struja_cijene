@@ -10,12 +10,14 @@ function loadTable() {
 	document.getElementById('vt_kwh').onchange = recalc_table;
 	document.getElementById('nt_kwh').onchange = recalc_table;
 	document.getElementById('period').onchange = recalc_table;
+	document.getElementById('def_trosak_uplate').onchange = recalc_table;
 	recalc_table();
 
 	// popunjavanje tablice
 	function recalc_table() {
 		var period='godišnje';
 		var mjeseci=12;
+		var def_trosak_uplate = document.getElementById('def_trosak_uplate').value;
 		if (document.getElementById('period').value == 'month') {
 			period='mjesečno';
 			mjeseci=1;
@@ -42,7 +44,8 @@ function loadTable() {
 			var calc_razno     = (vt_kwh + nt_kwh) * (op.kwh_solidarna + op.kwh_oieik) - op.mj_popust + mjeseci * op.mj_naknada_opskrba;
 			var calc_osnovica  = calc_energija + calc_mrezarina + calc_razno;
 			var calc_porez	   = calc_osnovica * op.pct_pdv;
-			var calc_total	   = calc_osnovica + calc_porez + mjeseci * op.mj_trosak_uplate;
+			var mj_trosak_uplate = op.ima_mj_trosak_uplate * def_trosak_uplate;
+			var calc_total	   = calc_osnovica + calc_porez + mjeseci * mj_trosak_uplate;
 			if (total_univerzalna == 'UNDEF') { total_univerzalna = calc_total; }
 			var calc_usteda    = total_univerzalna - calc_total;
 			var class_usteda   = calc_usteda > 0 ? 'plus' : 'minus';
@@ -80,14 +83,18 @@ function loadTable() {
 				return htmlRow;
 			}
 
+			// returns row with description  and jed_cijena*kolicina (and increse allTotal and subTotal accordingly)
+			function addSmallRow_mul3 (desc, jed_cijena, kolicina) {
+				var iznos = (kolicina * jed_cijena).toFixed(2);
+				subTotal += +iznos;
+				allTotal += +iznos;
+				return addSmallRow_html ('', desc, kolicina, jed_cijena, iznos);
+			}
 			// returns op["key_name"] multiplied by "kolicina", and increse allTotal and subTotal accordingly
 			function addSmallRow_mul(key_name, kolicina) {
 				var jed_cijena = op[key_name];
 				if (kolicina < 0) { kolicina = -kolicina; jed_cijena = -jed_cijena; }	// just for nicer output
-				var iznos = (kolicina * jed_cijena).toFixed(2);
-				subTotal += +iznos;
-				allTotal += +iznos;
-				return addSmallRow_html ('', key_name, kolicina, jed_cijena, iznos);
+				return addSmallRow_mul3 (key_name, jed_cijena, kolicina);
 			}
 
 			var row='<tr title="' + op.notes  + '">' + 
@@ -97,7 +104,7 @@ function loadTable() {
 				'<td>' + calc_total.toFixed(2)					+ '</td>' +
 				'<td class="' + class_usteda + '">' + calc_usteda.toFixed(2)	+ '</td>' +
 				'</tr>' +
-				'<tr><td></td>' +
+				'<tr class="detalji"><td></td>' +
 				'<td colspan=4>' +
 				'<details><summary>Detalji</summary>' +
 				'<table style="width: 98%;">' +
@@ -119,7 +126,7 @@ function loadTable() {
 				addSmallRow_total ('Osnovica') +
 				addSmallRow_mul ('pct_pdv', allTotal.toFixed(2)) +
 				addSmallRow_total ('Total iznos računa') +
-				addSmallRow_mul ('mj_trosak_uplate', mjeseci) +
+				addSmallRow_mul3 ('mj_trosak_uplate', mj_trosak_uplate, mjeseci) +
 				addSmallRow_total ('Sveukupni trošak') +
 				'<tr><td>Notes</td><td colspan=3 class="notes">' + op.notes + '</td></tr>' +
 				'</table>' +

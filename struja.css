@@ -111,4 +111,7 @@ td {
 	table {
 		margin: 0.5em;
 	}
+	.detalji {
+		visibility: hidden;
+	}
 }
