@@ -12,6 +12,8 @@
 -? solidarne naknade provjeri tko ima (mailaj i zovi po FIXME u opskrbljivaci.js)
    (ako je vjerovati gen-i kalkulatoru, nitko ih nema)
 
+- ljepsi opisi u details row
+
 - delete hardcoded vrijednosti moje struje u .htmlu (a stavi attribute da firefox to pamti vrijednosti ako nije default)
   i mozda onaj opis da pise grey ako nije nista ukucano (kao default)
 
@@ -25,7 +27,7 @@
 - ljepse formatiranje HTML-a 
 
 - table captions? 
-- html5 verify?
+- validator.w3.org
 
 - details sve stavke obojaj crveno ili zeleno ako su losije ili bolje od HEP Elektra univerzalne usluge
 
