@@ -36,7 +36,7 @@ function loadTable() {
 
 		var total_univerzalna = 'UNDEF';
 		// dodaj jedan red za jednog opskrbljivaca
-		function addBigRow(op) {
+		function addBigRow(count, op) {
 			var calc_energija  = vt_kwh * op.kwh_vt_cijena     + nt_kwh * op.kwh_nt_cijena;
 			var calc_mrezarina = vt_kwh * (op.kwh_ods_distribucija_vt_cijena+op.kwh_ods_prijenos_vt_cijena) 
 					   + nt_kwh * (op.kwh_ods_distribucija_nt_cijena+op.kwh_ods_prijenos_nt_cijena)
@@ -106,16 +106,15 @@ function loadTable() {
 				return '<tr><td>' + desc + '</td><td colspan=3 class="notes"><A target="_blank" HREF="' + href + '">Otvori</A></td></tr>';
 			}
 
-			var row='<tr title="' + op.notes  + '">' + 
+			var row='<tr onClick="tr_toggle(' + count + ')" title="' + op.notes  + '">' +
 				'<td class="naziv">' + op.naziv					+ '</td>' +
 				'<td>' + calc_energija.toFixed(2)				+ '</td>' +
 				'<td>' + calc_mrezarina.toFixed(2)				+ '</td>' +
 				'<td>' + calc_total.toFixed(2)					+ '</td>' +
 				'<td class="' + class_usteda + '">' + calc_usteda.toFixed(2)	+ '</td>' +
 				'</tr>' +
-				'<tr class="detalji"><td></td>' +
+				'<tr class="detalji0" id="_detail_' + count + '"><td></td>' +
 				'<td colspan=4>' +
-				'<details><summary>Detalji</summary>' +
 				'<table style="width: 98%;">' +
 				'<tr><th>Naziv</th><th>Količina</th><th>Cijena</th><th>Iznos</th></tr>' +
 				addSmallRow_mul ('kwh_vt_cijena', vt_kwh) +
@@ -141,7 +140,6 @@ function loadTable() {
 				addSmallRow_href  ('Homepage', op.web_site) +
 				addSmallRow_href  ('Cjenik', op.web_cjenik) +
 				'</table>' +
-				'</details>' +
 				'</td>' +
 				'</tr>';
 			return row;
@@ -150,13 +148,21 @@ function loadTable() {
 		var table_opskrbljivaci = '';
 		var i = 0;
 		while (i < opskrbljivaci.cfg.length) {
-			table_opskrbljivaci = table_opskrbljivaci + addBigRow(opskrbljivaci.cfg[i++]);
+			table_opskrbljivaci = table_opskrbljivaci + addBigRow(i, opskrbljivaci.cfg[i++]);
 		};
 
 		document.getElementById('table_opskrbljivaci').innerHTML = table_opskrbljivaci;
 		document.getElementById('zadnji_update').innerHTML = last_updated;
 	}
 
+}
+
+// toggle row details visibility
+function tr_toggle(id) {
+	'use strict';
+	var detail_id = '_detail_' + id;
+	var new_class = document.getElementById(detail_id).className == 'detalji0' ? 'detalji1' : 'detalji0';
+	document.getElementById(detail_id).className = new_class;
 }
 
 loadTable();

@@ -101,6 +101,13 @@ td {
 	font-weight: bold;
 }
 
+.detalji0 {
+	display: none;
+}
+.detalji1 {
+	display: inline;
+}
+
 /* mobile view has too little space for all the data */
 @media (max-width: 60em) {
 	.naziv {
@@ -109,8 +116,5 @@ td {
 	}
 	table {
 		margin: 0;
-	}
-	tr.detalji {
-		display: none;
 	}
 }
