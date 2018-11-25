@@ -123,7 +123,7 @@ function loadTable() {
 				addSmallRow_mul ('mj_naknada_opskrba', mjeseci) +
 				addSmallRow_mul ('mj_popust', -mjeseci) +
 				addSmallRow_subtotal ('Ostale naknade') +
-				addSmallRow_total ('Osnovica') +
+				addSmallRow_total ('Porezna osnovica') +
 				addSmallRow_mul ('pct_pdv', allTotal.toFixed(2)) +
 				addSmallRow_total ('Total iznos računa') +
 				addSmallRow_mul3 ('mj_trosak_uplate', mj_trosak_uplate, mjeseci) +
