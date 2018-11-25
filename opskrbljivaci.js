@@ -2,7 +2,7 @@
 // lista opskrbljivaca sa cijenama i popustima
 //
 
-var last_updated='2018-11-24';
+var last_updated='2018-11-25';
 
 var default_naknada_omm = 10;
 var default_naknada_opskrba = 7.40;
@@ -149,9 +149,9 @@ var opskrbljivaci = {
 },
 
 {       'naziv': 'RWE - BONUS 2 godine (A-7%)',
-	'kwh_jt_cijena': HEP_univerzalna_jt_cijena * (1-0.07),
-	'kwh_vt_cijena': HEP_univerzalna_vt_cijena * (1-0.07),
-	'kwh_nt_cijena': HEP_univerzalna_nt_cijena * (1-0.07),
+	'kwh_jt_cijena': (HEP_univerzalna_jt_cijena * (1-0.07)).toFixed(4),
+	'kwh_vt_cijena': (HEP_univerzalna_vt_cijena * (1-0.07)).toFixed(4),
+	'kwh_nt_cijena': (HEP_univerzalna_nt_cijena * (1-0.07)).toFixed(4),
 	'kwh_ods_jt_cijena': default_kwh_ods_jt_cijena,
 	'kwh_ods_vt_cijena': default_kwh_ods_vt_cijena,
 	'kwh_ods_nt_cijena': default_kwh_ods_nt_cijena,
@@ -185,9 +185,9 @@ var opskrbljivaci = {
 },
 
 {       'naziv': '220v - RACIO (8%)',
-	'kwh_jt_cijena': HEP_univerzalna_jt_cijena * (1-0.08),
-	'kwh_vt_cijena': HEP_univerzalna_vt_cijena * (1-0.08),
-	'kwh_nt_cijena': HEP_univerzalna_nt_cijena * (1-0.08),
+	'kwh_jt_cijena': (HEP_univerzalna_jt_cijena * (1-0.08)).toFixed(4),
+	'kwh_vt_cijena': (HEP_univerzalna_vt_cijena * (1-0.08)).toFixed(4),
+	'kwh_nt_cijena': (HEP_univerzalna_nt_cijena * (1-0.08)).toFixed(4),
 	'kwh_ods_jt_cijena': default_kwh_ods_jt_cijena,
 	'kwh_ods_vt_cijena': default_kwh_ods_vt_cijena,
 	'kwh_ods_nt_cijena': default_kwh_ods_nt_cijena,

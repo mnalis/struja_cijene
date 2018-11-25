@@ -78,12 +78,13 @@ function loadTable() {
 				return htmlRow;
 			}
 
-			// returns op["key"] multiplied by "mul"
-			function addSmallRow_mul(key, mul) {
-				var iznos = (mul * op[key]).toFixed(2);
+			// returns op["key_name"] multiplied by "mul"
+			function addSmallRow_mul(key_name, mul) {
+				var jed_cijena = op[key_name];
+				var iznos = (mul * jed_cijena).toFixed(2);
 				subTotal += +iznos;
 				allTotal += +iznos;
-				return addSmallRow_html ('', key, mul, op[key], iznos);
+				return addSmallRow_html ('', key_name, mul, jed_cijena, iznos);
 			}
 
 			var row='<tr title="' + op.notes  + '">' + 
@@ -108,7 +109,7 @@ function loadTable() {
 				addSmallRow_mul ('mj_naknada_opskrba', mjeseci) +
 				addSmallRow_mul ('mj_popust', -mjeseci) +
 				addSmallRow_total ('Osnovica') +
-				addSmallRow_mul ('pct_pdv', allTotal) +
+				addSmallRow_mul ('pct_pdv', allTotal.toFixed(2)) +
 				addSmallRow_total ('Total') +
 				'</table>' +
 				'</td>' +

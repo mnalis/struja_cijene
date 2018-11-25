@@ -9,6 +9,8 @@ da ovaj uzima u obzir sve popuste.
 
 - avoid double calculation (za summary, pa za details)
 
+- detail sve stavke obojaj crveno ili zeleno ako su losije ili bolje od HEP Elektra univerzalne usluge
+
 - search FIXME svugdje
 
 - HEPI vidi za detalje oko onog kluba (zovi ih?)
