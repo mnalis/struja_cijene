@@ -42,7 +42,7 @@ function loadTable() {
 			var calc_razno     = (vt_kwh + nt_kwh) * (op.kwh_solidarna + op.kwh_oieik) - op.mj_popust + mjeseci * op.mj_naknada_opskrba;
 			var calc_osnovica  = calc_energija + calc_mrezarina + calc_razno;
 			var calc_porez	   = calc_osnovica * op.pct_pdv;
-			var calc_total	   = calc_osnovica + calc_porez;
+			var calc_total	   = calc_osnovica + calc_porez + mjeseci * op.mj_trosak_uplate;
 			if (total_univerzalna == 'UNDEF') { total_univerzalna = calc_total; }
 			var calc_usteda    = total_univerzalna - calc_total;
 			var class_usteda   = calc_usteda > 0 ? 'plus' : 'minus';
