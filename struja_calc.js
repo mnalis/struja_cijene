@@ -36,7 +36,9 @@ function loadTable() {
 		// dodaj jedan red za jednog opskrbljivaca
 		function addBigRow(op) {
 			var calc_energija  = vt_kwh * op.kwh_vt_cijena     + nt_kwh * op.kwh_nt_cijena;
-			var calc_mrezarina = vt_kwh * op.kwh_ods_vt_cijena + nt_kwh * op.kwh_ods_nt_cijena + mjeseci * op.mj_naknada_omm;
+			var calc_mrezarina = vt_kwh * (op.kwh_ods_distribucija_vt_cijena+op.kwh_ods_prijenos_vt_cijena) 
+					   + nt_kwh * (op.kwh_ods_distribucija_nt_cijena+op.kwh_ods_prijenos_nt_cijena)
+					   + mjeseci * op.mj_naknada_omm;
 			var calc_razno     = (vt_kwh + nt_kwh) * (op.kwh_solidarna + op.kwh_oieik) - op.mj_popust + mjeseci * op.mj_naknada_opskrba;
 			var calc_osnovica  = calc_energija + calc_mrezarina + calc_razno;
 			var calc_porez	   = calc_osnovica * op.pct_pdv;
@@ -99,15 +101,18 @@ function loadTable() {
 				'<table style="width: 98%;">' +
 				addSmallRow_mul ('kwh_vt_cijena', vt_kwh) +
 				addSmallRow_mul ('kwh_nt_cijena', nt_kwh) +
-				addSmallRow_subtotal ('Opskrbljivač cijena električne energije') +
-				addSmallRow_mul ('kwh_ods_vt_cijena', vt_kwh) +
-				addSmallRow_mul ('kwh_ods_nt_cijena', nt_kwh) +
+				addSmallRow_subtotal ('Opskrbljivač - cijena električne energije') +
+				addSmallRow_mul ('kwh_ods_distribucija_vt_cijena', vt_kwh) +
+				addSmallRow_mul ('kwh_ods_distribucija_nt_cijena', nt_kwh) +
+				addSmallRow_mul ('kwh_ods_prijenos_vt_cijena', vt_kwh) +
+				addSmallRow_mul ('kwh_ods_prijenos_nt_cijena', nt_kwh) +
 				addSmallRow_mul ('mj_naknada_omm', mjeseci) +
-				addSmallRow_subtotal ('HEP ODS korištenje mreže') +
+				addSmallRow_subtotal ('HEP ODS - korištenje mreže') +
 				addSmallRow_mul ('kwh_oieik', vt_kwh+nt_kwh) +
 				addSmallRow_mul ('kwh_solidarna', vt_kwh+nt_kwh) +
 				addSmallRow_mul ('mj_naknada_opskrba', mjeseci) +
 				addSmallRow_mul ('mj_popust', -mjeseci) +
+				addSmallRow_subtotal ('Ostale naknade') +
 				addSmallRow_total ('Osnovica') +
 				addSmallRow_mul ('pct_pdv', allTotal.toFixed(2)) +
 				addSmallRow_total ('Total') +

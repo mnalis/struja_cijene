@@ -5,8 +5,6 @@ da ovaj uzima u obzir sve popuste.
 - details nicer popusti ispis (umjesto -1 * 12, stavi  1 * -12 )
 - advanced - cijena placanja mjesecnog racuna (i oni gdje mozes bez toga)
 
-- izdvoji posebno distribucija, a posebno prijenos
-
 - avoid double calculation (za summary, pa za details)
 
 - detail sve stavke obojaj crveno ili zeleno ako su losije ili bolje od HEP Elektra univerzalne usluge
@@ -33,6 +31,8 @@ da ovaj uzima u obzir sve popuste.
   http://www.jeftinastruja.hr/za-ku%c4%87anstva/jeftina-struja/izra%c4%8dunajte-svoju-u%c5%a1tedu/precizan-izra%c4%8dun-u%c5%a1tede/
   za 63 VT + 89 NT  ODS kaze 51.06, kao i moj kalkulator, a HT racun tvrdi 51.07 = 63*0.475(=29.93) + 89*80.2375(=21.14)
   a precizno je 29.925 + 21.1375 (HT zaokruzuje na svakom koraku)
+  bug u javascriptu? 
+    (82.175).toFixed(2) = "82.17" grrrr
 
 - radi citljivosti, odvoji dobavljaca od modela  
 
