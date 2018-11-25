@@ -113,8 +113,8 @@ function loadTable() {
 				'<td>' + calc_total.toFixed(2)					+ '</td>' +
 				'<td class="' + class_usteda + '">' + calc_usteda.toFixed(2)	+ '</td>' +
 				'</tr>' +
-				'<tr class="detalji0" id="_detail_' + count + '"><td></td>' +
-				'<td colspan=4>' +
+				'<tr class="detalji0" id="_detail_' + count + '">' +
+				'<td>&nbsp;</td> <td colspan=4>' +
 				'<table style="width: 98%;">' +
 				'<tr><th>Naziv</th><th>Količina</th><th>Cijena</th><th>Iznos</th></tr>' +
 				addSmallRow_mul ('kwh_vt_cijena', vt_kwh) +

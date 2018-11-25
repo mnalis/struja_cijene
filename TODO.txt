@@ -19,6 +19,8 @@
 
 - mogucnost inline expanda tablice da se vide detalji izracuna - napraviti ljepse nego ovaj <detail><summary>
   koji jede duple redove. v. https://stackoverflow.com/questions/15095933/pure-css-collapse-expand-div
+  i da lijepo izgleda na mobitelu
+  branch hide-js za javascript pokusaj.
 
 - provjeri doma sa HT racunima tocnost za mj. izracun
 
