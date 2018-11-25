@@ -1,11 +1,9 @@
 - spomeni stari TOKElen (i URL?) kao i trenutni HERA/GEN-I u README.md, kao
 da ovaj uzima u obzir sve popuste.
 
-- details nicer PDV ispis
-- details nicer popusti ispis (umjesto -1 * 12, stavi  1 * -12 )
 - advanced - cijena placanja mjesecnog racuna (i oni gdje mozes bez toga)
 
-- avoid double calculation (za summary, pa za details)
+- avoid double calculation (za summary, pa za details) - a pogotovo jer se razlikuju za lipu-dvije na kraju
 
 - detail sve stavke obojaj crveno ili zeleno ako su losije ili bolje od HEP Elektra univerzalne usluge
 

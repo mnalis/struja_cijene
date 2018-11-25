@@ -80,13 +80,14 @@ function loadTable() {
 				return htmlRow;
 			}
 
-			// returns op["key_name"] multiplied by "mul"
-			function addSmallRow_mul(key_name, mul) {
+			// returns op["key_name"] multiplied by "kolicina", and increse allTotal and subTotal accordingly
+			function addSmallRow_mul(key_name, kolicina) {
 				var jed_cijena = op[key_name];
-				var iznos = (mul * jed_cijena).toFixed(2);
+				if (kolicina < 0) { kolicina = -kolicina; jed_cijena = -jed_cijena; }	// just for nicer output
+				var iznos = (kolicina * jed_cijena).toFixed(2);
 				subTotal += +iznos;
 				allTotal += +iznos;
-				return addSmallRow_html ('', key_name, mul, jed_cijena, iznos);
+				return addSmallRow_html ('', key_name, kolicina, jed_cijena, iznos);
 			}
 
 			var row='<tr title="' + op.notes  + '">' + 
@@ -99,6 +100,7 @@ function loadTable() {
 				'<tr><td></td>' +
 				'<td colspan=4>' +
 				'<table style="width: 98%;">' +
+				'<tr><th>Naziv</th><th>Količina</th><th>Cijena</th><th>Iznos</th></tr>' +
 				addSmallRow_mul ('kwh_vt_cijena', vt_kwh) +
 				addSmallRow_mul ('kwh_nt_cijena', nt_kwh) +
 				addSmallRow_subtotal ('Opskrbljivač - cijena električne energije') +
