@@ -160,7 +160,7 @@ var opskrbljivaci = {
 	'notes': 'Račune bez naknade možete plaćati na HT Platomatima. Gasi se; od 11/2018 korisnici prebačeni na RWE',
 },
 
-{       'naziv': 'RWE - IDEAL 3 godine+online (A-12%)',
+{       'naziv': 'RWE - IDEAL+online 1.godina (A-12%)',
 	'kwh_jt_cijena': (HEP_univerzalna_jt_cijena * (1-0.12)).toFixed(4),
 	'kwh_vt_cijena': (HEP_univerzalna_vt_cijena * (1-0.12)).toFixed(4),
 	'kwh_nt_cijena': (HEP_univerzalna_nt_cijena * (1-0.12)).toFixed(4),
@@ -179,9 +179,9 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
-	'notes': '',
+	'notes': 'Ugovor na 3 godine. Dodatnih 2% za online prijave na http://rwe.hr/Elektricna_energija/Kucanstva/On-line_ugovor.aspx . Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B!',
 },
-{       'naziv': 'RWE - IDEAL 3 godine (A-10%)',
+{       'naziv': 'RWE - IDEAL 1.godina (A-10%)',
 	'kwh_jt_cijena': (HEP_univerzalna_jt_cijena * (1-0.10)).toFixed(4),
 	'kwh_vt_cijena': (HEP_univerzalna_vt_cijena * (1-0.10)).toFixed(4),
 	'kwh_nt_cijena': (HEP_univerzalna_nt_cijena * (1-0.10)).toFixed(4),
@@ -200,10 +200,10 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
-	'notes': '',
+	'notes': 'Ugovor na 3 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B!',
 },
 
-{       'naziv': 'RWE - BONUS 2 godine (A-7%)',
+{       'naziv': 'RWE - BONUS 1. godina (A-7%)',
 	'kwh_jt_cijena': (HEP_univerzalna_jt_cijena * (1-0.07)).toFixed(4),
 	'kwh_vt_cijena': (HEP_univerzalna_vt_cijena * (1-0.07)).toFixed(4),
 	'kwh_nt_cijena': (HEP_univerzalna_nt_cijena * (1-0.07)).toFixed(4),
@@ -222,7 +222,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
-	'notes': '',
+	'notes': 'Ugovor na 2 godine. Ova cijena je samo za prvu godinu, nakon toga se navodno cjenik B!',
 },
 
 {       'naziv': 'RWE - KLASIK (B cjenik)',
@@ -244,7 +244,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
-	'notes': '',
+	'notes': 'Bez ugovorne obveze. Ova tarifa se po defaultu koristi za korisnike preuzete od HT-a, kao i za 2. i ostale godine IDEAL i BONUS tarifa.',
 },
 
 {       'naziv': '220v - RACIO (8%)',
