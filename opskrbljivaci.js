@@ -42,6 +42,7 @@ var opskrbljivaci = {
 	'naknada za poticanje proizvodnje iz obnovljivih izvora i kogeneracije (cijena 1 kWh)',
 	'solidarna naknada (cijena 1 kWh)',
 	'iznos mjesečnog popusta',
+	'iznos dodatnog  popusta',
 	'porez na dodanu vrijednost',
 	'trošak plaćanja računa (npr. najpovoljnija provizija u banci, pošti i sl. ako nema mogućnosti besplatne uplate negdje)',
 	'web stranice',
@@ -66,6 +67,7 @@ var opskrbljivaci = {
 	'kwh_oieik': default_oieik_cijena,
 	'kwh_solidarna': 0,
 	'mj_popust': 0,
+	'extra_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.hep.hr/elektra/',
@@ -89,6 +91,7 @@ var opskrbljivaci = {
 	'kwh_oieik': default_oieik_cijena,
 	'kwh_solidarna': 0,
 	'mj_popust': 0,
+	'extra_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.jeftinastruja.hr/',
@@ -112,6 +115,7 @@ var opskrbljivaci = {
 	'kwh_oieik': default_oieik_cijena,
 	'kwh_solidarna': 0,
 	'mj_popust': 0,
+	'extra_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'http://hepi.hep.hr/',
@@ -135,6 +139,7 @@ var opskrbljivaci = {
 	'kwh_oieik': default_oieik_cijena,
 	'kwh_solidarna': 0,
 	'mj_popust': 0,
+	'extra_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'http://hepi.hep.hr/',
@@ -158,6 +163,7 @@ var opskrbljivaci = {
 	'kwh_oieik': default_oieik_cijena,
 	'kwh_solidarna': 0,
 	'mj_popust': 0,
+	'extra_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'https://www.hrvatskitelekom.hr/energija/struja',
@@ -181,6 +187,7 @@ var opskrbljivaci = {
 	'kwh_oieik': default_oieik_cijena,
 	'kwh_solidarna': 0,
 	'mj_popust': 12,
+	'extra_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'https://www.hrvatskitelekom.hr/energija/struja',
@@ -204,6 +211,7 @@ var opskrbljivaci = {
 	'kwh_oieik': default_oieik_cijena,
 	'kwh_solidarna': default_solidarna_cijena, /* do 1.1.2019. je 0.01kn/kWh? */
 	'mj_popust': 0,
+	'extra_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.rwe.hr/',
@@ -226,6 +234,7 @@ var opskrbljivaci = {
 	'kwh_oieik': default_oieik_cijena,
 	'kwh_solidarna': default_solidarna_cijena, /* do 1.1.2019. je 0.01kn/kWh? */
 	'mj_popust': 0,
+	'extra_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.rwe.hr/',
@@ -249,6 +258,7 @@ var opskrbljivaci = {
 	'kwh_oieik': default_oieik_cijena,
 	'kwh_solidarna': default_solidarna_cijena, /* do 1.1.2019. je 0.01kn/kWh? */
 	'mj_popust': 0,
+	'extra_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.rwe.hr/',
@@ -272,6 +282,7 @@ var opskrbljivaci = {
 	'kwh_oieik': default_oieik_cijena,
 	'kwh_solidarna': default_solidarna_cijena, /* do 1.1.2019. je 0.01kn/kWh? */
 	'mj_popust': 0,
+	'extra_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.rwe.hr/',
@@ -295,6 +306,7 @@ var opskrbljivaci = {
 	'kwh_oieik': default_oieik_cijena,
 	'kwh_solidarna': default_solidarna_cijena, /*, FIXME ima li solidarnu? */
 	'mj_popust': 0,
+	'extra_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.220v.hr/',
@@ -318,6 +330,7 @@ var opskrbljivaci = {
 	'kwh_oieik': default_oieik_cijena,
 	'kwh_solidarna': default_solidarna_cijena, /*, FIXME ima li solidarnu? */
 	'mj_popust': 0,
+	'extra_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'https://www.proenergy.eu/hr/elektricna-energija/',
@@ -341,6 +354,7 @@ var opskrbljivaci = {
 	'kwh_oieik': default_oieik_cijena,
 	'kwh_solidarna': default_solidarna_cijena, /* FIXME ima li solidarnu? */
 	'mj_popust': 0,
+	'extra_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'https://www.proenergy.eu/hr/elektricna-energija/',
