@@ -173,13 +173,13 @@ var opskrbljivaci = {
 	'mj_naknada_omm': default_naknada_omm,
 	'mj_naknada_opskrba': default_naknada_opskrba,
 	'kwh_oieik': default_oieik_cijena,
-	'kwh_solidarna': 0.01, /*default_solidarna_cijena od 1.1.2019.? */
+	'kwh_solidarna': default_solidarna_cijena, /* do 1.1.2019. je 0.01kn/kWh? */
 	'mj_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
-	'notes': 'Ugovor na 3 godine. Dodatnih 2% za online prijave na http://rwe.hr/Elektricna_energija/Kucanstva/On-line_ugovor.aspx . Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! Od 1.1.2019. korisnik placa solidarnu naknadu u punom iznosu 0.03kn/kWh. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx',
+	'notes': 'Ugovor na 3 godine. Dodatnih 2% za online prijave na http://rwe.hr/Elektricna_energija/Kucanstva/On-line_ugovor.aspx . Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! Od 1.1.2019. korisnik placa solidarnu naknadu u punom iznosu 0.03kn/kWh, do onda je 0.01kn/kWh. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx',
 },
 {       'naziv': 'RWE - IDEAL 1.godina (A-10%)',
 	'kwh_jt_cijena': (HEP_univerzalna_jt_cijena * (1-0.10)).toFixed(4),
@@ -194,13 +194,13 @@ var opskrbljivaci = {
 	'mj_naknada_omm': default_naknada_omm,
 	'mj_naknada_opskrba': default_naknada_opskrba,
 	'kwh_oieik': default_oieik_cijena,
-	'kwh_solidarna': 0.01, /*default_solidarna_cijena od 1.1.2019.? */
+	'kwh_solidarna': default_solidarna_cijena, /* do 1.1.2019. je 0.01kn/kWh? */
 	'mj_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
-	'notes': 'Ugovor na 3 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! Od 1.1.2019. korisnik placa solidarnu naknadu u punom iznosu 0.03kn/kWh. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx',
+	'notes': 'Ugovor na 3 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! Od 1.1.2019. korisnik placa solidarnu naknadu u punom iznosu 0.03kn/kWh, do onda je 0.01kn/kWh. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx',
 },
 
 {       'naziv': 'RWE - BONUS 1. godina (A-7%)',
@@ -216,13 +216,13 @@ var opskrbljivaci = {
 	'mj_naknada_omm': default_naknada_omm,
 	'mj_naknada_opskrba': default_naknada_opskrba,
 	'kwh_oieik': default_oieik_cijena,
-	'kwh_solidarna': 0.01, /*default_solidarna_cijena od 1.1.2019.? */
+	'kwh_solidarna': default_solidarna_cijena, /* do 1.1.2019. je 0.01kn/kWh? */
 	'mj_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
-	'notes': 'Ugovor na 2 godine. Ova cijena je samo za prvu godinu, nakon toga se navodno cjenik B! Od 1.1.2019. korisnik placa solidarnu naknadu u punom iznosu 0.03kn/kWh. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx',
+	'notes': 'Ugovor na 2 godine. Ova cijena je samo za prvu godinu, nakon toga se navodno cjenik B! Od 1.1.2019. korisnik placa solidarnu naknadu u punom iznosu 0.03kn/kWh, do onda je 0.01kn/kWh. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx',
 },
 
 {       'naziv': 'RWE - KLASIK (B cjenik)',
@@ -238,13 +238,13 @@ var opskrbljivaci = {
 	'mj_naknada_omm': default_naknada_omm,
 	'mj_naknada_opskrba': default_naknada_opskrba,
 	'kwh_oieik': default_oieik_cijena,
-	'kwh_solidarna': 0.01, /*default_solidarna_cijena od 1.1.2019.? */
+	'kwh_solidarna': default_solidarna_cijena, /* do 1.1.2019. je 0.01kn/kWh? */
 	'mj_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
-	'notes': 'Bez ugovorne obveze. Ova tarifa se po defaultu koristi za korisnike preuzete od HT-a, kao i za 2. i ostale godine IDEAL i BONUS tarifa. Od 1.1.2019. korisnik placa solidarnu naknadu u punom iznosu 0.03kn/kWh. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx',
+	'notes': 'Bez ugovorne obveze. Ova tarifa se po defaultu koristi za korisnike preuzete od HT-a, kao i za 2. i ostale godine IDEAL i BONUS tarifa. Od 1.1.2019. korisnik placa solidarnu naknadu u punom iznosu 0.03kn/kWh, do onda je 0.01kn/kWh. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx',
 },
 
 {       'naziv': '220v - RACIO (8%)',
@@ -260,7 +260,7 @@ var opskrbljivaci = {
 	'mj_naknada_omm': default_naknada_omm,
 	'mj_naknada_opskrba': default_naknada_opskrba,
 	'kwh_oieik': default_oieik_cijena,
-	'kwh_solidarna': 0, /*default_solidarna_cijena, FIXME ima li solidarnu? */
+	'kwh_solidarna': default_solidarna_cijena, /*, FIXME ima li solidarnu? */
 	'mj_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
@@ -282,7 +282,7 @@ var opskrbljivaci = {
 	'mj_naknada_omm': default_naknada_omm,
 	'mj_naknada_opskrba': default_naknada_opskrba,
 	'kwh_oieik': default_oieik_cijena,
-	'kwh_solidarna': 0, /*default_solidarna_cijena, FIXME ima li solidarnu? */
+	'kwh_solidarna': default_solidarna_cijena, /*, FIXME ima li solidarnu? */
 	'mj_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
@@ -304,7 +304,7 @@ var opskrbljivaci = {
 	'mj_naknada_omm': default_naknada_omm,
 	'mj_naknada_opskrba': default_naknada_opskrba,
 	'kwh_oieik': default_oieik_cijena,
-	'kwh_solidarna': 0, /*default_solidarna_cijena, FIXME ima li solidarnu? */
+	'kwh_solidarna': default_solidarna_cijena, /* FIXME ima li solidarnu? */
 	'mj_popust': 0,
 	'pct_pdv': default_pdv,
 	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
