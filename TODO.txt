@@ -4,8 +4,6 @@
 - i-energija zovi i pitaj sto sa mojim popustima? 0800 8777 (ili 0800 8860)
   i sto ako zelim drugdje a ne na RWE
 
-- HEPI HITNO salji online zahtjev za prebacivanjem!
-
 - za sve opskrbljivace prvjeri web i salji upit:
   - ima li solidarnu naknadu i koliku
   - gdje (i ako) se moze platiti racun bez naknade
@@ -13,6 +11,11 @@
 
 - mogucnost usporedbe s necim drugim, a ne samo HEP Elektra - Univerzalna usluga kao baseline
   (za usporedbu da li se isplati prelaziti sa x na y)
+
+HEPI-advanced napravi novu grupu HEPI+samoocitanje+klub - uracunaj popuste:
+    - dodatno HEPI club 2.9% niza cijena? (za 1500 bodova micanje opskrbne naknade na neko razdoblje ili druge pogodnosti)
+      ali sto ako vec ne placam tu naknadu za opskrbu, sto ce mi umanjiti?
+      3000bod za 40kn, 3300 za 6*8.36kn (50kn), itd. saznaj sto sve ima (skidaj app?)
 
 - opisi stavi da su tooltipovi na kolone
 
