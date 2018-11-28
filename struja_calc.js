@@ -10,7 +10,9 @@ function loadTable() {
 	document.getElementById('vt_kwh').onchange = recalc_table;
 	document.getElementById('nt_kwh').onchange = recalc_table;
 	document.getElementById('period').onchange = recalc_table;
+	document.getElementById('brojilo').onchange = recalc_table;
 	document.getElementById('def_trosak_uplate').onchange = recalc_table;
+	// i izracun defaultne tablice na pocetku
 	recalc_table();
 
 	// popunjavanje tablice
