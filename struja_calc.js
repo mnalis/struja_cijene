@@ -110,13 +110,13 @@ function loadTable() {
 				'<tr><th>Naziv</th><th>Količina</th><th>Cijena</th><th>Iznos</th></tr>' +
 				addSmallRow_mul ('kwh_vt_cijena', vt_kwh) +
 				addSmallRow_mul ('kwh_nt_cijena', nt_kwh) +
-				addSmallRow_subtotal ('Opskrbljivač - cijena električne energije') +
+				addSmallRow_subtotal ('Opskrbljivač - cijena električne energije') +	// totals[0]
 				addSmallRow_mul ('kwh_ods_distribucija_vt_cijena', vt_kwh) +
 				addSmallRow_mul ('kwh_ods_distribucija_nt_cijena', nt_kwh) +
 				addSmallRow_mul ('kwh_ods_prijenos_vt_cijena', vt_kwh) +
 				addSmallRow_mul ('kwh_ods_prijenos_nt_cijena', nt_kwh) +
 				addSmallRow_mul ('mj_naknada_omm', mjeseci) +
-				addSmallRow_subtotal ('HEP ODS - korištenje mreže') +
+				addSmallRow_subtotal ('HEP ODS - korištenje mreže') +			// totals[1]
 				addSmallRow_mul ('kwh_oieik', vt_kwh+nt_kwh) +
 				addSmallRow_mul ('kwh_solidarna', vt_kwh+nt_kwh) +
 				addSmallRow_mul ('mj_naknada_opskrba', mjeseci) +
