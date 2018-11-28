@@ -1,11 +1,21 @@
+
 - search FIXME svugdje
+
+- i-energija zovi i pitaj sto sa mojim popustima? 0800 8777 (ili 0800 8860)
+  i sto ako zelim drugdje a ne na RWE
+
+- HEPI HITNO salji online zahtjev za prebacivanjem!
+
+- za sve opskrbljivace prvjeri web i salji upit:
+  - ima li solidarnu naknadu i koliku
+  - gdje (i ako) se moze platiti racun bez naknade
+  - ima li kojih drugih pogodnosti
 
 - mogucnost usporedbe s necim drugim, a ne samo HEP Elektra - Univerzalna usluga kao baseline
   (za usporedbu da li se isplati prelaziti sa x na y)
 
 - opisi stavi da su tooltipovi na kolone
 
-- HEPI vidi za detalje oko onog kluba (zovi ih?)
 
 -? solidarne naknade provjeri tko ima (mailaj i zovi po FIXME u opskrbljivaci.js)
    (ako je vjerovati gen-i kalkulatoru, nitko ih nema)
