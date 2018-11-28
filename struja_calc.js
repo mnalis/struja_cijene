@@ -9,6 +9,7 @@ function loadTable() {
 	// svaka izmjena podataka neka radi novi izracun
 	document.getElementById('vt_kwh').onchange = recalc_table;
 	document.getElementById('nt_kwh').onchange = recalc_table;
+	document.getElementById('jt_kwh').onchange = recalc_table;
 	document.getElementById('period').onchange = recalc_table;
 	document.getElementById('brojilo').onchange = recalc_table;
 	document.getElementById('def_trosak_uplate').onchange = recalc_table;
@@ -121,17 +122,23 @@ function loadTable() {
 				'<td colspan=5>' +
 				'<table style="width: 98%;">' +
 				'<tr><th>Naziv</th><th>Količina</th><th>Cijena</th><th>Iznos</th></tr>' +
-				addSmallRow_mul ('kwh_vt_cijena', vt_kwh) +
-				addSmallRow_mul ('kwh_nt_cijena', nt_kwh) +
+				(brojilo == "jednotarifno" ?
+					(addSmallRow_mul ('kwh_jt_cijena', jt_kwh)) :
+					(addSmallRow_mul ('kwh_vt_cijena', vt_kwh) +
+					 addSmallRow_mul ('kwh_nt_cijena', nt_kwh))) +
 				addSmallRow_subtotal ('Opskrbljivač - cijena električne energije') +	// totals[0]
-				addSmallRow_mul ('kwh_ods_distribucija_vt_cijena', vt_kwh) +
-				addSmallRow_mul ('kwh_ods_distribucija_nt_cijena', nt_kwh) +
-				addSmallRow_mul ('kwh_ods_prijenos_vt_cijena', vt_kwh) +
-				addSmallRow_mul ('kwh_ods_prijenos_nt_cijena', nt_kwh) +
+				(brojilo == "jednotarifno" ?
+					(addSmallRow_mul ('kwh_ods_distribucija_jt_cijena', jt_kwh)) :
+					(addSmallRow_mul ('kwh_ods_distribucija_vt_cijena', vt_kwh) +
+					 addSmallRow_mul ('kwh_ods_distribucija_nt_cijena', nt_kwh))) +
+				(brojilo == "jednotarifno" ?
+					(addSmallRow_mul ('kwh_ods_prijenos_jt_cijena', jt_kwh)) :
+					(addSmallRow_mul ('kwh_ods_prijenos_vt_cijena', vt_kwh) +
+					 addSmallRow_mul ('kwh_ods_prijenos_nt_cijena', nt_kwh))) +
 				addSmallRow_mul ('mj_naknada_omm', mjeseci) +
 				addSmallRow_subtotal ('HEP ODS - korištenje mreže') +			// totals[1]
-				addSmallRow_mul ('kwh_oieik', vt_kwh+nt_kwh) +
-				addSmallRow_mul ('kwh_solidarna', vt_kwh+nt_kwh) +
+				addSmallRow_mul ('kwh_oieik',     brojilo == "jednotarifno" ? jt_kwh : (vt_kwh+nt_kwh)) +
+				addSmallRow_mul ('kwh_solidarna', brojilo == "jednotarifno" ? jt_kwh : (vt_kwh+nt_kwh)) +
 				addSmallRow_mul ('mj_naknada_opskrba', mjeseci) +
 				addSmallRow_mul ('mj_popust', -mjeseci) +
 				addSmallRow_subtotal ('Ostale naknade') +
