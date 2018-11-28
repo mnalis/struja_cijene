@@ -47,6 +47,7 @@ var opskrbljivaci = {
 	'web stranice',
 	'web cjenik',
 	'opaska',
+	'da li je jos uvijek dostupan?',
 ],
 
 'cfg': [
@@ -70,6 +71,7 @@ var opskrbljivaci = {
 	'web_site': 'http://www.hep.hr/elektra/',
 	'web_cjenik': 'http://www.hep.hr/elektra/kucanstvo/tarifne-stavke-cijene/1547',
 	'notes': 'Defaultni opskrbljivač za sva kućanstva koja nisu mijenjala opskrbljivača.',
+	'dostupnost': 1,
 },
 
 {       'naziv': 'GEN-I - Jeftina struja',
@@ -92,6 +94,7 @@ var opskrbljivaci = {
 	'web_site': 'http://www.jeftinastruja.hr/',
 	'web_cjenik': 'http://www.jeftinastruja.hr/za-ku%C4%87anstva/cijene-i-tarife/cjenik/',
 	'notes': 'FIXME - nema više prvi mjesec besplatno? bilo je do 31. listopada 2018, možda će opet biti',
+	'dostupnost': 1,
 },
 
 {       'naziv': 'HEP Opskrba - HEPI',
@@ -114,6 +117,7 @@ var opskrbljivaci = {
 	'web_site': 'http://hepi.hep.hr/',
 	'web_cjenik': 'http://hepi.hep.hr/UserDocsImages/Cjenici/Hepi-cjenik-9_17.pdf',
 	'notes': 'Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije. FIXME - dodatni popusti za HEPI club?',
+	'dostupnost': 1,
 },
 
 {       'naziv': 'HEP Opskrba - HEPI+samoočitanje',
@@ -136,6 +140,7 @@ var opskrbljivaci = {
 	'web_site': 'http://hepi.hep.hr/',
 	'web_cjenik': 'http://hepi.hep.hr/UserDocsImages/Cjenici/Hepi-cjenik-9_17.pdf',
 	'notes': 'Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije. FIXME - dodatni popusti za HEPI club?',
+	'dostupnost': 1,
 },
 
 {       'naziv': 'Hrvatski telekom - bez obveze',
@@ -157,7 +162,8 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'https://www.hrvatskitelekom.hr/energija/struja',
 	'web_cjenik': 'https://www.hrvatskitelekom.hr/ResourceManager/FileDownload.aspx?rId=8309&rType=2',
-	'notes': 'Račune bez naknade možete plaćati na HT Platomatima. Gasi se; od 11/2018 korisnici prebačeni na RWE',
+	'notes': 'Gasi se; od 12/2018 korisnici prebačeni na RWE-KLASIK. Računi bez naknade mogli su se plaćati na HT Platomatima. ',
+	'dostupnost': 0,
 },
 
 {       'naziv': 'Hrvatski telekom - 2 godine',
@@ -179,7 +185,8 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'https://www.hrvatskitelekom.hr/energija/struja',
 	'web_cjenik': 'https://www.hrvatskitelekom.hr/ResourceManager/FileDownload.aspx?rId=8309&rType=2',
-	'notes': 'Račune bez naknade možete plaćati na HT Platomatima. Gasi se; od 11/2018 korisnici prebačeni na RWE',
+	'notes': 'Gasi se; od 12/2018 korisnici prebačeni na RWE-KLASIK. Računi bez naknade mogli su se plaćati na HT Platomatima. ',
+	'dostupnost': 0,
 },
 
 {       'naziv': 'RWE - IDEAL+online 1.godina (A-12%)',
@@ -202,6 +209,7 @@ var opskrbljivaci = {
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
 	'notes': 'Ugovor na 3 godine. Dodatnih 2% za online prijave na http://rwe.hr/Elektricna_energija/Kucanstva/On-line_ugovor.aspx . Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! Od 1.1.2019. korisnik placa solidarnu naknadu u punom iznosu 0.03kn/kWh, do onda je 0.01kn/kWh. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx',
+	'dostupnost': 1,
 },
 {       'naziv': 'RWE - IDEAL 1.godina (A-10%)',
 	'kwh_jt_cijena': (HEP_univerzalna_jt_cijena * (1-0.10)).toFixed(4),
@@ -223,6 +231,7 @@ var opskrbljivaci = {
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
 	'notes': 'Ugovor na 3 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! Od 1.1.2019. korisnik placa solidarnu naknadu u punom iznosu 0.03kn/kWh, do onda je 0.01kn/kWh. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx',
+	'dostupnost': 1,
 },
 
 {       'naziv': 'RWE - BONUS 1. godina (A-7%)',
@@ -245,6 +254,7 @@ var opskrbljivaci = {
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
 	'notes': 'Ugovor na 2 godine. Ova cijena je samo za prvu godinu, nakon toga se navodno cjenik B! Od 1.1.2019. korisnik placa solidarnu naknadu u punom iznosu 0.03kn/kWh, do onda je 0.01kn/kWh. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx',
+	'dostupnost': 1,
 },
 
 {       'naziv': 'RWE - KLASIK (B cjenik)',
@@ -267,6 +277,7 @@ var opskrbljivaci = {
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
 	'notes': 'Bez ugovorne obveze. Ova tarifa se po defaultu koristi za korisnike preuzete od HT-a, kao i za 2. i ostale godine IDEAL i BONUS tarifa. Od 1.1.2019. korisnik placa solidarnu naknadu u punom iznosu 0.03kn/kWh, do onda je 0.01kn/kWh. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx',
+	'dostupnost': 1,
 },
 
 {       'naziv': '220v - RACIO (8%)',
@@ -289,6 +300,7 @@ var opskrbljivaci = {
 	'web_site': 'http://www.220v.hr/',
 	'web_cjenik': 'http://220v.hr/#!/kucanstva',
 	'notes': 'FIXME da li ga isto kupuje RWE 11/2018+?',
+	'dostupnost': 1,
 },
 
 {       'naziv': 'Proenergy - GREEN',
@@ -311,6 +323,7 @@ var opskrbljivaci = {
 	'web_site': 'https://www.proenergy.eu/hr/elektricna-energija/',
 	'web_cjenik': 'https://www.proenergy.eu/assets/pdf/struja/hr/Cijene%20elektri%C4%8Dne%20energije%20-%20ku%C4%87anstvo%20-%20green.pdf',
 	'notes': '100% energije iz obnovljivih izvora (sa certifikatom)',
+	'dostupnost': 1,
 },
 
 {       'naziv': 'Proenergy - GREEN Flat',
@@ -333,6 +346,7 @@ var opskrbljivaci = {
 	'web_site': 'https://www.proenergy.eu/hr/elektricna-energija/',
 	'web_cjenik': 'https://www.proenergy.eu/assets/pdf/struja/hr/Cijene%20elektri%C4%8Dne%20energije%20-%20ku%C4%87anstvo%20-%20green.pdf',
 	'notes': '100% energije iz obnovljivih izvora (sa certifikatom) - JT',
+	'dostupnost': 1,
 },
 
 ] };

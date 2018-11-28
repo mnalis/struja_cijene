@@ -162,8 +162,8 @@ function loadTable() {
 			var class_usteda   = calc_usteda > 0 ? 'plus' : 'minus';
 
 			var row_summary =
-				'<tr onClick="tr_toggle(' + count + ')" title="' + op.notes  + '">' +
-				'<td class="naziv">' + op.naziv					+ '</td>' +
+				'<tr  onClick="tr_toggle(' + count + ')" title="' + op.notes  + '">' +
+				'<td class="naziv' + (op.dostupnost == 0 ? ' nedostupan"' : '')  +'">' + op.naziv					+ '</td>' +
 				'<td>' + calc_energija.toFixed(2)				+ '</td>' +
 				'<td>' + calc_mrezarina.toFixed(2)				+ '</td>' +
 				'<td>' + calc_total.toFixed(2)					+ '</td>' +
