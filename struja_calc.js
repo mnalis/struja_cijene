@@ -108,13 +108,7 @@ function loadTable() {
 				return '<tr><td>' + desc + '</td><td colspan=3 class="notes"><A target="_blank" HREF="' + href + '">Otvori</A></td></tr>';
 			}
 
-			var row='<tr onClick="tr_toggle(' + count + ')" title="' + op.notes  + '">' +
-				'<td class="naziv">' + op.naziv					+ '</td>' +
-				'<td>' + calc_energija.toFixed(2)				+ '</td>' +
-				'<td>' + calc_mrezarina.toFixed(2)				+ '</td>' +
-				'<td>' + calc_total.toFixed(2)					+ '</td>' +
-				'<td class="' + class_usteda + '">' + calc_usteda.toFixed(2)	+ '</td>' +
-				'</tr>' +
+			var row_details =
 				'<tr class="detalji0" id="_detail_' + count + '">' +
 				'<td colspan=5>' +
 				'<table style="width: 98%;">' +
@@ -144,7 +138,16 @@ function loadTable() {
 				'</table>' +
 				'</td>' +
 				'</tr>';
-			return row;
+
+			var row_summary =
+				'<tr onClick="tr_toggle(' + count + ')" title="' + op.notes  + '">' +
+				'<td class="naziv">' + op.naziv					+ '</td>' +
+				'<td>' + calc_energija.toFixed(2)				+ '</td>' +
+				'<td>' + calc_mrezarina.toFixed(2)				+ '</td>' +
+				'<td>' + calc_total.toFixed(2)					+ '</td>' +
+				'<td class="' + class_usteda + '">' + calc_usteda.toFixed(2)	+ '</td>' +
+				'</tr>';
+			return row_summary + row_details;
 		}
 
 		var table_opskrbljivaci = '';
