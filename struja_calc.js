@@ -43,6 +43,7 @@ function loadTable() {
 
 			var allTotal = 0;	// total so far
 			var subTotal = 0;	// reset after every subtotal print
+			var mj_trosak_uplate = op.ima_mj_trosak_uplate * def_trosak_uplate;
 
 			// first arguments is <tr> class if nonempty; all others are <td> values
 			function addSmallRow_html() {
@@ -132,15 +133,9 @@ function loadTable() {
 				'</td>' +
 				'</tr>';
 
-			var calc_energija  = vt_kwh * op.kwh_vt_cijena     + nt_kwh * op.kwh_nt_cijena;
-			var calc_mrezarina = vt_kwh * (op.kwh_ods_distribucija_vt_cijena+op.kwh_ods_prijenos_vt_cijena) 
-					   + nt_kwh * (op.kwh_ods_distribucija_nt_cijena+op.kwh_ods_prijenos_nt_cijena)
-					   + mjeseci * op.mj_naknada_omm;
-			var calc_razno     = (vt_kwh + nt_kwh) * (op.kwh_solidarna + op.kwh_oieik) - op.mj_popust + mjeseci * op.mj_naknada_opskrba;
-			var calc_osnovica  = calc_energija + calc_mrezarina + calc_razno;
-			var calc_porez	   = calc_osnovica * op.pct_pdv;
-			var mj_trosak_uplate = op.ima_mj_trosak_uplate * def_trosak_uplate;
-			var calc_total	   = calc_osnovica + calc_porez + mjeseci * mj_trosak_uplate;
+			var calc_energija  = +totals[0];
+			var calc_mrezarina = +totals[1];
+			var calc_total	   = +totals[totals.length - 1];	// last total is "sveukupni trosak"
 			if (total_univerzalna == 'UNDEF') { total_univerzalna = calc_total; }
 			var calc_usteda    = total_univerzalna - calc_total;
 			var class_usteda   = calc_usteda > 0 ? 'plus' : 'minus';

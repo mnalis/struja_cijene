@@ -1,5 +1,3 @@
-- avoid double calculation (za summary, pa za details) - a pogotovo jer se razlikuju za lipu-dvije na kraju
-
 - search FIXME svugdje
 
 - mogucnost usporedbe s necim drugim, a ne samo HEP Elektra - Univerzalna usluga kao baseline
