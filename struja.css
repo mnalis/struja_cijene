@@ -112,6 +112,12 @@ td {
 	display: inline;
 }
 
+.nedostupan {
+	background: red;
+	color: black;
+	opacity: 0.8;
+}
+
 /* mobile view has too little space for all the data */
 @media (max-width: 60em) {
 	.naziv {
