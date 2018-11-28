@@ -13,8 +13,7 @@
 - ljepsi opisi u details row
   (i da ne bude horizontal scroll na mobu)
 
-- delete hardcoded vrijednosti moje struje u .htmlu (a stavi attribute da firefox to pamti vrijednosti ako nije default)
-  i mozda onaj opis da pise grey ako nije nista ukucano (kao default)
+- kWh NT/VT/JT mozda onaj opis da pise grey ako nije nista ukucano (kao default)
 
 - ljepsi linkovi za website i cjenik
 

@@ -101,11 +101,15 @@ td {
 	font-weight: bold;
 }
 
-.detalji0 {
+.detalji0, .brojilo0 {
 	display: none;
 }
 .detalji1 {
 	display: table-row;
+}
+
+.brojilo1 {
+	display: inline;
 }
 
 /* mobile view has too little space for all the data */

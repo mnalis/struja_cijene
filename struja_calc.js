@@ -25,17 +25,30 @@ function loadTable() {
 			period='mjesečno';
 			mjeseci=1;
 		}
+		var brojilo=document.getElementById('brojilo').value;
+		if (brojilo == "jednotarifno") {				// nuke unused values, just in case
+			document.getElementById('vt_kwh').value = "0";
+			document.getElementById('nt_kwh').value = "0";
+			document.getElementById('brojilo_jt').className   = 'brojilo1';
+			document.getElementById('brojilo_vtnt').className = 'brojilo0';
+		} else {	// dvotarifno
+			document.getElementById('jt_kwh').value = "0";
+			document.getElementById('brojilo_vtnt').className = 'brojilo1';
+			document.getElementById('brojilo_jt').className   = 'brojilo0';
+		}
 
 		document.getElementById('h_energija').innerHTML  = 'Energija ' + period + ' [kn]';
 		document.getElementById('h_mrezarina').innerHTML = 'Mrežarina ' + period + ' [kn]';
 		document.getElementById('h_total').innerHTML = 'Ukupno ' + period + ' [kn]';
 		document.getElementById('h_usteda').innerHTML = 'Ušteda ' + period + ' [kn]';
 
-		document.getElementById('l_vt').childNodes[0].nodeValue='Potrošnja ' + period + ' VT:';	// modifying .innerText also nukes <input> field in FF60 :(
+		document.getElementById('l_vt').childNodes[0].nodeValue='Potrošnja ' + period + ' VT:';	// hack: modifying .innerText also nukes <input> field in FF60 :(
 		document.getElementById('l_nt').childNodes[0].nodeValue='Potrošnja ' + period + ' NT:';
+		document.getElementById('l_jt').childNodes[0].nodeValue='Potrošnja ' + period + ' JT:';
 
 		var vt_kwh = +document.getElementById('vt_kwh').value;		// convert string to number, otherwise vt_kwh+nt_kwh becomes a huge number!
 		var nt_kwh = +document.getElementById('nt_kwh').value;
+		var jt_kwh = +document.getElementById('jt_kwh').value;
 
 		var total_univerzalna = 'UNDEF';
 		// dodaj jedan red za jednog opskrbljivaca
