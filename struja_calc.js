@@ -12,6 +12,7 @@ function loadTable() {
 	document.getElementById('period').onchange = recalc_table;
 	document.getElementById('brojilo').onchange = recalc_table;
 	document.getElementById('def_trosak_uplate').onchange = recalc_table;
+	document.getElementById('izracunaj').onclick = recalc_table;
 	// i izracun defaultne tablice na pocetku
 	recalc_table();
 
@@ -159,6 +160,8 @@ function loadTable() {
 
 		document.getElementById('table_opskrbljivaci').innerHTML = table_opskrbljivaci;
 		document.getElementById('zadnji_update').innerHTML = last_updated;
+
+		return false;	// important: so submit button does nothing
 	}
 
 }
