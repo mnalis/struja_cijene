@@ -39,18 +39,7 @@ function loadTable() {
 		var total_univerzalna = 'UNDEF';
 		// dodaj jedan red za jednog opskrbljivaca
 		function addBigRow(count, op) {
-			var calc_energija  = vt_kwh * op.kwh_vt_cijena     + nt_kwh * op.kwh_nt_cijena;
-			var calc_mrezarina = vt_kwh * (op.kwh_ods_distribucija_vt_cijena+op.kwh_ods_prijenos_vt_cijena) 
-					   + nt_kwh * (op.kwh_ods_distribucija_nt_cijena+op.kwh_ods_prijenos_nt_cijena)
-					   + mjeseci * op.mj_naknada_omm;
-			var calc_razno     = (vt_kwh + nt_kwh) * (op.kwh_solidarna + op.kwh_oieik) - op.mj_popust + mjeseci * op.mj_naknada_opskrba;
-			var calc_osnovica  = calc_energija + calc_mrezarina + calc_razno;
-			var calc_porez	   = calc_osnovica * op.pct_pdv;
-			var mj_trosak_uplate = op.ima_mj_trosak_uplate * def_trosak_uplate;
-			var calc_total	   = calc_osnovica + calc_porez + mjeseci * mj_trosak_uplate;
-			if (total_univerzalna == 'UNDEF') { total_univerzalna = calc_total; }
-			var calc_usteda    = total_univerzalna - calc_total;
-			var class_usteda   = calc_usteda > 0 ? 'plus' : 'minus';
+			var totals = [];	// list of (sub)totals
 
 			var allTotal = 0;	// total so far
 			var subTotal = 0;	// reset after every subtotal print
@@ -70,7 +59,9 @@ function loadTable() {
 			function addSmallRow_total(desc) {
 				var oldTotal = allTotal;
 				var oldsubTotal = subTotal;
-				var htmlRow = addSmallRow_html ('total', desc, '', '', allTotal.toFixed(2));
+				var value = allTotal.toFixed(2);
+				totals.push(value);
+				var htmlRow = addSmallRow_html ('total', desc, '', '', value);
 				allTotal = oldTotal;
 				subTotal = oldsubTotal;
 				return htmlRow;
@@ -79,7 +70,9 @@ function loadTable() {
 			// shows current subTotal (and reset it to zero), without changing allTotal
 			function addSmallRow_subtotal(desc) {
 				var oldTotal = allTotal;
-				var htmlRow = addSmallRow_html ('total', desc, '', '', subTotal.toFixed(2));
+				var value = subTotal.toFixed(2);
+				totals.push(value);
+				var htmlRow = addSmallRow_html ('total', desc, '', '', value);
 				allTotal = oldTotal;
 				subTotal = 0;
 				return htmlRow;
@@ -138,6 +131,19 @@ function loadTable() {
 				'</table>' +
 				'</td>' +
 				'</tr>';
+
+			var calc_energija  = vt_kwh * op.kwh_vt_cijena     + nt_kwh * op.kwh_nt_cijena;
+			var calc_mrezarina = vt_kwh * (op.kwh_ods_distribucija_vt_cijena+op.kwh_ods_prijenos_vt_cijena) 
+					   + nt_kwh * (op.kwh_ods_distribucija_nt_cijena+op.kwh_ods_prijenos_nt_cijena)
+					   + mjeseci * op.mj_naknada_omm;
+			var calc_razno     = (vt_kwh + nt_kwh) * (op.kwh_solidarna + op.kwh_oieik) - op.mj_popust + mjeseci * op.mj_naknada_opskrba;
+			var calc_osnovica  = calc_energija + calc_mrezarina + calc_razno;
+			var calc_porez	   = calc_osnovica * op.pct_pdv;
+			var mj_trosak_uplate = op.ima_mj_trosak_uplate * def_trosak_uplate;
+			var calc_total	   = calc_osnovica + calc_porez + mjeseci * mj_trosak_uplate;
+			if (total_univerzalna == 'UNDEF') { total_univerzalna = calc_total; }
+			var calc_usteda    = total_univerzalna - calc_total;
+			var class_usteda   = calc_usteda > 0 ? 'plus' : 'minus';
 
 			var row_summary =
 				'<tr onClick="tr_toggle(' + count + ')" title="' + op.notes  + '">' +
