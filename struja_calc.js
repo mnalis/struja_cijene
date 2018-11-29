@@ -141,7 +141,7 @@ function loadTable() {
 				addSmallRow_mul ('kwh_solidarna', brojilo == "jednotarifno" ? jt_kwh : (vt_kwh+nt_kwh)) +
 				addSmallRow_mul ('mj_naknada_opskrba', mjeseci) +
 				addSmallRow_mul ('mj_popust', -mjeseci) +
-				addSmallRow_mul ('extra_popust', -1) +
+				addSmallRow_mul3 ('extra_popust',  -op.extra_popust(), 1) +
 				addSmallRow_subtotal ('Ostale naknade') +
 				addSmallRow_total ('Porezna osnovica') +
 				addSmallRow_mul ('pct_pdv', allTotal.toFixed(2)) +
