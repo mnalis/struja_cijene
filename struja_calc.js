@@ -54,11 +54,11 @@ function loadTable() {
 		var total_univerzalna = 'UNDEF';
 		// dodaj jedan red za jednog opskrbljivaca
 		function addBigRow(count, op) {
-			var totals = [];	// list of (sub)totals
+			op.calc_totals = [];	// list of (sub)totals
 
-			var allTotal = 0;	// total so far
-			var subTotal = 0;	// reset after every subtotal print
-			var mj_trosak_uplate = op.ima_mj_trosak_uplate * def_trosak_uplate;
+			op.calc_allTotal = 0;	// total so far
+			op.calc_subTotal = 0;	// reset after every subtotal print
+			op.calc_mj_trosak_uplate = op.ima_mj_trosak_uplate * def_trosak_uplate;
 
 			// first arguments is <tr> class if nonempty; all others are <td> values
 			function addSmallRow_html() {
@@ -71,37 +71,37 @@ function loadTable() {
 				return htmlRow + '</tr>';
 			}
 
-			// shows current Total (without changing allTotal or subTotal)
+			// shows current Total (without changing op.calc_allTotal or op.calc_subTotal)
 			function addSmallRow_total(desc) {
-				var oldTotal = allTotal;
-				var oldsubTotal = subTotal;
-				var value = allTotal.toFixed(2);
-				totals.push(value);
+				var oldTotal = op.calc_allTotal;
+				var oldsubTotal = op.calc_subTotal;
+				var value = op.calc_allTotal.toFixed(2);
+				op.calc_totals.push(value);
 				var htmlRow = addSmallRow_html ('total', desc, '', '', value);
-				allTotal = oldTotal;
-				subTotal = oldsubTotal;
+				op.calc_allTotal = oldTotal;
+				op.calc_subTotal = oldsubTotal;
 				return htmlRow;
 			}
 
-			// shows current subTotal (and reset it to zero), without changing allTotal
+			// shows current subTotal (and reset it to zero), without changing op.calc_allTotal
 			function addSmallRow_subtotal(desc) {
-				var oldTotal = allTotal;
-				var value = subTotal.toFixed(2);
-				totals.push(value);
+				var oldTotal = op.calc_allTotal;
+				var value = op.calc_subTotal.toFixed(2);
+				op.calc_totals.push(value);
 				var htmlRow = addSmallRow_html ('total', desc, '', '', value);
-				allTotal = oldTotal;
-				subTotal = 0;
+				op.calc_allTotal = oldTotal;
+				op.calc_subTotal = 0;
 				return htmlRow;
 			}
 
-			// returns row with description  and jed_cijena*kolicina (and increse allTotal and subTotal accordingly)
+			// returns row with description  and jed_cijena*kolicina (and increse op.calc_allTotal and op.calc_subTotal accordingly)
 			function addSmallRow_mul3 (desc, jed_cijena, kolicina) {
 				var iznos = (kolicina * jed_cijena).toFixed(2);
-				subTotal += +iznos;
-				allTotal += +iznos;
+				op.calc_subTotal += +iznos;
+				op.calc_allTotal += +iznos;
 				return addSmallRow_html ('', desc, kolicina, jed_cijena, iznos);
 			}
-			// returns op["key_name"] multiplied by "kolicina", and increse allTotal and subTotal accordingly
+			// returns op["key_name"] multiplied by "kolicina", and increse op.calc_allTotal and op.calc_subTotal accordingly
 			function addSmallRow_mul(key_name, kolicina) {
 				var jed_cijena = op[key_name];
 				if (kolicina < 0) { kolicina = -kolicina; jed_cijena = -jed_cijena; }	// just for nicer output
@@ -126,7 +126,7 @@ function loadTable() {
 					(addSmallRow_mul ('kwh_jt_cijena', jt_kwh)) :
 					(addSmallRow_mul ('kwh_vt_cijena', vt_kwh) +
 					 addSmallRow_mul ('kwh_nt_cijena', nt_kwh))) +
-				addSmallRow_subtotal ('Opskrbljivač - cijena električne energije') +	// totals[0]
+				addSmallRow_subtotal ('Opskrbljivač - cijena električne energije') +	// calc_totals[0]
 				(brojilo == "jednotarifno" ?
 					(addSmallRow_mul ('kwh_ods_distribucija_jt_cijena', jt_kwh)) :
 					(addSmallRow_mul ('kwh_ods_distribucija_vt_cijena', vt_kwh) +
@@ -136,17 +136,17 @@ function loadTable() {
 					(addSmallRow_mul ('kwh_ods_prijenos_vt_cijena', vt_kwh) +
 					 addSmallRow_mul ('kwh_ods_prijenos_nt_cijena', nt_kwh))) +
 				addSmallRow_mul ('mj_naknada_omm', mjeseci) +
-				addSmallRow_subtotal ('HEP ODS - korištenje mreže') +			// totals[1]
+				addSmallRow_subtotal ('HEP ODS - korištenje mreže') +			// calc_totals[1]
 				addSmallRow_mul ('kwh_oieik',     brojilo == "jednotarifno" ? jt_kwh : (vt_kwh+nt_kwh)) +
 				addSmallRow_mul ('kwh_solidarna', brojilo == "jednotarifno" ? jt_kwh : (vt_kwh+nt_kwh)) +
 				addSmallRow_mul ('mj_naknada_opskrba', mjeseci) +
 				addSmallRow_mul ('mj_popust', -mjeseci) +
 				addSmallRow_subtotal ('Ostale naknade') +
 				addSmallRow_total ('Porezna osnovica') +
-				addSmallRow_mul ('pct_pdv', allTotal.toFixed(2)) +
+				addSmallRow_mul ('pct_pdv', op.calc_allTotal.toFixed(2)) +
 				addSmallRow_mul3 ('extra_popust',  -op.extra_popust(), 1) +
 				addSmallRow_total ('Total iznos računa') +
-				addSmallRow_mul3 ('mj_trosak_uplate', mj_trosak_uplate, mjeseci) +
+				addSmallRow_mul3 ('Trošak uplate', op.calc_mj_trosak_uplate, mjeseci) +
 				addSmallRow_total ('Sveukupni trošak') +
 				addSmallRow_notes ('Notes', op.notes) +
 				addSmallRow_href  ('Homepage', op.web_site) +
@@ -155,9 +155,9 @@ function loadTable() {
 				'</td>' +
 				'</tr>';
 
-			var calc_energija  = +totals[0];
-			var calc_mrezarina = +totals[1];
-			var calc_total	   = +totals[totals.length - 1];	// last total is "sveukupni trosak"
+			var calc_energija  = +op.calc_totals[0];
+			var calc_mrezarina = +op.calc_totals[1];
+			var calc_total	   = +op.calc_totals[op.calc_totals.length - 1];	// last total is "sveukupni trosak"
 			if (total_univerzalna == 'UNDEF') { total_univerzalna = calc_total; }
 			var calc_usteda    = total_univerzalna - calc_total;
 			var class_usteda   = calc_usteda > 0 ? 'plus' : 'minus';

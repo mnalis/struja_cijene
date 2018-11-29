@@ -1,3 +1,4 @@
+- stavi da ne resetira VT/NT/JT kod svakog refresha
 
 - search FIXME svugdje
 
