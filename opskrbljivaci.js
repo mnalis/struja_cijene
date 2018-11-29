@@ -25,6 +25,7 @@ var HEP_univerzalna_vt_cijena = 0.4900;
 var HEP_univerzalna_nt_cijena = 0.2400;
 
 var opskrbljivaci = {
+	'use strict';
 
 'opis': [
 	'naziv opskrbljivača električnom energijom i njegov tarifni model',
@@ -170,7 +171,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'http://hepi.hep.hr/',
 	'web_cjenik': 'http://hepi.hep.hr/UserDocsImages/Cjenici/Hepi-cjenik-9_17.pdf',
-	'notes': 'Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije. FIXME - dodatni popusti za HEPI club?',
+	'notes': 'Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije. FIXME - doradi dodatne popusti za HEPI club',
 	'dostupnost': 1,
 },
 
