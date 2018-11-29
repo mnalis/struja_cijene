@@ -18,10 +18,6 @@
 
 - opisi stavi da su tooltipovi na kolone
 
-
--? solidarne naknade provjeri tko ima (mailaj i zovi po FIXME u opskrbljivaci.js)
-   (ako je vjerovati gen-i kalkulatoru, nitko ih nema)
-
 - ljepsi opisi u details row
   (i da ne bude horizontal scroll na mobu)
 
