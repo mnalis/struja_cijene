@@ -167,7 +167,14 @@ var opskrbljivaci = {
 	'kwh_solidarna': 0,
 	'mj_popust': 0,
 	'extra_popust': function() {
-		return 2;
+		var hepi_klub_popust = 0;
+		var sum_racun = this.calc_allTotal;
+		if 		(sum_racun > 3300) {
+			hepi_klub_popust = 50;
+		} else if	(sum_racun > 3000) {
+			hepi_klub_popust = 40;
+		}
+		return hepi_klub_popust;
 	},
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': 0,
