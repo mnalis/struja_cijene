@@ -69,10 +69,10 @@ var opskrbljivaci = {
 	'mj_popust': 0,
 	'extra_popust': 0,
 	'pct_pdv': default_pdv,
-	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
+	'ima_mj_trosak_uplate': 0,
 	'web_site': 'http://www.hep.hr/elektra/',
 	'web_cjenik': 'http://www.hep.hr/elektra/kucanstvo/tarifne-stavke-cijene/1547',
-	'notes': 'Defaultni opskrbljivač za sva kućanstva koja nisu mijenjala opskrbljivača.',
+	'notes': 'Defaultni opskrbljivač za sva kućanstva koja nisu mijenjala opskrbljivača. Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti',
 	'dostupnost': 1,
 },
 
@@ -93,10 +93,10 @@ var opskrbljivaci = {
 	'mj_popust': 0,
 	'extra_popust': 0,
 	'pct_pdv': default_pdv,
-	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
+	'ima_mj_trosak_uplate': 0,
 	'web_site': 'http://www.jeftinastruja.hr/',
 	'web_cjenik': 'http://www.jeftinastruja.hr/za-ku%C4%87anstva/cijene-i-tarife/cjenik/',
-	'notes': 'FIXME - nema više prvi mjesec besplatno? bilo je do 31. listopada 2018, možda će opet biti',
+	'notes': 'Plaćanje bez provizije na prodajnim mjestima Tiska, iNovina i Konzuma (super, maxi). FIXME - nema više prvi mjesec besplatno? bilo je do 31. listopada 2018, možda će opet biti',
 	'dostupnost': 1,
 },
 
@@ -120,7 +120,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'http://hepi.hep.hr/',
 	'web_cjenik': 'http://hepi.hep.hr/UserDocsImages/Cjenici/Hepi-cjenik-9_17.pdf',
-	'notes': 'Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije. FIXME - dodatni popusti za HEPI club?',
+	'notes': 'Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije.',
 	'dostupnost': 1,
 },
 
@@ -304,15 +304,15 @@ var opskrbljivaci = {
 	'mj_naknada_omm': default_naknada_omm,
 	'mj_naknada_opskrba': default_naknada_opskrba,
 	'kwh_oieik': default_oieik_cijena,
-	'kwh_solidarna': default_solidarna_cijena, /*, FIXME ima li solidarnu? */
+	'kwh_solidarna': default_solidarna_cijena, /* NB: ne znamo da li su imali solidarnu, ne primaju nove */
 	'mj_popust': 0,
 	'extra_popust': 0,
 	'pct_pdv': default_pdv,
-	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
+	'ima_mj_trosak_uplate': ima_default_mj_trosak_uplate, /* NB: ne znamo da li se moglo bez troska uplate, ne primaju nove */
 	'web_site': 'http://www.220v.hr/',
 	'web_cjenik': 'http://220v.hr/#!/kucanstva',
-	'notes': 'FIXME da li ga isto kupuje RWE 11/2018+?',
-	'dostupnost': 1,
+	'notes': 'Gasi se; od 11/2018 korisnici prebačeni na RWE-KLASIK',
+	'dostupnost': 0,
 },
 
 {       'naziv': 'Proenergy - GREEN',
@@ -328,7 +328,7 @@ var opskrbljivaci = {
 	'mj_naknada_omm': default_naknada_omm,
 	'mj_naknada_opskrba': default_naknada_opskrba,
 	'kwh_oieik': default_oieik_cijena,
-	'kwh_solidarna': default_solidarna_cijena, /*, FIXME ima li solidarnu? */
+	'kwh_solidarna': default_solidarna_cijena, /* FIXME ima li solidarnu? */
 	'mj_popust': 0,
 	'extra_popust': 0,
 	'pct_pdv': default_pdv,
