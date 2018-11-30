@@ -28,13 +28,13 @@ function loadTable() {
 			calc_mjeseci=1;
 		}
 		var brojilo=document.getElementById('brojilo').value;
-		if (brojilo == "jednotarifno") {				// nuke unused values, just in case
-			document.getElementById('vt_kwh').value = "0";
-			document.getElementById('nt_kwh').value = "0";
+		if (brojilo == "jednotarifno") {
+			//document.getElementById('vt_kwh').value = "0";	// nuke unused values, just in case
+			//document.getElementById('nt_kwh').value = "0";
 			document.getElementById('brojilo_jt').className   = 'brojilo1';
 			document.getElementById('brojilo_vtnt').className = 'brojilo0';
 		} else {	// dvotarifno
-			document.getElementById('jt_kwh').value = "0";
+			//document.getElementById('jt_kwh').value = "0";
 			document.getElementById('brojilo_vtnt').className = 'brojilo1';
 			document.getElementById('brojilo_jt').className   = 'brojilo0';
 		}
