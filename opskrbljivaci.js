@@ -28,6 +28,7 @@ var op_defaults = {
 
 // RWE common part of the notes
 var extranotes_rwe = '5kn popusta je kako bi korisnik mogao sam odabrati gdje će platiti račun. Od 1.1.2019. korisnik placa solidarnu naknadu u punom iznosu 0.03kn/kWh, do onda je 0.01kn/kWh. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx';
+var extranotes_ht  = 'Gasi se; od 12/2018 korisnici prebačeni na RWE preko i-energije, ali HT cijene ostaju do isteka ugovorne obveze, a nakon toga RWE KLASIK. Računi bez naknade mogli su se plaćati na HT Platomatima.';
 
 var opskrbljivaci = {
 
@@ -206,7 +207,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'https://www.hrvatskitelekom.hr/energija/struja',
 	'web_cjenik': 'https://www.hrvatskitelekom.hr/ResourceManager/FileDownload.aspx?rId=8309&rType=2',
-	'notes': 'Gasi se; od 12/2018 korisnici prebačeni na RWE preko i-energije, ali HT cijene ostaju do isteka ugovorne obveze. Računi bez naknade mogli su se plaćati na HT Platomatima. ',
+	'notes': extranotes_ht,
 	'dostupnost': 0,
 },
 
@@ -230,7 +231,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'https://www.hrvatskitelekom.hr/energija/struja',
 	'web_cjenik': 'https://www.hrvatskitelekom.hr/ResourceManager/FileDownload.aspx?rId=8309&rType=2',
-	'notes': 'Gasi se; od 12/2018 korisnici prebačeni na RWE preko i-energije, ali HT cijene ostaju do isteka ugovorne obveze. Računi bez naknade mogli su se plaćati na HT Platomatima. ',
+	'notes': extranotes_ht,
 	'dostupnost': 0,
 },
 
