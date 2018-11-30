@@ -1,12 +1,10 @@
-- stavi da ne resetira VT/NT/JT kod svakog refresha
-
 - search FIXME svugdje
 
 - mogucnost usporedbe s necim drugim, a ne samo HEP Elektra - Univerzalna usluga kao baseline
   (za usporedbu da li se isplati prelaziti sa x na y)
 
 - HEPI-advanced napravi novu grupu HEPI+samoocitanje+klub - uracunaj popuste:
-    - dodatno HEPI club 2.9% niza cijena? (za 1500 bodova micanje opskrbne naknade na neko razdoblje ili druge pogodnosti)
+    - dodatno HEPI club do 2.9% niza cijena? (za 1500 bodova micanje opskrbne naknade na neko razdoblje ili druge pogodnosti)
       ali sto ako vec ne placam tu naknadu za opskrbu, sto ce mi umanjiti?
       3000bod za 40kn, 3300 za 6*8.36kn (50kn), itd. saznaj sto sve ima (skidaj app?)
 
@@ -35,8 +33,6 @@
 
 - table captions? 
 
-+? validator.w3.org
-
 - details sve stavke obojaj crveno ili zeleno ako su losije ili bolje od HEP Elektra univerzalne usluge
 
 - nekad mi fula za lipu, zasto? npr.
@@ -50,7 +46,6 @@
 
 - maybe: radi citljivosti, odvoji dobavljaca od modela   (ako ce mi stati toliko kolona na mobitel?)
 
-- stavi i mogucnost 1tarifnog (JT), a ne samo 2tarifnog brojila (VT+NT)
 - stavi mogucnost izracuna kako bi izgledalo da promijenis jednotarifno u dvotarifno i obratno 
 - mogucnost odabira popusta (kao posebni modeli ili?)
 - stavi i skuplje modele iz ponude radi kompletnosti?
