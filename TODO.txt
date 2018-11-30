@@ -2,12 +2,9 @@
 
 - search FIXME svugdje
 
-- i-energija zovi i pitaj sto sa mojim popustima? 0800 8777 (ili 0800 8860)
+- i-energija zovi i pitaj sto sa mojim popustima?  (ili 0800 8860 i-energija)
+  navodno ostaju isti uvjeti do isteka - provjeriti sa RWE 0800 8777
   i sto ako zelim drugdje a ne na RWE
-
-- za sve opskrbljivace prvjeri web i cekaj odgovor na upite:
-  - ima li solidarnu naknadu i koliku
-  - gdje (i ako) se moze platiti racun bez naknade
 
 - mogucnost usporedbe s necim drugim, a ne samo HEP Elektra - Univerzalna usluga kao baseline
   (za usporedbu da li se isplati prelaziti sa x na y)
@@ -16,11 +13,6 @@
     - dodatno HEPI club 2.9% niza cijena? (za 1500 bodova micanje opskrbne naknade na neko razdoblje ili druge pogodnosti)
       ali sto ako vec ne placam tu naknadu za opskrbu, sto ce mi umanjiti?
       3000bod za 40kn, 3300 za 6*8.36kn (50kn), itd. saznaj sto sve ima (skidaj app?)
-
-+ proenergy 0800 910 008
-	- solidarna?
-	- placanje bez naknade?
-	+ ne primaju vise nove za kucanstva, samo poduzetnistvo!
 
 - RWE 0800 87 77
 	+ solidarna? 3lp ima
