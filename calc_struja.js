@@ -20,11 +20,11 @@ function loadTable() {
 	// popunjavanje tablice
 	function recalc_table() {
 		var period='godišnje';
-		var mjeseci=12;
+		op.calc_mjeseci=12;
 		var def_trosak_uplate = document.getElementById('def_trosak_uplate').value;
 		if (document.getElementById('period').value == 'month') {
 			period='mjesečno';
-			mjeseci=1;
+			op.calc_mjeseci=1;
 		}
 		var brojilo=document.getElementById('brojilo').value;
 		if (brojilo == "jednotarifno") {				// nuke unused values, just in case
@@ -135,18 +135,18 @@ function loadTable() {
 					(addSmallRow_mul ('kwh_ods_prijenos_jt_cijena', jt_kwh)) :
 					(addSmallRow_mul ('kwh_ods_prijenos_vt_cijena', vt_kwh) +
 					 addSmallRow_mul ('kwh_ods_prijenos_nt_cijena', nt_kwh))) +
-				addSmallRow_mul ('mj_naknada_omm', mjeseci) +
+				addSmallRow_mul ('mj_naknada_omm', op.calc_mjeseci) +
 				addSmallRow_subtotal ('HEP ODS - korištenje mreže') +			// calc_totals[1]
 				addSmallRow_mul ('kwh_oieik',     brojilo == "jednotarifno" ? jt_kwh : (vt_kwh+nt_kwh)) +
 				addSmallRow_mul ('kwh_solidarna', brojilo == "jednotarifno" ? jt_kwh : (vt_kwh+nt_kwh)) +
-				addSmallRow_mul ('mj_naknada_opskrba', mjeseci) +
-				addSmallRow_mul ('mj_popust', -mjeseci) +
+				addSmallRow_mul ('mj_naknada_opskrba', op.calc_mjeseci) +
+				addSmallRow_mul ('mj_popust', -op.calc_mjeseci) +
 				addSmallRow_subtotal ('Ostale naknade') +
 				addSmallRow_total ('Porezna osnovica') +
 				addSmallRow_mul ('pct_pdv', op.calc_allTotal.toFixed(2)) +
 				addSmallRow_mul3 ('extra_popust',  -op.extra_popust(), 1) +
 				addSmallRow_total ('Total iznos računa') +
-				addSmallRow_mul3 ('Trošak uplate', op.calc_mj_trosak_uplate, mjeseci) +
+				addSmallRow_mul3 ('Trošak uplate', op.calc_mj_trosak_uplate, op.calc_mjeseci) +
 				addSmallRow_total ('Sveukupni trošak') +
 				addSmallRow_notes ('Notes', op.notes) +
 				addSmallRow_href  ('Homepage', op.web_site) +

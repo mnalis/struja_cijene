@@ -17,9 +17,10 @@
       ali sto ako vec ne placam tu naknadu za opskrbu, sto ce mi umanjiti?
       3000bod za 40kn, 3300 za 6*8.36kn (50kn), itd. saznaj sto sve ima (skidaj app?)
 
-- proenergy 0800 910 008
++ proenergy 0800 910 008
 	- solidarna?
 	- placanje bez naknade?
+	+ ne primaju vise nove za kucanstva, samo poduzetnistvo!
 
 - RWE 0800 87 77
 	+ solidarna? 3lp ima
@@ -29,6 +30,7 @@
 
 	1470 VT/god cca 122 kWh/mj
 	1696 NT/god cca 142 kWh/mj
+
 
 - opisi stavi da su tooltipovi na kolone
 
