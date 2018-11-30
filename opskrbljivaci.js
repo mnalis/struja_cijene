@@ -26,12 +26,8 @@ var op_defaults = {
 	'HEP_univerzalna_nt_cijena': 0.2400,
 };
 
-// common popusti za RWE
-function extrapopust_rwe()
-{
-	return calc_mjeseci * 5;	// umanjuju racun za 5kn, kako bi mogli platiti kako zelimo racun
-}
-var extranotes_rwe = 'Od 1.1.2019. korisnik placa solidarnu naknadu u punom iznosu 0.03kn/kWh, do onda je 0.01kn/kWh. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx';
+// RWE common part of the notes
+var extranotes_rwe = '5kn popusta je kako bi korisnik mogao sam odabrati gdje će platiti račun. Od 1.1.2019. korisnik placa solidarnu naknadu u punom iznosu 0.03kn/kWh, do onda je 0.01kn/kWh. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx';
 
 var opskrbljivaci = {
 
@@ -252,10 +248,10 @@ var opskrbljivaci = {
 	'mj_naknada_opskrba': op_defaults.naknada_opskrba,
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena, /* do 1.1.2019. je 0.01kn/kWh? */
-	'mj_popust': 0,
-	'extra_popust': extrapopust_rwe,
+	'mj_popust': 5,
+	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
-	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
+	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
 	'notes': 'Ugovor na 3 godine. Dodatnih 2% za online prijave na http://rwe.hr/Elektricna_energija/Kucanstva/On-line_ugovor.aspx . Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_rwe,
@@ -275,10 +271,10 @@ var opskrbljivaci = {
 	'mj_naknada_opskrba': op_defaults.naknada_opskrba,
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena, /* do 1.1.2019. je 0.01kn/kWh? */
-	'mj_popust': 0,
-	'extra_popust': extrapopust_rwe,
+	'mj_popust': 5,
+	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
-	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
+	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
 	'notes': 'Ugovor na 3 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_rwe,
@@ -299,10 +295,10 @@ var opskrbljivaci = {
 	'mj_naknada_opskrba': op_defaults.naknada_opskrba,
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena, /* do 1.1.2019. je 0.01kn/kWh? */
-	'mj_popust': 0,
-	'extra_popust': extrapopust_rwe,
+	'mj_popust': 5,
+	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
-	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
+	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
 	'notes': 'Ugovor na 2 godine. Ova cijena je samo za prvu godinu, nakon toga se navodno cjenik B! ' + extranotes_rwe,
@@ -323,10 +319,10 @@ var opskrbljivaci = {
 	'mj_naknada_opskrba': op_defaults.naknada_opskrba,
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena, /* do 1.1.2019. je 0.01kn/kWh? */
-	'mj_popust': 0,
-	'extra_popust': extrapopust_rwe,
+	'mj_popust': 5,
+	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
-	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate, /* FIXME moze li bez troska uplate? */
+	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
 	'web_site': 'http://www.rwe.hr/',
 	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
 	'notes': 'Bez ugovorne obveze. Ova tarifa se (navodno) po defaultu koristi za korisnike preuzete od HT-a, kao i za 2. i ostale godine IDEAL i BONUS tarifa. ' + extranotes_rwe,

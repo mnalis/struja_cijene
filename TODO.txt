@@ -2,10 +2,6 @@
 
 - search FIXME svugdje
 
-- i-energija zovi i pitaj sto sa mojim popustima?  (ili 0800 8860 i-energija)
-  navodno ostaju isti uvjeti do isteka - provjeriti sa RWE 0800 8777
-  i sto ako zelim drugdje a ne na RWE
-
 - mogucnost usporedbe s necim drugim, a ne samo HEP Elektra - Univerzalna usluga kao baseline
   (za usporedbu da li se isplati prelaziti sa x na y)
 
@@ -13,15 +9,6 @@
     - dodatno HEPI club 2.9% niza cijena? (za 1500 bodova micanje opskrbne naknade na neko razdoblje ili druge pogodnosti)
       ali sto ako vec ne placam tu naknadu za opskrbu, sto ce mi umanjiti?
       3000bod za 40kn, 3300 za 6*8.36kn (50kn), itd. saznaj sto sve ima (skidaj app?)
-
-- RWE 0800 87 77
-	+ solidarna? 3lp ima
-	+ placanje bez naknade?  umanje se za 5kn svaki racun!
-	- zovi za izracun detaljni
-	- i zovi za otkazivanje
-
-	1470 VT/god cca 122 kWh/mj
-	1696 NT/god cca 142 kWh/mj
 
 
 - opisi stavi da su tooltipovi na kolone
