@@ -66,8 +66,10 @@ function loadTable() {
 				var klasa=arguments[0];
 				var htmlRow='<tr>';
 				if (klasa) { htmlRow = '<tr class="' + klasa + '">' }
+				var td = '<td class="naziv">';	// first row is always class "naziv"
 				for (var i=1, numArgs = arguments.length; i<numArgs; i++){
 					htmlRow = htmlRow + '<td>' + arguments[i] + '</td>';
+					td='<td>';
 				}
 				return htmlRow + '</tr>';
 			}
@@ -111,11 +113,11 @@ function loadTable() {
 
 			// returns row with some big description
 			function addSmallRow_notes(desc,value) {
-				return '<tr><td>' + desc + '</td><td colspan=3 class="notes">' + value + '</td></tr>';
+				return '<tr><td class="naziv">' + desc + '</td><td colspan=3 class="notes">' + value + '</td></tr>';
 			}
 			// returns row with HREF
 			function addSmallRow_href(desc,href) {
-				return '<tr><td>' + desc + '</td><td colspan=3 class="notes"><A target="_blank" HREF="' + href + '">Otvori</A></td></tr>';
+				return '<tr><td class="naziv">' + desc + '</td><td colspan=3 class="notes"><A target="_blank" HREF="' + href + '">Otvori</A></td></tr>';
 			}
 
 			var row_details =
