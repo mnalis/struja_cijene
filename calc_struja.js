@@ -112,8 +112,9 @@ function loadTable() {
 			}
 
 			// returns row with some big description
-			function addSmallRow_notes(desc,value) {
-				return '<tr><td class="naziv">' + desc + '</td><td colspan=3 class="notes">' + value + '</td></tr>';
+			function addSmallRow_notes(desc,note) {
+				note=note.replace (/(https?:[^ ]+)\b/gi, '<a href="$1">link</a>');
+				return '<tr><td class="naziv">' + desc + '</td><td colspan=3 class="notes">' + note + '</td></tr>';
 			}
 			// returns row with HREF
 			function addSmallRow_href(desc,href) {
