@@ -68,7 +68,7 @@ function loadTable() {
 				if (klasa) { htmlRow = '<tr class="' + klasa + '">' }
 				var td = '<td class="naziv">';	// first row is always class "naziv"
 				for (var i=1, numArgs = arguments.length; i<numArgs; i++){
-					htmlRow = htmlRow + '<td>' + arguments[i] + '</td>';
+					htmlRow = htmlRow + td + arguments[i] + '</td>';
 					td='<td>';
 				}
 				return htmlRow + '</tr>';
