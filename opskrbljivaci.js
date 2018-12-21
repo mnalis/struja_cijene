@@ -2,7 +2,7 @@
 // lista opskrbljivaca sa cijenama i popustima
 //
 
-var last_updated='2018-12-02';	// autoupdated by Makefile
+var last_updated='2018-12-21';	// autoupdated by Makefile
 
 var op_defaults = {
 	'ima_mj_trosak_uplate': 1,	// odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
@@ -95,7 +95,7 @@ var opskrbljivaci = {
 	'mj_naknada_omm': op_defaults.naknada_omm,
 	'mj_naknada_opskrba': op_defaults.naknada_opskrba,
 	'kwh_oieik': op_defaults.oieik_cijena,
-	'kwh_solidarna': 0,
+	'kwh_solidarna': op_defaults.solidarna_cijena, /* od 1.1.2019. - http://www.jeftinastruja.hr/za-ku%c4%87anstva/jeftina-struja/obavijesti/solidarna-naknada/ */
 	'mj_popust': 0,
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
@@ -248,7 +248,7 @@ var opskrbljivaci = {
 	'mj_naknada_omm': op_defaults.naknada_omm,
 	'mj_naknada_opskrba': op_defaults.naknada_opskrba,
 	'kwh_oieik': op_defaults.oieik_cijena,
-	'kwh_solidarna': op_defaults.solidarna_cijena, /* do 1.1.2019. je 0.01kn/kWh? */
+	'kwh_solidarna': op_defaults.solidarna_cijena,
 	'mj_popust': 5,
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
@@ -271,7 +271,7 @@ var opskrbljivaci = {
 	'mj_naknada_omm': op_defaults.naknada_omm,
 	'mj_naknada_opskrba': op_defaults.naknada_opskrba,
 	'kwh_oieik': op_defaults.oieik_cijena,
-	'kwh_solidarna': op_defaults.solidarna_cijena, /* do 1.1.2019. je 0.01kn/kWh? */
+	'kwh_solidarna': op_defaults.solidarna_cijena,
 	'mj_popust': 5,
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
@@ -295,7 +295,7 @@ var opskrbljivaci = {
 	'mj_naknada_omm': op_defaults.naknada_omm,
 	'mj_naknada_opskrba': op_defaults.naknada_opskrba,
 	'kwh_oieik': op_defaults.oieik_cijena,
-	'kwh_solidarna': op_defaults.solidarna_cijena, /* do 1.1.2019. je 0.01kn/kWh? */
+	'kwh_solidarna': op_defaults.solidarna_cijena,
 	'mj_popust': 5,
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
@@ -319,7 +319,7 @@ var opskrbljivaci = {
 	'mj_naknada_omm': op_defaults.naknada_omm,
 	'mj_naknada_opskrba': op_defaults.naknada_opskrba,
 	'kwh_oieik': op_defaults.oieik_cijena,
-	'kwh_solidarna': op_defaults.solidarna_cijena, /* do 1.1.2019. je 0.01kn/kWh? */
+	'kwh_solidarna': op_defaults.solidarna_cijena,
 	'mj_popust': 5,
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
