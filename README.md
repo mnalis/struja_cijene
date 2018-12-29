@@ -4,6 +4,8 @@ Izračun cijene struje u Hrvatskoj (usporedba opskrbljivača električnom energi
 Za razliku od HERA i drugih dostupnih kalkulatora, uključuje maksimalne moguće popuste svakog opskrbljivača u izračun.
 Također uzima u obzir trošak plaćanja računa, ako opskrbljivač ne nudi mogućnost plaćanja bez naknade.
 
+Live instancu mozete isprobati na: http://mnalis.com/struja_cijene/
+
 Molimo prijavite moguće nepravilnosti na https://github.com/mnalis/struja_cijene
 
 Ostali pregledani pokušaji i razlozi njihove neprimjerenosti za precizan izračun:
