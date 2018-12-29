@@ -55,7 +55,7 @@ table {
 }
 
 
-tr:hover td {
+tr:not(.detalji1):hover td {
 	color: black;
 	opacity: 0.7;
 	filter: brightness(85%);
