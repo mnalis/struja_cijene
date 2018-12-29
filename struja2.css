@@ -56,8 +56,9 @@ table {
 
 
 tr:hover td {
-	background: #d0dafd;
-	color: #339;
+	color: black;
+	opacity: 0.7;
+	filter: brightness(85%);
 }
 
 th {
