@@ -2,7 +2,7 @@
 // lista opskrbljivaca sa cijenama i popustima
 //
 
-var last_updated='2018-12-21';	// autoupdated by Makefile
+var last_updated='2018-12-29';	// autoupdated by Makefile
 
 var op_defaults = {
 	'ima_mj_trosak_uplate': 1,	// odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
@@ -246,7 +246,7 @@ var opskrbljivaci = {
 	'kwh_ods_prijenos_vt_cijena': op_defaults.kwh_ods_prijenos_vt_cijena,
 	'kwh_ods_prijenos_nt_cijena': op_defaults.kwh_ods_prijenos_nt_cijena,
 	'mj_naknada_omm': op_defaults.naknada_omm,
-	'mj_naknada_opskrba': op_defaults.naknada_opskrba,
+	'mj_naknada_opskrba': 20.90,	/* od 1.1.2019. */
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena,
 	'mj_popust': 5,
@@ -269,7 +269,7 @@ var opskrbljivaci = {
 	'kwh_ods_prijenos_vt_cijena': op_defaults.kwh_ods_prijenos_vt_cijena,
 	'kwh_ods_prijenos_nt_cijena': op_defaults.kwh_ods_prijenos_nt_cijena,
 	'mj_naknada_omm': op_defaults.naknada_omm,
-	'mj_naknada_opskrba': op_defaults.naknada_opskrba,
+	'mj_naknada_opskrba': 20.90,	/* od 1.1.2019. */
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena,
 	'mj_popust': 5,
@@ -293,7 +293,7 @@ var opskrbljivaci = {
 	'kwh_ods_prijenos_vt_cijena': op_defaults.kwh_ods_prijenos_vt_cijena,
 	'kwh_ods_prijenos_nt_cijena': op_defaults.kwh_ods_prijenos_nt_cijena,
 	'mj_naknada_omm': op_defaults.naknada_omm,
-	'mj_naknada_opskrba': op_defaults.naknada_opskrba,
+	'mj_naknada_opskrba': 20.90,	/* od 1.1.2019. */
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena,
 	'mj_popust': 5,
@@ -317,7 +317,7 @@ var opskrbljivaci = {
 	'kwh_ods_prijenos_vt_cijena': op_defaults.kwh_ods_prijenos_vt_cijena,
 	'kwh_ods_prijenos_nt_cijena': op_defaults.kwh_ods_prijenos_nt_cijena,
 	'mj_naknada_omm': op_defaults.naknada_omm,
-	'mj_naknada_opskrba': op_defaults.naknada_opskrba,
+	'mj_naknada_opskrba': 20.90,	/* od 1.1.2019. */
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena,
 	'mj_popust': 5,
