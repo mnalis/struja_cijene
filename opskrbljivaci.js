@@ -170,12 +170,24 @@ var opskrbljivaci = {
 	'kwh_solidarna': 0,
 	'mj_popust': 0,
 	'extra_popust': function() {
+		// 19980 bodova - Umanjenje za ops. naknadu 36mj
+		// 13320 bodova - Umanjenje za ops. naknadu 24mj
+		// 6600 bodova - Umanjenje za ops. naknadu 12mj
+		// 6000 bodova - Umanjenje racuna 80kn
+		// 4500 bodova - Umanjenje racuna 60kn
+		// 3300 bodova - Umanjenje za ops. naknadu 6 mj
+		// 3000 bodova - Umanjenje racuna 40kn
+		// 1500 bodova - Umanjenje racuna 20kn
 		var hepi_klub_popust = 0;
 		var sum_racun = this.calc_allTotal;
-		if 		(sum_racun > 3300) {
-			hepi_klub_popust = 50;
+		if 		(sum_racun > 6000) {
+			hepi_klub_popust = 80;
+		} else if	(sum_racun > 4500) {
+			hepi_klub_popust = 60;
 		} else if	(sum_racun > 3000) {
 			hepi_klub_popust = 40;
+		} else if	(sum_racun > 1500) {
+			hepi_klub_popust = 20;
 		}
 		return hepi_klub_popust;
 	},
@@ -183,7 +195,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'http://hepi.hep.hr/',
 	'web_cjenik': 'http://hepi.hep.hr/UserDocsImages/Cjenici/Hepi-cjenik-9_17.pdf',
-	'notes': 'Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije. FIXME - doradi dodatne popusti za HEPI club',
+	'notes': 'Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije. HEPI club: svakih 1500 bodova = 20kn manji račun',
 	'dostupnost': 1,
 },
 
