@@ -178,16 +178,14 @@ var opskrbljivaci = {
 		// 3300 bodova - Umanjenje za ops. naknadu 6 mj
 		// 3000 bodova - Umanjenje racuna 40kn
 		// 1500 bodova - Umanjenje racuna 20kn
+
+		// FIXME: trenutno ignoriramo popust umanjenja za opskrbnu naknadu, 
+		// FIXME: trenutno umanjujemo i preko 6000 bodova (jer gledamo da je za velike iznose izracun vjerojatno za cijelu godinu, pa da mozemo teoretski *svaki mjesec* odbiti do 6000kn ako su toliki racuni!)
 		var hepi_klub_popust = 0;
 		var sum_racun = this.calc_allTotal;
-		if 		(sum_racun > 6000) {
-			hepi_klub_popust = 80;
-		} else if	(sum_racun > 4500) {
-			hepi_klub_popust = 60;
-		} else if	(sum_racun > 3000) {
-			hepi_klub_popust = 40;
-		} else if	(sum_racun > 1500) {
-			hepi_klub_popust = 20;
+		while (sum_racun >= 1500) {
+			hepi_klub_popust += 20;
+			sum_racun -= 1500;
 		}
 		return hepi_klub_popust;
 	},
