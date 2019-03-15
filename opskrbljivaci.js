@@ -27,7 +27,7 @@ var op_defaults = {
 };
 
 // RWE common part of the notes
-var extranotes_rwe = '5kn popusta je kako bi korisnik mogao sam odabrati gdje će platiti račun. Od 1.1.2019. korisnik placa solidarnu naknadu u punom iznosu 0.03kn/kWh, do onda je 0.01kn/kWh. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx';
+var extranotes_rwe = '5kn popusta je kako bi korisnik mogao sam odabrati gdje će platiti račun. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx';
 var extranotes_ht  = 'Gasi se; od 12/2018 korisnici prebačeni na RWE preko i-energije, ali HT cijene ostaju do isteka ugovorne obveze, a nakon toga RWE KLASIK. Računi bez naknade mogli su se plaćati na HT Platomatima.';
 
 var opskrbljivaci = {
@@ -259,7 +259,7 @@ var opskrbljivaci = {
 	'mj_naknada_opskrba': 20.90,	/* od 1.1.2019. */
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena,
-	'mj_popust': 5,
+	'mj_popust': 4.425,
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
@@ -282,7 +282,7 @@ var opskrbljivaci = {
 	'mj_naknada_opskrba': 20.90,	/* od 1.1.2019. */
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena,
-	'mj_popust': 5,
+	'mj_popust': 4.425,
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
@@ -306,7 +306,7 @@ var opskrbljivaci = {
 	'mj_naknada_opskrba': 20.90,	/* od 1.1.2019. */
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena,
-	'mj_popust': 5,
+	'mj_popust': 4.425,
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
@@ -330,7 +330,7 @@ var opskrbljivaci = {
 	'mj_naknada_opskrba': 20.90,	/* od 1.1.2019. */
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena,
-	'mj_popust': 5,
+	'mj_popust': 4.425,
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
