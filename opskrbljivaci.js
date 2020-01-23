@@ -28,7 +28,7 @@ var op_defaults = {
 
 // RWE common part of the notes
 var extranotes_rwe = '5kn popusta je kako bi korisnik mogao sam odabrati gdje će platiti račun. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx';
-var extranotes_ht  = 'Gasi se; od 12/2018 korisnici prebačeni na RWE preko i-energije, ali HT cijene ostaju do isteka ugovorne obveze, a nakon toga RWE KLASIK. Računi bez naknade mogli su se plaćati na HT Platomatima.';
+var extranotes_ht  = 'Ugašeno; od 12/2018 korisnici prebačeni na RWE preko i-energije, ali HT cijene ostaju do isteka ugovorne obveze, a nakon toga RWE KLASIK. Računi bez naknade mogli su se plaćati na HT Platomatima.';
 
 var opskrbljivaci = {
 
@@ -360,7 +360,31 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate, /* NB: ne znamo da li se moglo bez troska uplate, ne primaju nove */
 	'web_site': 'http://www.220v.hr/',
 	'web_cjenik': 'http://220v.hr/#!/kucanstva',
-	'notes': 'Gasi se; od 11/2018 korisnici prebačeni na RWE-KLASIK',
+	'notes': 'Ugašeno; od 12/2018 korisnici prebačeni na RWE-KLASIK',
+	'dostupnost': 0,
+},
+
+{       'naziv': 'Proenergy - bez obaveze',
+	'kwh_jt_cijena': 0.5800,
+	'kwh_vt_cijena': 0.6400,
+	'kwh_nt_cijena': 0.4400,
+	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
+	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
+	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
+	'kwh_ods_prijenos_jt_cijena': op_defaults.kwh_ods_prijenos_jt_cijena,
+	'kwh_ods_prijenos_vt_cijena': op_defaults.kwh_ods_prijenos_vt_cijena,
+	'kwh_ods_prijenos_nt_cijena': op_defaults.kwh_ods_prijenos_nt_cijena,
+	'mj_naknada_omm': op_defaults.naknada_omm,
+	'mj_naknada_opskrba': op_defaults.naknada_opskrba,
+	'kwh_oieik': op_defaults.oieik_cijena,
+	'kwh_solidarna': op_defaults.solidarna_cijena,  /* NB: ne znamo da li su imali solidarnu, ne primaju nove */
+	'mj_popust': 0,
+	'extra_popust': function() { return 0; },
+	'pct_pdv': op_defaults.pdv,
+	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate, /* NB: ne znamo da li se moglo bez troska uplate, ne primaju nove */
+	'web_site': 'https://www.proenergy.eu/hr/elektricna-energija/',
+	'web_cjenik': 'https://www.proenergy.eu/hr/elektricna-energija/',
+	'notes': 'U osnovi ne primaju nova kućanstva barem od 12/2018-01/2020',
 	'dostupnost': 0,
 },
 
@@ -384,7 +408,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate, /* NB: ne znamo da li se moglo bez troska uplate, ne primaju nove */
 	'web_site': 'https://www.proenergy.eu/hr/elektricna-energija/',
 	'web_cjenik': 'https://www.proenergy.eu/assets/pdf/struja/hr/Cijene%20elektri%C4%8Dne%20energije%20-%20ku%C4%87anstvo%20-%20green.pdf',
-	'notes': '100% energije iz obnovljivih izvora (sa certifikatom)',
+	'notes': 'U osnovi ne primaju nova kućanstva barem od 12/2018-01/2020; 100% energije iz obnovljivih izvora (sa certifikatom)',
 	'dostupnost': 0,
 },
 
@@ -408,7 +432,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate, /* NB: ne znamo da li se moglo bez troska uplate, ne primaju nove */
 	'web_site': 'https://www.proenergy.eu/hr/elektricna-energija/',
 	'web_cjenik': 'https://www.proenergy.eu/assets/pdf/struja/hr/Cijene%20elektri%C4%8Dne%20energije%20-%20ku%C4%87anstvo%20-%20green.pdf',
-	'notes': '100% energije iz obnovljivih izvora (sa certifikatom) - JT',
+	'notes': 'U osnovi ne primaju nova kućanstva barem od 12/2018-01/2020; 100% energije iz obnovljivih izvora (sa certifikatom) - JT',
 	'dostupnost': 0,
 },
 
