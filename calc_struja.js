@@ -168,11 +168,11 @@ function loadTable() {
 
 			var row_summary =
 				'<tr  onClick="tr_toggle(' + count + ')" title="' + op.notes  + '">' +
-				'<td class="naziv' + (op.dostupnost == 0 ? ' nedostupan"' : '')  +'">' + op.naziv					+ '</td>' +
-				'<td>' + calc_energija.toFixed(2)				+ '</td>' +
-				'<td>' + calc_mrezarina.toFixed(2)				+ '</td>' +
-				'<td>' + calc_total.toFixed(2)					+ '</td>' +
-				'<td class="' + class_usteda + '">' + calc_usteda.toFixed(2)	+ '</td>' +
+				'<td class="naziv' + (op.dostupnost == 0 ? ' nedostupan"' : '')  +'">' + op.naziv	+ '</td>' +
+				'<td class="lowprio">' + calc_energija.toFixed(2)					+ '</td>' +
+				'<td class="lowprio">' + calc_mrezarina.toFixed(2)					+ '</td>' +
+				'<td>' + calc_total.toFixed(2)								+ '</td>' +
+				'<td class="' + class_usteda + '">' + calc_usteda.toFixed(2)				+ '</td>' +
 				'</tr>';
 			return row_summary + row_details;
 		}

@@ -117,6 +117,10 @@ td {
 	opacity: 0.8;
 }
 
+.lowprio {
+	display: table-cell;
+}
+
 /* mobile view has too little space for all the data */
 @media (max-width: 60em) {
 	.naziv {
@@ -125,5 +129,8 @@ td {
 	}
 	table {
 		margin: 0;
+	}
+	.lowprio {
+		display: none;
 	}
 }
