@@ -26,8 +26,8 @@ var op_defaults = {
 	'HEP_univerzalna_nt_cijena': 0.2400,
 };
 
-// RWE common part of the notes
-var extranotes_rwe = '5kn popusta je kako bi korisnik mogao sam odabrati gdje će platiti račun. Navodno su jos moguci dodatni mjeseci popusta za dovedene korisnike: http://rwe.hr/Elektricna_energija/Posebne_ponude.aspx';
+// E.ON common part of the notes
+var extranotes_eon = '5kn popusta je kako bi korisnik mogao sam odabrati gdje će platiti račun. Usluga sadrži i besplatno korištenje dodatnih pogodnosti Pomoći u kući, Zdravstveno savjetovanje i Standardni smještaj. Još su mogući dodatni mjeseci popusta za dovedene korisnike: https://www.eon.hr/content/dam/eon/eon-hr/documents/034-S_EE_HH_Prijatelj_Uvjeti_koristenja_ponude-31.12.2019.pdf';
 var extranotes_ht  = 'Ugašeno; od 12/2018 korisnici prebačeni na RWE preko i-energije, ali HT cijene ostaju do isteka ugovorne obveze, a nakon toga RWE KLASIK. Računi bez naknade mogli su se plaćati na HT Platomatima.';
 
 var opskrbljivaci = {
@@ -245,7 +245,7 @@ var opskrbljivaci = {
 	'dostupnost': 0,
 },
 
-{       'naziv': 'RWE - IDEAL+online 1.godina (A-12%)',
+{       'naziv': 'E.ON - IDEAL 1.godina (A-12%)',
 	'kwh_jt_cijena': (op_defaults.HEP_univerzalna_jt_cijena * (1-0.12)).toFixed(4),
 	'kwh_vt_cijena': (op_defaults.HEP_univerzalna_vt_cijena * (1-0.12)).toFixed(4),
 	'kwh_nt_cijena': (op_defaults.HEP_univerzalna_nt_cijena * (1-0.12)).toFixed(4),
@@ -256,22 +256,23 @@ var opskrbljivaci = {
 	'kwh_ods_prijenos_vt_cijena': op_defaults.kwh_ods_prijenos_vt_cijena,
 	'kwh_ods_prijenos_nt_cijena': op_defaults.kwh_ods_prijenos_nt_cijena,
 	'mj_naknada_omm': op_defaults.naknada_omm,
-	'mj_naknada_opskrba': 20.90,	/* od 1.1.2019. */
+	'mj_naknada_opskrba': 26.90,	/* od 31.12.2019. */
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena,
 	'mj_popust': 4.425,
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
-	'web_site': 'http://www.rwe.hr/',
-	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
-	'notes': 'Ugovor na 3 godine. Dodatnih 2% za online prijave na http://rwe.hr/Elektricna_energija/Kucanstva/On-line_ugovor.aspx . Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_rwe,
-	'dostupnost': 1,
+	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
+	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/022-S_EE_HH_Cjenik-31.12.2019.pdf',
+	'notes': 'RWE je postao E-ON. Ugovor na 3 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_eon,
+	'dostupnost': 0,
 },
-{       'naziv': 'RWE - IDEAL 1.godina (A-10%)',
-	'kwh_jt_cijena': (op_defaults.HEP_univerzalna_jt_cijena * (1-0.10)).toFixed(4),
-	'kwh_vt_cijena': (op_defaults.HEP_univerzalna_vt_cijena * (1-0.10)).toFixed(4),
-	'kwh_nt_cijena': (op_defaults.HEP_univerzalna_nt_cijena * (1-0.10)).toFixed(4),
+
+{       'naziv': 'E.ON - BONUS 1. godina (A-9%)',
+	'kwh_jt_cijena': (op_defaults.HEP_univerzalna_jt_cijena * (1-0.09)).toFixed(4),
+	'kwh_vt_cijena': (op_defaults.HEP_univerzalna_vt_cijena * (1-0.09)).toFixed(4),
+	'kwh_nt_cijena': (op_defaults.HEP_univerzalna_nt_cijena * (1-0.09)).toFixed(4),
 	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
 	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
 	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
@@ -279,47 +280,23 @@ var opskrbljivaci = {
 	'kwh_ods_prijenos_vt_cijena': op_defaults.kwh_ods_prijenos_vt_cijena,
 	'kwh_ods_prijenos_nt_cijena': op_defaults.kwh_ods_prijenos_nt_cijena,
 	'mj_naknada_omm': op_defaults.naknada_omm,
-	'mj_naknada_opskrba': 20.90,	/* od 1.1.2019. */
+	'mj_naknada_opskrba': 26.90,	/* od 31.12.2019. */
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena,
 	'mj_popust': 4.425,
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
-	'web_site': 'http://www.rwe.hr/',
-	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
-	'notes': 'Ugovor na 3 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_rwe,
+	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
+	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/022-S_EE_HH_Cjenik-31.12.2019.pdf',
+	'notes': 'RWE je postao E-ON. Ugovor na 2 godine. Ova cijena je samo za prvu godinu, nakon toga se navodno cjenik B! ' + extranotes_eon,
 	'dostupnost': 1,
 },
 
-{       'naziv': 'RWE - BONUS 1. godina (A-7%)',
-	'kwh_jt_cijena': (op_defaults.HEP_univerzalna_jt_cijena * (1-0.07)).toFixed(4),
-	'kwh_vt_cijena': (op_defaults.HEP_univerzalna_vt_cijena * (1-0.07)).toFixed(4),
-	'kwh_nt_cijena': (op_defaults.HEP_univerzalna_nt_cijena * (1-0.07)).toFixed(4),
-	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
-	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
-	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
-	'kwh_ods_prijenos_jt_cijena': op_defaults.kwh_ods_prijenos_jt_cijena,
-	'kwh_ods_prijenos_vt_cijena': op_defaults.kwh_ods_prijenos_vt_cijena,
-	'kwh_ods_prijenos_nt_cijena': op_defaults.kwh_ods_prijenos_nt_cijena,
-	'mj_naknada_omm': op_defaults.naknada_omm,
-	'mj_naknada_opskrba': 20.90,	/* od 1.1.2019. */
-	'kwh_oieik': op_defaults.oieik_cijena,
-	'kwh_solidarna': op_defaults.solidarna_cijena,
-	'mj_popust': 4.425,
-	'extra_popust': function() { return 0; },
-	'pct_pdv': op_defaults.pdv,
-	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
-	'web_site': 'http://www.rwe.hr/',
-	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
-	'notes': 'Ugovor na 2 godine. Ova cijena je samo za prvu godinu, nakon toga se navodno cjenik B! ' + extranotes_rwe,
-	'dostupnost': 1,
-},
-
-{       'naziv': 'RWE - KLASIK (B cjenik)',
+{       'naziv': 'E.ON - KLASIK (B cjenik)',
 	'kwh_jt_cijena': 0.4465,
-	'kwh_vt_cijena': 0.4750,
-	'kwh_nt_cijena': 0.2375,
+	'kwh_vt_cijena': 0.4690,
+	'kwh_nt_cijena': 0.2899,
 	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
 	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
 	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
@@ -327,16 +304,16 @@ var opskrbljivaci = {
 	'kwh_ods_prijenos_vt_cijena': op_defaults.kwh_ods_prijenos_vt_cijena,
 	'kwh_ods_prijenos_nt_cijena': op_defaults.kwh_ods_prijenos_nt_cijena,
 	'mj_naknada_omm': op_defaults.naknada_omm,
-	'mj_naknada_opskrba': 20.90,	/* od 1.1.2019. */
+	'mj_naknada_opskrba': 26.90,	/* od 31.12.2019. */
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena,
 	'mj_popust': 4.425,
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
-	'web_site': 'http://www.rwe.hr/',
-	'web_cjenik': 'http://www.rwe.hr/Elektricna_energija/Kucanstva/Cijene_i_proizvodi.aspx',
-	'notes': 'Bez ugovorne obveze. Ova tarifa se (navodno) po defaultu koristi za korisnike preuzete od HT-a, kao i za 2. i ostale godine IDEAL i BONUS tarifa. ' + extranotes_rwe,
+	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
+	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/022-S_EE_HH_Cjenik-31.12.2019.pdf',
+	'notes': 'RWE je postao E-ON. Bez ugovorne obveze. Ova tarifa se koristi za 2. i ostale godine IDEAL i BONUS tarifa, kao i za korisnike preuzete od drugih opskrbljivača. ' + extranotes_eon,
 	'dostupnost': 1,
 },
 
