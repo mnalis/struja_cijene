@@ -129,7 +129,7 @@ var opskrbljivaci = {
 	'dostupnost': 1,
 },
 
-{       'naziv': 'HEP Opskrba - HEPI+samoočitanje',
+{       'naziv': 'HEP Opskrba - HEPI + samoočitanje',
 	'kwh_jt_cijena': 0.4370,
 	'kwh_vt_cijena': 0.4655,
 	'kwh_nt_cijena': 0.2280,
@@ -153,7 +153,7 @@ var opskrbljivaci = {
 	'dostupnost': 1,
 },
 
-{       'naziv': 'HEP Opskrba - HEPI+samoočitanje+klub',
+{       'naziv': 'HEP Opskrba - HEPI + samoočitanje + klub',
 	'kwh_jt_cijena': 0.4370,
 	'kwh_vt_cijena': 0.4655,
 	'kwh_nt_cijena': 0.2280,

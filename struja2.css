@@ -13,16 +13,14 @@ html, body {
 }
 main {
    padding: 0;
-   padding-bottom: 7em;	/* more than the height of the footer, to leave some space when screen full */
+   padding-bottom: 12rem;	/* must be more than the height of the footer, to leave some space even when screen full */
 }
 footer {
    position: absolute;
    bottom: 0;
-   display: table;
    padding-left: 1%;
    padding-right: 1%;
    width: 98%;
-   height: 4em;		/* Height of the footer */
    background: #6cf;
 }
 
