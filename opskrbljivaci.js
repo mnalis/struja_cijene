@@ -101,7 +101,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'http://www.jeftinastruja.hr/',
 	'web_cjenik': 'http://www.jeftinastruja.hr/za-ku%C4%87anstva/cijene-i-tarife/cjenik/',
-	'notes': 'Plaćanje bez provizije na prodajnim mjestima Tiska, iNovina i Konzuma (super, maxi). FIXME - nema više prvi mjesec besplatno? bilo je do 31. listopada 2018, možda će opet biti',
+	'notes': 'Od 31.3.2020-31.12.2020, na prva 3 mjeseca dodatni popust od 15%. Plaćanje bez provizije na prodajnim mjestima Tiska, iNovina i Konzuma (super, maxi). FIXME - nema više prvi mjesec besplatno? bilo je do 31. listopada 2018, možda će opet biti',
 	'dostupnost': 1,
 },
 
