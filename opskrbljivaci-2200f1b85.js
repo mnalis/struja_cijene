@@ -180,7 +180,7 @@ var opskrbljivaci = {
 
 		// FIXME: trenutno ignoriramo popust umanjenja za opskrbnu naknadu, 
 		// FIXME: trenutno umanjujemo i preko 6000 bodova (jer gledamo da je za velike iznose izracun vjerojatno za cijelu godinu, pa da mozemo teoretski *svaki mjesec* odbiti do 6000kn ako su toliki racuni!)
-		const hepi_inc = Number((20 * (1 + op_defaults.pdv)).toFixed(2));
+		const hepi_inc = Number(decimal(20 * (1 + op_defaults.pdv)));
 		var hepi_klub_popust = 0;
 		var sum_racun = this.calc_allTotal;
 		while (sum_racun >= 1500) {

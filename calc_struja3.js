@@ -1,6 +1,14 @@
 // Matija Nalis <mnalis-git@voyager.hr> started 20181123 under GPLv3+
 // on https://github.com/mnalis/struja_cijene
 var calc_mjeseci=0;
+
+// floating point is ill-suited for kune+lipe arithemtic (eg. (82.175).toFixed(2) = "82.17")
+// as we always need 2 decimal places for calculations, try to make smarter rounding. Returns a string with 3 decimal places, hopefully more correctly rounded
+function decimal(x) {
+	var ret = Number(x);
+	return ret.toFixed(2);
+}
+
 function loadTable() {
 	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode
 	'use strict';
@@ -78,7 +86,7 @@ function loadTable() {
 			function addSmallRow_total(desc) {
 				var oldTotal = op.calc_allTotal;
 				var oldsubTotal = op.calc_subTotal;
-				var value = op.calc_allTotal.toFixed(2);
+				var value = decimal(op.calc_allTotal);
 				op.calc_totals.push(value);
 				var htmlRow = addSmallRow_html ('total', desc, '', '', value);
 				op.calc_allTotal = oldTotal;
@@ -89,7 +97,7 @@ function loadTable() {
 			// shows current subTotal (and reset it to zero), without changing op.calc_allTotal
 			function addSmallRow_subtotal(desc) {
 				var oldTotal = op.calc_allTotal;
-				var value = op.calc_subTotal.toFixed(2);
+				var value = decimal(op.calc_subTotal);
 				op.calc_totals.push(value);
 				var htmlRow = addSmallRow_html ('total', desc, '', '', value);
 				op.calc_allTotal = oldTotal;
@@ -99,7 +107,7 @@ function loadTable() {
 
 			// returns row with description  and jed_cijena*kolicina (and increse op.calc_allTotal and op.calc_subTotal accordingly)
 			function addSmallRow_mul3 (desc, jed_cijena, kolicina) {
-				var iznos = (kolicina * jed_cijena).toFixed(2);
+				var iznos = decimal(kolicina * jed_cijena);
 				op.calc_subTotal += +iznos;
 				op.calc_allTotal += +iznos;
 				return addSmallRow_html ('', desc, kolicina, jed_cijena, iznos);
@@ -147,7 +155,7 @@ function loadTable() {
 				addSmallRow_mul ('mj_popust', -calc_mjeseci) +
 				addSmallRow_subtotal ('Ostale naknade') +
 				addSmallRow_total ('Porezna osnovica') +
-				addSmallRow_mul ('pct_pdv', op.calc_allTotal.toFixed(2)) +
+				addSmallRow_mul ('pct_pdv', decimal(op.calc_allTotal)) +
 				addSmallRow_mul3 ('extra_popust',  -op.extra_popust(), 1) +
 				addSmallRow_total ('Total iznos računa') +
 				addSmallRow_mul3 ('Trošak uplate', op.calc_mj_trosak_uplate, calc_mjeseci) +
@@ -169,10 +177,10 @@ function loadTable() {
 			var row_summary =
 				'<tr  onClick="tr_toggle(' + count + ')" title="' + op.notes  + '">' +
 				'<td class="naziv' + (op.dostupnost == 0 ? ' nedostupan"' : '')  +'">' + op.naziv	+ '</td>' +
-				'<td class="lowprio">' + calc_energija.toFixed(2)					+ '</td>' +
-				'<td class="lowprio">' + calc_mrezarina.toFixed(2)					+ '</td>' +
-				'<td>' + calc_total.toFixed(2)								+ '</td>' +
-				'<td class="' + class_usteda + '">' + calc_usteda.toFixed(2)				+ '</td>' +
+				'<td class="lowprio">' + decimal(calc_energija)						+ '</td>' +
+				'<td class="lowprio">' + decimal(calc_mrezarina)					+ '</td>' +
+				'<td>' + decimal(calc_total)								+ '</td>' +
+				'<td class="' + class_usteda + '">' + decimal(calc_usteda)				+ '</td>' +
 				'</tr>';
 			return row_summary + row_details;
 		}
