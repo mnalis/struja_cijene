@@ -2,7 +2,7 @@
 // lista opskrbljivaca sa cijenama i popustima
 //
 
-var last_updated='2021-12-15';	// autoupdated by Makefile
+var last_updated='2021-12-16';	// autoupdated by Makefile
 
 var op_defaults = {
 	'ima_mj_trosak_uplate': 1,	// odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
