@@ -5,8 +5,10 @@ var calc_mjeseci=0;
 // floating point is ill-suited for kune+lipe arithemtic (eg. (82.175).toFixed(2) = "82.17")
 // as we always need 2 decimal places for calculations, try to make smarter rounding. Returns a string with 3 decimal places, hopefully more correctly rounded
 function decimal(x) {
-	var ret = Number(x);
-	return ret.toFixed(2);
+	const fractionSize = 2;
+	const number = Number(x);
+	const ret = +(Math.round(+(number.toString() + 'e' + fractionSize)).toString() + 'e' + -fractionSize)
+	return ret.toFixed(fractionSize);
 }
 
 function loadTable() {
