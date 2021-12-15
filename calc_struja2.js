@@ -130,6 +130,9 @@ function loadTable() {
 					(addSmallRow_mul ('kwh_jt_cijena', jt_kwh)) :
 					(addSmallRow_mul ('kwh_vt_cijena', vt_kwh) +
 					 addSmallRow_mul ('kwh_nt_cijena', nt_kwh))) +
+				addSmallRow_mul ('kwh_solidarna', brojilo == "jednotarifno" ? jt_kwh : (vt_kwh+nt_kwh)) +
+				addSmallRow_mul ('kwh_oieik',     brojilo == "jednotarifno" ? jt_kwh : (vt_kwh+nt_kwh)) +
+				addSmallRow_mul ('mj_naknada_opskrba', calc_mjeseci) +
 				addSmallRow_subtotal ('Opskrbljivač - cijena električne energije') +	// calc_totals[0]
 				(brojilo == "jednotarifno" ?
 					(addSmallRow_mul ('kwh_ods_distribucija_jt_cijena', jt_kwh)) :
@@ -141,9 +144,6 @@ function loadTable() {
 					 addSmallRow_mul ('kwh_ods_prijenos_nt_cijena', nt_kwh))) +
 				addSmallRow_mul ('mj_naknada_omm', calc_mjeseci) +
 				addSmallRow_subtotal ('HEP ODS - korištenje mreže') +			// calc_totals[1]
-				addSmallRow_mul ('kwh_oieik',     brojilo == "jednotarifno" ? jt_kwh : (vt_kwh+nt_kwh)) +
-				addSmallRow_mul ('kwh_solidarna', brojilo == "jednotarifno" ? jt_kwh : (vt_kwh+nt_kwh)) +
-				addSmallRow_mul ('mj_naknada_opskrba', calc_mjeseci) +
 				addSmallRow_mul ('mj_popust', -calc_mjeseci) +
 				addSmallRow_subtotal ('Ostale naknade') +
 				addSmallRow_total ('Porezna osnovica') +
