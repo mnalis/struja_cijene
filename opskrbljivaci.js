@@ -82,9 +82,9 @@ var opskrbljivaci = {
 },
 
 {       'naziv': 'GEN-I - Jeftina struja',
-	'kwh_jt_cijena': 0.4230,
-	'kwh_vt_cijena': 0.4500,
-	'kwh_nt_cijena': 0.2250,
+	'kwh_jt_cijena': 0.5520,
+	'kwh_vt_cijena': 0.5950,
+	'kwh_nt_cijena': 0.2950,
 	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
 	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
 	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
