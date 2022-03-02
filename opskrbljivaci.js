@@ -21,9 +21,9 @@ var op_defaults = {
 	'kwh_ods_distribucija_vt_cijena': 0.24,
 	'kwh_ods_distribucija_nt_cijena': 0.12,
 
-	'HEP_univerzalna_jt_cijena': 0.4600,
-	'HEP_univerzalna_vt_cijena': 0.4900,
-	'HEP_univerzalna_nt_cijena': 0.2400,
+	'HEP_univerzalna_jt_cijena': 0.5295,
+	'HEP_univerzalna_vt_cijena': 0.5635,
+	'HEP_univerzalna_nt_cijena': 0.2765,
 };
 
 // E.ON common part of the notes
