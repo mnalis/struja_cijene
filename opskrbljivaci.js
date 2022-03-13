@@ -7,18 +7,18 @@ var last_updated='2022-03-02';	// autoupdated by Makefile
 var op_defaults = {
 	'ima_mj_trosak_uplate': 1,	// odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
 
-	'naknada_omm': 10,
+	'naknada_omm': 11.60,			// poskupljenje od 1.4.2022.
 	'naknada_opskrba': 7.40,
 	'oieik_cijena': 0.105,
 	'solidarna_cijena': 0.03,
 	'pdv': 0.13,
 
 	'kwh_ods_prijenos_jt_cijena': 0.09,
-	'kwh_ods_prijenos_vt_cijena': 0.11,
+	'kwh_ods_prijenos_vt_cijena': 0.13,	// poskupljenje od 1.4.2022.
 	'kwh_ods_prijenos_nt_cijena': 0.05,
 
 	'kwh_ods_distribucija_jt_cijena': 0.22,
-	'kwh_ods_distribucija_vt_cijena': 0.24,
+	'kwh_ods_distribucija_vt_cijena': 0.26,	// poskupljenje od 1.4.2022.
 	'kwh_ods_distribucija_nt_cijena': 0.12,
 
 	'HEP_univerzalna_jt_cijena': 0.5295,
