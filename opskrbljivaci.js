@@ -27,7 +27,7 @@ var op_defaults = {
 };
 
 // E.ON common part of the notes
-var extranotes_eon = '5kn popusta je kako bi korisnik mogao sam odabrati gdje će platiti račun. Usluga sadrži i besplatno korištenje dodatnih pogodnosti Pomoći u kući, Zdravstveno savjetovanje i Standardni smještaj. Još su mogući dodatni mjeseci popusta za dovedene korisnike: https://www.eon.hr/content/dam/eon/eon-hr/documents/034-S_EE_HH_Prijatelj_Uvjeti_koristenja_ponude-31.12.2019.pdf';
+var extranotes_eon = '5kn popusta je kako bi korisnik mogao sam odabrati gdje će platiti račun. Usluga omogućava i korištenje dodatnih pogodnosti Pomoći u kući i Doktor u kući. Još su mogući dodatni mjeseci popusta za dovedene korisnike. https://www.eon.hr/hr/o-nama/dokumenti-i-obrasci.html';
 
 var opskrbljivaci = {
 
@@ -197,10 +197,10 @@ var opskrbljivaci = {
 	'dostupnost': 1,
 },
 
-{       'naziv': 'E.ON - IDEAL - samo 1.godina (A-12%)',
-	'kwh_jt_cijena': (op_defaults.HEP_univerzalna_jt_cijena * (1-0.12)).toFixed(4),
-	'kwh_vt_cijena': (op_defaults.HEP_univerzalna_vt_cijena * (1-0.12)).toFixed(4),
-	'kwh_nt_cijena': (op_defaults.HEP_univerzalna_nt_cijena * (1-0.12)).toFixed(4),
+{       'naziv': 'E.ON - IDEAL - samo 1.godina (A-10%)',
+	'kwh_jt_cijena': (op_defaults.HEP_univerzalna_jt_cijena * (1-0.10)).toFixed(4),
+	'kwh_vt_cijena': (op_defaults.HEP_univerzalna_vt_cijena * (1-0.10)).toFixed(4),
+	'kwh_nt_cijena': (op_defaults.HEP_univerzalna_nt_cijena * (1-0.10)).toFixed(4),
 	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
 	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
 	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
@@ -216,15 +216,15 @@ var opskrbljivaci = {
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
 	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
-	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/022-S_EE_HH_Cjenik-31.12.2019.pdf',
+	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/022-S_EE_HH_Cjenik-06.04.2020.pdf',
 	'notes': 'RWE je postao E-ON. Ugovor na 3 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_eon,
 	'dostupnost': 1,
 },
 
-{       'naziv': 'E.ON - BONUS - samo 1. godina (A-9%)',
-	'kwh_jt_cijena': (op_defaults.HEP_univerzalna_jt_cijena * (1-0.09)).toFixed(4),
-	'kwh_vt_cijena': (op_defaults.HEP_univerzalna_vt_cijena * (1-0.09)).toFixed(4),
-	'kwh_nt_cijena': (op_defaults.HEP_univerzalna_nt_cijena * (1-0.09)).toFixed(4),
+{       'naziv': 'E.ON - BONUS - samo 1. godina (A-7%)',
+	'kwh_jt_cijena': (op_defaults.HEP_univerzalna_jt_cijena * (1-0.07)).toFixed(4),
+	'kwh_vt_cijena': (op_defaults.HEP_univerzalna_vt_cijena * (1-0.07)).toFixed(4),
+	'kwh_nt_cijena': (op_defaults.HEP_univerzalna_nt_cijena * (1-0.07)).toFixed(4),
 	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
 	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
 	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
@@ -240,8 +240,8 @@ var opskrbljivaci = {
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
 	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
-	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/022-S_EE_HH_Cjenik-31.12.2019.pdf',
-	'notes': 'RWE je postao E-ON. Ugovor na 2 godine. Ova cijena je samo za prvu godinu, nakon toga se navodno cjenik B! ' + extranotes_eon,
+	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/022-S_EE_HH_Cjenik-06.04.2020.pdf',
+	'notes': 'RWE je postao E-ON. Ugovor na 2 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_eon,
 	'dostupnost': 1,
 },
 
@@ -264,7 +264,7 @@ var opskrbljivaci = {
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
 	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
-	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/022-S_EE_HH_Cjenik-31.12.2019.pdf',
+	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/022-S_EE_HH_Cjenik-06.04.2020.pdf',
 	'notes': 'RWE je postao E-ON. Bez ugovorne obveze. Ova tarifa se koristi za 2. i ostale godine IDEAL i BONUS tarifa, kao i za korisnike preuzete od drugih opskrbljivača. ' + extranotes_eon,
 	'dostupnost': 1,
 },
