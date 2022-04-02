@@ -13,8 +13,11 @@ Ostali pregledani pokušaji i razlozi njihove neprimjerenosti za precizan izrač
 * TOKElen (više ne postoji)
   https://web.archive.org/web/20160407075057/http://zastita-potrosaca.org/tokelen/TOKelen/brojilo.html
 
-* GEN-I kalkulator (ne uzima u obzir moguće uštede drugih opskrbljivača)
+* GEN-I kalkulator (više ne postoji; a i dok je postojao nije uzimao u obzir moguće uštede drugih opskrbljivača)
   http://www.jeftinastruja.hr/za-ku%c4%87anstva/jeftina-struja/izra%c4%8dunajte-svoju-u%c5%a1tedu/precizan-izra%c4%8dun-u%c5%a1tede/
 
-* HERA kalkulator (ne računa moguće uštede, nego ih tek usputno spominje)
+* HERA kalkulator (ne računa moguće uštede, nego ih tek usputno spominje da postoje)
   https://www.hera.hr/hr/tarifni-kalkulator-eek/
+
+* HEPI kalkulator (uzima samo osnovnu cijenu, i ne daje mogućnost izračuna ostalih ušteda kao "samočitanje" i "HEPI club")
+  https://hepi.hep.hr/mobile/kalkulator.aspx
