@@ -2,7 +2,7 @@
 // lista opskrbljivaca sa cijenama i popustima
 //
 
-var last_updated='2022-03-17';	// autoupdated by Makefile
+var last_updated='2022-04-02';	// autoupdated by Makefile
 
 var op_defaults = {
 	'ima_mj_trosak_uplate': 1,	// odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
@@ -77,7 +77,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'http://www.hep.hr/elektra/',
 	'web_cjenik': 'http://www.hep.hr/elektra/kucanstvo/tarifne-stavke-cijene/1547',
-	'notes': 'Defaultni opskrbljivač za sva kućanstva koja nisu mijenjala opskrbljivača. Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti',
+	'notes': 'Promjena cijene od 1.4.2022. Defaultni opskrbljivač za sva kućanstva koja nisu mijenjala opskrbljivača. Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti',
 	'dostupnost': 1,
 },
 
@@ -101,7 +101,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'http://www.jeftinastruja.hr/',
 	'web_cjenik': 'http://www.jeftinastruja.hr/za-ku%C4%87anstva/cijene-i-tarife/cjenik/',
-	'notes': 'Plaćanje bez provizije na prodajnim mjestima Tiska, iNovina i Konzuma (super, maxi). Prošle akcije na https://www.jeftinastruja.hr/za-ku%C4%87anstva/cijene-i-tarife/akcije',
+	'notes': 'Promjena cijene od 1.4.2022. Plaćanje bez provizije na prodajnim mjestima Tiska, iNovina i Konzuma (super, maxi). Prošle akcije na https://www.jeftinastruja.hr/za-ku%C4%87anstva/cijene-i-tarife/akcije',
 	'dostupnost': 1,
 },
 
@@ -125,7 +125,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'http://hepi.hep.hr/',
 	'web_cjenik': 'https://hepi.hep.hr/sto-je-hepi/hepi-cjenik-74/74',
-	'notes': 'Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije.',
+	'notes': 'Promjena cijene od 1.4.2022. Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije.',
 	'dostupnost': 1,
 },
 
@@ -149,7 +149,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'http://hepi.hep.hr/',
 	'web_cjenik': 'https://hepi.hep.hr/sto-je-hepi/hepi-cjenik-74/74',
-	'notes': 'Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije.',
+	'notes': 'Promjena cijene od 1.4.2022. Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije.',
 	'dostupnost': 1,
 },
 
@@ -193,7 +193,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'http://hepi.hep.hr/',
 	'web_cjenik': 'https://hepi.hep.hr/sto-je-hepi/hepi-cjenik-74/74',
-	'notes': 'Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije. HEPI club: svakih 1500 bodova = 20kn manji račun',
+	'notes': 'Promjena cijene od 1.4.2022. Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije. HEPI club: svakih 1500 bodova = 20kn manji račun',
 	'dostupnost': 1,
 },
 
@@ -217,7 +217,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
 	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
 	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenici/16032022_EE_HH_Cjenik.pdf',
-	'notes': 'RWE je postao E-ON. Ugovor na 3 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_eon,
+	'notes': 'Promjena cijene od 1.5.2022. Ugovor na 3 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_eon,
 	'dostupnost': 1,
 },
 
@@ -241,7 +241,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
 	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
 	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenici/16032022_EE_HH_Cjenik.pdf',
-	'notes': 'RWE je postao E-ON. Ugovor na 2 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_eon,
+	'notes': 'Promjena cijene od 1.5.2022. Ugovor na 2 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_eon,
 	'dostupnost': 1,
 },
 
@@ -265,7 +265,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
 	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
 	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenici/16032022_EE_HH_Cjenik.pdf',
-	'notes': 'RWE je postao E-ON. Bez ugovorne obveze. Ova tarifa se koristi i za 2. i ostale godine IDEAL i BONUS tarifa, kao i za korisnike preuzete od drugih opskrbljivača. ' + extranotes_eon,
+	'notes': 'Promjena cijene od 1.5.2022. Bez ugovorne obveze. Ova tarifa se koristi i za 2. i ostale godine IDEAL i BONUS tarifa, kao i za korisnike preuzete od drugih opskrbljivača. ' + extranotes_eon,
 	'dostupnost': 1,
 },
 
