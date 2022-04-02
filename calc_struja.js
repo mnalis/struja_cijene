@@ -162,7 +162,7 @@ function loadTable() {
 				addSmallRow_total ('Total iznos računa') +
 				addSmallRow_mul3 ('Trošak uplate', op.calc_mj_trosak_uplate, calc_mjeseci) +
 				addSmallRow_total ('Sveukupni trošak') +
-				addSmallRow_notes ('Notes', op.notes) +
+				addSmallRow_notes ('Napomene', op.notes) +
 				addSmallRow_href  ('Homepage', op.web_site) +
 				addSmallRow_href  ('Cjenik', op.web_cjenik) +
 				'</table>' +
