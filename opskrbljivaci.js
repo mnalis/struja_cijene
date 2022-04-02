@@ -77,7 +77,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'http://www.hep.hr/elektra/',
 	'web_cjenik': 'http://www.hep.hr/elektra/kucanstvo/tarifne-stavke-cijene/1547',
-	'notes': 'Promjena cijene od 1.4.2022. Defaultni opskrbljivač za sva kućanstva koja nisu mijenjala opskrbljivača. Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti',
+	'notes': 'Promjena cijene od 1.4.2022. Pretpostavljeni opskrbljivač za sva kućanstva koja nisu mijenjala opskrbljivača. Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti',
 	'dostupnost': 1,
 },
 
