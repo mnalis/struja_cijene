@@ -313,8 +313,8 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
 	'web_site': 'https://www.petrol.hr/za-dom',
 	'web_cjenik': 'https://www.petrol.hr/binaries/content/assets/www-hr/2022/08/redovni-cjenik-za-krajnje-kupce-kategorije-kucanstvo_01_09.pdf',
-	'notes': 'Promjena cijene od 1.9.2022.',
-	'dostupnost': 1,
+	'notes': 'Promjena cijene od 1.9.2022. 9/2022+ ne primaju nove korisnike zbog volatilnosti cijena - 0800 1055',
+	'dostupnost': 0,
 },
 
 
