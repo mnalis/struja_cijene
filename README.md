@@ -21,3 +21,6 @@ Ostali pregledani pokušaji i razlozi njihove neprimjerenosti za precizan izrač
 
 * HEPI kalkulator (uzima samo osnovnu cijenu, i ne daje mogućnost izračuna ostalih ušteda kao "samočitanje" i "HEPI club")
   https://hepi.hep.hr/mobile/kalkulator.aspx
+
+* HROTE kalkulator (uzima samo osnovnu cijenu, i ne daje mogućnost izračuna ostalih ušteda kao "samočitanje" i "HEPI club")
+  https://www.hrote.hr/alat-za-usporedbu
