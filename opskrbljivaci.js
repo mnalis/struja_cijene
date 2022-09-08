@@ -289,8 +289,8 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
 	'web_site': 'https://www.enna.hr/enna-opskrba-t8',
 	'web_cjenik': 'https://www.enna.hr/storage/userfiles/files/Tarifne-stavke-cijena-elektricne-energije-kategorije-kucanstvo-09-2022.pdf',
-	'notes': 'Promjena cijene od 1.8.2021.',
-	'dostupnost': 1,
+	'notes': 'Promjena cijene od 1.8.2021. Pitano 9/2022+, trenutno ne rade opskrbu za kategoriju kućanstvo',
+	'dostupnost': 0,
 },
 
 {       'naziv': 'Petrol',
