@@ -121,6 +121,11 @@ td {
 	display: table-cell;
 }
 
+.vazno {
+	background-color: #E03030;
+	color: black;
+}
+
 /* mobile view has too little space for all the data */
 @media (max-width: 60em) {
 	.naziv {
