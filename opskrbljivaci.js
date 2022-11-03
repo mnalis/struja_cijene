@@ -102,7 +102,7 @@ var opskrbljivaci = {
 	'web_site': 'http://www.jeftinastruja.hr/',
 	'web_cjenik': 'http://www.jeftinastruja.hr/za-ku%C4%87anstva/cijene-i-tarife/cjenik/',
 	'notes': 'Promjena cijene od 1.4.2022. Plaćanje bez provizije na prodajnim mjestima Tiska, iNovina i Konzuma (super, maxi). Prošle akcije na https://www.jeftinastruja.hr/za-ku%C4%87anstva/cijene-i-tarife/akcije',
-	'dostupnost': 1,
+	'dostupnost': 0,
 },
 
 {       'naziv': 'HEP Opskrba - HEPI',
