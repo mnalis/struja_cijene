@@ -101,7 +101,7 @@ var opskrbljivaci = {
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'http://www.jeftinastruja.hr/',
 	'web_cjenik': 'http://www.jeftinastruja.hr/za-ku%C4%87anstva/cijene-i-tarife/cjenik/',
-	'notes': 'Promjena cijene od 1.4.2022. Plaćanje bez provizije na prodajnim mjestima Tiska, iNovina i Konzuma (super, maxi). Prošle akcije na https://www.jeftinastruja.hr/za-ku%C4%87anstva/cijene-i-tarife/akcije',
+	'notes': 'Prestaje sa radom 1.12.2022. Promjena cijene od 1.4.2022. Plaćanje bez provizije na prodajnim mjestima Tiska, iNovina i Konzuma (super, maxi). Prošle akcije na https://www.jeftinastruja.hr/za-ku%C4%87anstva/cijene-i-tarife/akcije',
 	'dostupnost': 0,
 },
 
