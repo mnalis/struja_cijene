@@ -5,8 +5,6 @@
 var last_updated='2022-11-03';	// autoupdated by Makefile
 
 var op_defaults = {
-	'ima_mj_trosak_uplate': 1,	// odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
-
 	'naknada_omm': 11.60,			// poskupljenje od 1.4.2022.
 	'naknada_opskrba': 7.40,
 	'oieik_cijena': 0.105,
@@ -214,7 +212,7 @@ var opskrbljivaci = {
 	'mj_popust': 4.425,
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
-	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
+	'ima_mj_trosak_uplate': 1,  // odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
 	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
 	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenici/16032022_EE_HH_Cjenik.pdf',
 	'notes': 'Promjena cijene od 1.10.2022. Ugovor na 3 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_eon,
@@ -238,7 +236,7 @@ var opskrbljivaci = {
 	'mj_popust': 4.425,
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
-	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
+	'ima_mj_trosak_uplate': 1,  // odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
 	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
 	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenici/16032022_EE_HH_Cjenik.pdf',
 	'notes': 'Promjena cijene od 1.10.2022. Ugovor na 2 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_eon,
@@ -262,7 +260,7 @@ var opskrbljivaci = {
 	'mj_popust': 4.425,
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
-	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
+	'ima_mj_trosak_uplate': 1,  // odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
 	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
 	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenicieuri/cjenik_hh_ee_vrijediod110.pdf',
 	'notes': 'Promjena cijene od 1.10.2022. Bez ugovorne obveze. Ova tarifa se koristi i za 2. i ostale godine IDEAL i BONUS tarifa, kao i za korisnike preuzete od drugih opskrbljivača. ' + extranotes_eon,
@@ -286,7 +284,7 @@ var opskrbljivaci = {
 	'mj_popust': 0,
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
-	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
+	'ima_mj_trosak_uplate': 1,  // odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
 	'web_site': 'https://www.enna.hr/enna-opskrba-t8',
 	'web_cjenik': 'https://www.enna.hr/storage/userfiles/files/Tarifne-stavke-cijena-elektricne-energije-kategorije-kucanstvo-09-2022.pdf',
 	'notes': 'Promjena cijene od 1.8.2021. Pitano 9/2022+, trenutno ne rade opskrbu za kategoriju kućanstvo',
@@ -310,7 +308,7 @@ var opskrbljivaci = {
 	'mj_popust': 0,
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
-	'ima_mj_trosak_uplate': op_defaults.ima_mj_trosak_uplate,
+	'ima_mj_trosak_uplate': 1,  // odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
 	'web_site': 'https://www.petrol.hr/za-dom',
 	'web_cjenik': 'https://www.petrol.hr/binaries/content/assets/www-hr/2022/08/redovni-cjenik-za-krajnje-kupce-kategorije-kucanstvo_01_09.pdf',
 	'notes': 'Promjena cijene od 1.9.2022. 9/2022+ ne primaju nove korisnike zbog volatilnosti cijena - 0800 1055',
