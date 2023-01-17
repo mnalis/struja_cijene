@@ -49,10 +49,10 @@ function loadTable() {
 			document.getElementById('brojilo_jt').className   = 'brojilo0';
 		}
 
-		document.getElementById('h_energija').innerHTML  = 'Energija ' + period + ' [kn]';
-		document.getElementById('h_mrezarina').innerHTML = 'Mrežarina ' + period + ' [kn]';
-		document.getElementById('h_total').innerHTML = 'Ukupno ' + period + ' [kn]';
-		document.getElementById('h_usteda').innerHTML = 'Ušteda ' + period + ' [kn]';
+		document.getElementById('h_energija').innerHTML  = 'Energija ' + period + ' [€]';
+		document.getElementById('h_mrezarina').innerHTML = 'Mrežarina ' + period + ' [€]';
+		document.getElementById('h_total').innerHTML = 'Ukupno ' + period + ' [€]';
+		document.getElementById('h_usteda').innerHTML = 'Ušteda ' + period + ' [€]';
 
 		document.getElementById('l_vt').childNodes[0].nodeValue='Potrošnja ' + period + ' VT:';	// hack: modifying .innerText also nukes <input> field in FF60 :(
 		document.getElementById('l_nt').childNodes[0].nodeValue='Potrošnja ' + period + ' NT:';
