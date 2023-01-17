@@ -1,6 +1,7 @@
 // Matija Nalis <mnalis-git@voyager.hr> started 20181123 under GPLv3+
 // on https://github.com/mnalis/struja_cijene
 var calc_mjeseci=0;
+var valuta="unknown";
 
 // floating point is ill-suited for kune+lipe arithemtic (eg. (82.175).toFixed(2) = "82.17")
 // as we always need 2 decimal places for calculations, try to make smarter rounding. Returns a string with 3 decimal places, hopefully more correctly rounded
@@ -18,6 +19,7 @@ function loadTable() {
 	document.getElementById('table_opskrbljivaci').innerHTML = '<tr><td colspan=5>Initializing...</td></tr>';
 
 	// svaka izmjena podataka neka radi novi izracun
+	document.getElementById('valuta').onchange = recalc_table;
 	document.getElementById('vt_kwh').onchange = recalc_table;
 	document.getElementById('nt_kwh').onchange = recalc_table;
 	document.getElementById('jt_kwh').onchange = recalc_table;
@@ -32,6 +34,10 @@ function loadTable() {
 	function recalc_table() {
 		var period='godišnje';
 		calc_mjeseci=12;
+
+		valuta = document.getElementById('valuta').value;
+		document.getElementById('def_trosak_uplate_valuta').innerHTML = valuta;
+
 		var def_trosak_uplate = document.getElementById('def_trosak_uplate').value;
 		if (document.getElementById('period').value == 'month') {
 			period='mjesečno';
@@ -49,10 +55,10 @@ function loadTable() {
 			document.getElementById('brojilo_jt').className   = 'brojilo0';
 		}
 
-		document.getElementById('h_energija').innerHTML  = 'Energija ' + period + ' [kn]';
-		document.getElementById('h_mrezarina').innerHTML = 'Mrežarina ' + period + ' [kn]';
-		document.getElementById('h_total').innerHTML = 'Ukupno ' + period + ' [kn]';
-		document.getElementById('h_usteda').innerHTML = 'Ušteda ' + period + ' [kn]';
+		document.getElementById('h_energija').innerHTML  = 'Energija ' + period + ' [' + valuta + ']';
+		document.getElementById('h_mrezarina').innerHTML = 'Mrežarina ' + period + ' [' + valuta + ']';
+		document.getElementById('h_total').innerHTML = 'Ukupno ' + period + ' [' + valuta + ']';
+		document.getElementById('h_usteda').innerHTML = 'Ušteda ' + period + ' [' + valuta + ']';
 
 		document.getElementById('l_vt').childNodes[0].nodeValue='Potrošnja ' + period + ' VT:';	// hack: modifying .innerText also nukes <input> field in FF60 :(
 		document.getElementById('l_nt').childNodes[0].nodeValue='Potrošnja ' + period + ' NT:';
