@@ -5,27 +5,27 @@
 var last_updated='2022-11-03';	// autoupdated by Makefile
 
 var op_defaults = {
-	'naknada_omm': 11.60,			// poskupljenje od 1.4.2022.
-	'naknada_opskrba': 7.40,
-	'oieik_cijena': 0.105,
-	'solidarna_cijena': 0.03,
+	'naknada_omm': 1.540,			// poskupljenje od 1.4.2022.
+	'naknada_opskrba': 0.982,
+	'oieik_cijena': 0.014,
+	'solidarna_cijena': 0.003982,
 	'pdv': 0.13,
 
-	'kwh_ods_prijenos_jt_cijena': 0.09,
-	'kwh_ods_prijenos_vt_cijena': 0.13,	// poskupljenje od 1.4.2022.
-	'kwh_ods_prijenos_nt_cijena': 0.05,
+	'kwh_ods_prijenos_jt_cijena': 0.011945,
+	'kwh_ods_prijenos_vt_cijena': 0.017254,	// poskupljenje od 1.4.2022.
+	'kwh_ods_prijenos_nt_cijena': 0.006636,
 
-	'kwh_ods_distribucija_jt_cijena': 0.22,
-	'kwh_ods_distribucija_vt_cijena': 0.26,	// poskupljenje od 1.4.2022.
-	'kwh_ods_distribucija_nt_cijena': 0.12,
+	'kwh_ods_distribucija_jt_cijena': 0.029199,
+	'kwh_ods_distribucija_vt_cijena': 0.034508,	// poskupljenje od 1.4.2022.
+	'kwh_ods_distribucija_nt_cijena': 0.015927,
 
-	'HEP_univerzalna_jt_cijena': 0.5295,
-	'HEP_univerzalna_vt_cijena': 0.5635,
-	'HEP_univerzalna_nt_cijena': 0.2765,
+	'HEP_univerzalna_jt_cijena': 0.070276,
+	'HEP_univerzalna_vt_cijena': 0.074789,
+	'HEP_univerzalna_nt_cijena': 0.036697,
 };
 
 // E.ON common part of the notes
-var extranotes_eon = '5kn popusta je kako bi korisnik mogao sam odabrati gdje će platiti račun. Usluga omogućava i korištenje dodatnih pogodnosti Pomoći u kući i Doktor u kući. Još su mogući dodatni mjeseci popusta za dovedene korisnike. https://www.eon.hr/hr/o-nama/dokumenti-i-obrasci.html';
+var extranotes_eon = 'Planirano poskupljenje od 01.04.2023. 5kn popusta je kako bi korisnik mogao sam odabrati gdje će platiti račun. Usluga omogućava i korištenje dodatnih pogodnosti Pomoći u kući i Doktor u kući. Još su mogući dodatni mjeseci popusta za dovedene korisnike. https://www.eon.hr/hr/o-nama/dokumenti-i-obrasci.html';
 
 var opskrbljivaci = {
 
@@ -80,9 +80,9 @@ var opskrbljivaci = {
 },
 
 {       'naziv': 'GEN-I - Jeftina struja',
-	'kwh_jt_cijena': 0.5520,
-	'kwh_vt_cijena': 0.5950,
-	'kwh_nt_cijena': 0.2950,
+	'kwh_jt_cijena': 0.073,
+	'kwh_vt_cijena': 0.079,
+	'kwh_nt_cijena': 0.039,
 	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
 	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
 	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
@@ -90,7 +90,7 @@ var opskrbljivaci = {
 	'kwh_ods_prijenos_vt_cijena': op_defaults.kwh_ods_prijenos_vt_cijena,
 	'kwh_ods_prijenos_nt_cijena': op_defaults.kwh_ods_prijenos_nt_cijena,
 	'mj_naknada_omm': op_defaults.naknada_omm,
-	'mj_naknada_opskrba': 22.40,	/* poskupljenje sa 7.40 na 22.40kn od 1.9.2021. */
+	'mj_naknada_opskrba': 2.97,	/* poskupljenje sa 7.40kn na 22.40kn od 1.9.2021. */
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena, /* od 1.1.2019. - http://www.jeftinastruja.hr/za-ku%c4%87anstva/jeftina-struja/obavijesti/solidarna-naknada/ */
 	'mj_popust': 0,
@@ -167,6 +167,8 @@ var opskrbljivaci = {
 	'kwh_solidarna': 0,
 	'mj_popust': 0,
 	'extra_popust': function() {
+		// FIXME: novi iznosi BODOVA od 1.1.2023.
+
 		// 19980 bodova - Umanjenje za ops. naknadu 36mj
 		// 13320 bodova - Umanjenje za ops. naknadu 24mj
 		// 6600 bodova - Umanjenje za ops. naknadu 12mj
@@ -196,9 +198,9 @@ var opskrbljivaci = {
 },
 
 {       'naziv': 'E.ON - IDEAL - samo 1.godina (A-10%)',
-	'kwh_jt_cijena': (0.9710 * (1-0.10)).toFixed(4),	/* poskupljenje od 1.10.2022. */
-	'kwh_vt_cijena': (1.0333 * (1-0.10)).toFixed(4),	/* poskupljenje od 1.10.2022. */
-	'kwh_nt_cijena': (0.5070 * (1-0.10)).toFixed(4),	/* poskupljenje od 1.10.2022. */
+	'kwh_jt_cijena': (0.1289 * (1-0.10)).toFixed(4),	/* poskupljenje od 1.10.2022. */
+	'kwh_vt_cijena': (0.1371 * (1-0.10)).toFixed(4),	/* poskupljenje od 1.10.2022. */
+	'kwh_nt_cijena': (0.0673 * (1-0.10)).toFixed(4),	/* poskupljenje od 1.10.2022. */
 	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
 	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
 	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
@@ -206,10 +208,10 @@ var opskrbljivaci = {
 	'kwh_ods_prijenos_vt_cijena': op_defaults.kwh_ods_prijenos_vt_cijena,
 	'kwh_ods_prijenos_nt_cijena': op_defaults.kwh_ods_prijenos_nt_cijena,
 	'mj_naknada_omm': op_defaults.naknada_omm,
-	'mj_naknada_opskrba': 26.90,	/* od 31.12.2019. */
+	'mj_naknada_opskrba': 3.57,	/* od 31.12.2019. */
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena,
-	'mj_popust': 4.425,
+	'mj_popust': 0.59,  /* FIXME 18.1.2023. rucno preracunato u EUR, nisam nasao u cjeniku? */
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': 1,  // odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
@@ -220,9 +222,9 @@ var opskrbljivaci = {
 },
 
 {       'naziv': 'E.ON - BONUS - samo 1. godina (A-7%)',
-	'kwh_jt_cijena': (0.9710 * (1-0.07)).toFixed(4),	/* poskupljenje od 1.10.2022. */
-	'kwh_vt_cijena': (1.0333 * (1-0.07)).toFixed(4),	/* poskupljenje od 1.10.2022. */
-	'kwh_nt_cijena': (0.5070 * (1-0.07)).toFixed(4),	/* poskupljenje od 1.10.2022. */
+	'kwh_jt_cijena': (0.1289 * (1-0.07)).toFixed(4),	/* poskupljenje od 1.10.2022. */
+	'kwh_vt_cijena': (0.1371 * (1-0.07)).toFixed(4),	/* poskupljenje od 1.10.2022. */
+	'kwh_nt_cijena': (0.0673 * (1-0.07)).toFixed(4),	/* poskupljenje od 1.10.2022. */
 	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
 	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
 	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
@@ -230,10 +232,10 @@ var opskrbljivaci = {
 	'kwh_ods_prijenos_vt_cijena': op_defaults.kwh_ods_prijenos_vt_cijena,
 	'kwh_ods_prijenos_nt_cijena': op_defaults.kwh_ods_prijenos_nt_cijena,
 	'mj_naknada_omm': op_defaults.naknada_omm,
-	'mj_naknada_opskrba': 26.90,	/* od 31.12.2019. */
+	'mj_naknada_opskrba': 3.57,	/* od 31.12.2019. */
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena,
-	'mj_popust': 4.425,
+	'mj_popust': 0.59,  /* FIXME 18.1.2023. rucno preracunato u EUR, nisam nasao u cjeniku? */
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': 1,  // odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
@@ -244,9 +246,9 @@ var opskrbljivaci = {
 },
 
 {       'naziv': 'E.ON - KLASIK (B cjenik)',
-	'kwh_jt_cijena': 0.9160,	/* poskupljenje od 1.10.2022. */
-	'kwh_vt_cijena': 0.9749,	/* poskupljenje od 1.10.2022. */
-	'kwh_nt_cijena': 0.4783,	/* poskupljenje od 1.10.2022. */
+	'kwh_jt_cijena': 0.1216,	/* poskupljenje od 1.10.2022. */
+	'kwh_vt_cijena': 0.1294,	/* poskupljenje od 1.10.2022. */
+	'kwh_nt_cijena': 0.0635,	/* poskupljenje od 1.10.2022. */
 	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
 	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
 	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
@@ -254,10 +256,10 @@ var opskrbljivaci = {
 	'kwh_ods_prijenos_vt_cijena': op_defaults.kwh_ods_prijenos_vt_cijena,
 	'kwh_ods_prijenos_nt_cijena': op_defaults.kwh_ods_prijenos_nt_cijena,
 	'mj_naknada_omm': op_defaults.naknada_omm,
-	'mj_naknada_opskrba': 26.90,	/* od 31.12.2019. */
+	'mj_naknada_opskrba': 3.57,	/* od 31.12.2019. */
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena,
-	'mj_popust': 4.425,
+	'mj_popust': 0.59,  /* FIXME 18.1.2023. rucno preracunato u EUR, nisam nasao u cjeniku? */
 	'extra_popust': function() { return 0; },
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': 1,  // odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
@@ -268,9 +270,9 @@ var opskrbljivaci = {
 },
 
 {       'naziv': 'ENNA Opskrba',
-	'kwh_jt_cijena': 0.4600,
-	'kwh_vt_cijena': 0.4900,
-	'kwh_nt_cijena': 0.2400,
+	'kwh_jt_cijena': 0.1314,
+	'kwh_vt_cijena': 0.1407,
+	'kwh_nt_cijena': 0.0743,
 	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
 	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
 	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
@@ -278,7 +280,7 @@ var opskrbljivaci = {
 	'kwh_ods_prijenos_vt_cijena': op_defaults.kwh_ods_prijenos_vt_cijena,
 	'kwh_ods_prijenos_nt_cijena': op_defaults.kwh_ods_prijenos_nt_cijena,
 	'mj_naknada_omm': op_defaults.naknada_omm,
-	'mj_naknada_opskrba': 20.00,
+	'mj_naknada_opskrba': 2.6545,
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena,
 	'mj_popust': 0,
@@ -286,15 +288,15 @@ var opskrbljivaci = {
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': 1,  // odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
 	'web_site': 'https://www.enna.hr/enna-opskrba-t8',
-	'web_cjenik': 'https://www.enna.hr/storage/userfiles/files/Tarifne-stavke-cijena-elektricne-energije-kategorije-kucanstvo-09-2022.pdf',
-	'notes': 'Promjena cijene od 1.8.2021. Pitano 9/2022+, trenutno ne rade opskrbu za kategoriju kućanstvo',
+	'web_cjenik': 'https://www.enna.hr/storage/userfiles/files/enna-opskrba/Cjenik-elektricne-energije-kucanstva-01122022.pdf',
+	'notes': 'Promjena cijene od 1.12.2021. Pitano 9/2022+, trenutno ne rade opskrbu za kategoriju kućanstvo',
 	'dostupnost': 0,
 },
 
 {       'naziv': 'Petrol',
-	'kwh_jt_cijena': 1.0059,
-	'kwh_vt_cijena': 1.0833,
-	'kwh_nt_cijena': 0.7724,
+	'kwh_jt_cijena': 0.134,
+	'kwh_vt_cijena': 0.144,
+	'kwh_nt_cijena': 0.103,
 	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
 	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
 	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
@@ -302,7 +304,7 @@ var opskrbljivaci = {
 	'kwh_ods_prijenos_vt_cijena': op_defaults.kwh_ods_prijenos_vt_cijena,
 	'kwh_ods_prijenos_nt_cijena': op_defaults.kwh_ods_prijenos_nt_cijena,
 	'mj_naknada_omm': op_defaults.naknada_omm,
-	'mj_naknada_opskrba': 20.40,
+	'mj_naknada_opskrba': 2.708,
 	'kwh_oieik': op_defaults.oieik_cijena,
 	'kwh_solidarna': op_defaults.solidarna_cijena,
 	'mj_popust': 0,
@@ -310,7 +312,7 @@ var opskrbljivaci = {
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': 1,  // odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
 	'web_site': 'https://www.petrol.hr/za-dom',
-	'web_cjenik': 'https://www.petrol.hr/binaries/content/assets/www-hr/2022/08/redovni-cjenik-za-krajnje-kupce-kategorije-kucanstvo_01_09.pdf',
+	'web_cjenik': 'https://www.petrol.hr/binaries/content/assets/www-hr/2023/pages/za-dom/redovni-cjenik-za-krajnje-kupce-kategorije-kucanstvo_01_23.pdf',
 	'notes': 'Promjena cijene od 1.9.2022. 9/2022+ ne primaju nove korisnike zbog volatilnosti cijena - 0800 1055',
 	'dostupnost': 0,
 },
