@@ -167,33 +167,30 @@ var opskrbljivaci = {
 	'kwh_solidarna': 0,
 	'mj_popust': 0,
 	'extra_popust': function() {
-		// FIXME: novi iznosi BODOVA od 1.1.2023.
+		// Note: novi iznosi BODOVA od 1.1.2023. - ranije su bili prakticki isti stalno (i za najmanje umanjenje 1.3333%) - sada su losiji osim ako se ne ceka potrosenih 2600 EUR kada su malo bolji!
 
-		// 19980 bodova - Umanjenje za ops. naknadu 36mj
-		// 13320 bodova - Umanjenje za ops. naknadu 24mj
-		// 6600 bodova - Umanjenje za ops. naknadu 12mj
-		// 6000 bodova - Umanjenje racuna 80kn
-		// 4500 bodova - Umanjenje racuna 60kn
-		// 3300 bodova - Umanjenje za ops. naknadu 6 mj
-		// 3000 bodova - Umanjenje racuna 40kn
-		// 1500 bodova - Umanjenje racuna 20kn
+		// 2600 bodova - Umanjenje računa 35 € (1.3462%)
+		// 1800 bodova - Umanjenje računa 22 € (1.2222%)
+		// 900 bodova - Umanjenje računa 10 €  (1.1111%)
+		// 600 bodova - Umanjenje računa 7 €   (1.1667%)
+		// 400 bodova - Umanjenje računa 4 €   (1.0000%)
+		// 200 bodova - Umanjenje računa 2 €   (1.0000%)
 
-		// FIXME: trenutno ignoriramo popust umanjenja za opskrbnu naknadu, 
-		// FIXME: trenutno umanjujemo i preko 6000 bodova (jer gledamo da je za velike iznose izracun vjerojatno za cijelu godinu, pa da mozemo teoretski *svaki mjesec* odbiti do 6000kn ako su toliki racuni!)
+		// FIXME: trenutno umanjujemo i preko 2600 bodova (jer gledamo da je za velike iznose izracun vjerojatno za cijelu godinu, pa da mozemo teoretski *svaki mjesec* odbiti do 2600€ ako su toliki racuni!)
 		const hepi_inc = Number(decimal(20 * (1 + op_defaults.pdv)));
 		var hepi_klub_popust = 0;
 		var sum_racun = this.calc_allTotal;
-		while (sum_racun >= 1500) {
-			hepi_klub_popust += hepi_inc;
-			sum_racun -= 1500;
-		}
+		while (sum_racun >= 2600) { hepi_klub_popust += hepi_inc; sum_racun -= 2600; }
+		while (sum_racun >= 1800) { hepi_klub_popust += hepi_inc; sum_racun -= 1800; }
+		while (sum_racun >= 600)  { hepi_klub_popust += hepi_inc; sum_racun -= 600; }
+		while (sum_racun >= 200)  { hepi_klub_popust += hepi_inc; sum_racun -= 200; }
 		return hepi_klub_popust;
 	},
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': 0,
 	'web_site': 'http://hepi.hep.hr/',
 	'web_cjenik': 'https://hepi.hep.hr/sto-je-hepi/hepi-cjenik-74/74',
-	'notes': 'Promjena cijene od 1.4.2022. Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije. HEPI club: svakih 1500 bodova = 20kn manji račun',
+	'notes': 'Promjena cijene od 1.4.2022. Račune bez naknade možete plaćati u FINA-i, Hrvatskoj pošti i kreditnim karticama putem m-hepi aplikacije. HEPI club: svakih 200 bodova = 2€ manji račun',
 	'dostupnost': 1,
 },
 
