@@ -177,13 +177,12 @@ var opskrbljivaci = {
 		// 200 bodova - Umanjenje računa 2 €   (1.0000%)
 
 		// FIXME: trenutno umanjujemo i preko 2600 bodova (jer gledamo da je za velike iznose izracun vjerojatno za cijelu godinu, pa da mozemo teoretski *svaki mjesec* odbiti do 2600€ ako su toliki racuni!)
-		const hepi_inc = Number(decimal(20 * (1 + op_defaults.pdv)));
 		var hepi_klub_popust = 0;
 		var sum_racun = this.calc_allTotal;
-		while (sum_racun >= 2600) { hepi_klub_popust += hepi_inc; sum_racun -= 2600; }
-		while (sum_racun >= 1800) { hepi_klub_popust += hepi_inc; sum_racun -= 1800; }
-		while (sum_racun >= 600)  { hepi_klub_popust += hepi_inc; sum_racun -= 600; }
-		while (sum_racun >= 200)  { hepi_klub_popust += hepi_inc; sum_racun -= 200; }
+		while (sum_racun >= 2600) { hepi_klub_popust += Number(decimal(35 * (1 + op_defaults.pdv))); sum_racun -= 2600; }
+		while (sum_racun >= 1800) { hepi_klub_popust += Number(decimal(22 * (1 + op_defaults.pdv))); sum_racun -= 1800; }
+		while (sum_racun >= 600)  { hepi_klub_popust += Number(decimal(7  * (1 + op_defaults.pdv))); sum_racun -= 600; }
+		while (sum_racun >= 200)  { hepi_klub_popust += Number(decimal(2  * (1 + op_defaults.pdv))); sum_racun -= 200; }
 		return hepi_klub_popust;
 	},
 	'pct_pdv': op_defaults.pdv,
