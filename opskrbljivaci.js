@@ -7,7 +7,7 @@ var last_updated='2022-11-03';	// autoupdated by Makefile
 var op_defaults = {
 	'naknada_omm': 1.540,			// poskupljenje od 1.4.2022.
 	'naknada_opskrba': 0.982,
-	'oieik_cijena': 0.014,
+	'oieik_cijena': 0.013936,       // obnovljivi izvori energije i kogeneracija
 	'solidarna_cijena': 0.003982,
 	'pdv': 0.13,
 
