@@ -24,3 +24,6 @@ Ostali pregledani pokušaji i razlozi njihove neprimjerenosti za precizan izrač
 
 * HROTE kalkulator (uzima samo osnovnu cijenu, i ne daje mogućnost izračuna ostalih ušteda kao "samočitanje" i "HEPI club")
   https://www.hrote.hr/alat-za-usporedbu
+
+* UPRISE kalkulator (uzima samo osnovnu cijenu, i ne daje mogućnost izračuna ostalih ušteda kao "samočitanje" i "HEPI club")
+  https://ustedi.hr/kalkulator
