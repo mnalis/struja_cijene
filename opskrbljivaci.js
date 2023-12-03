@@ -25,7 +25,7 @@ var op_defaults = {
 };
 
 // E.ON common part of the notes
-var extranotes_eon = 'Planirano poskupljenje od 01.04.2023. 5kn popusta je kako bi korisnik mogao sam odabrati gdje će platiti račun. Usluga omogućava i korištenje dodatnih pogodnosti Pomoći u kući i Doktor u kući. Još su mogući dodatni mjeseci popusta za dovedene korisnike. https://www.eon.hr/hr/o-nama/dokumenti-i-obrasci.html';
+var extranotes_eon = '5kn popusta je kako bi korisnik mogao sam odabrati gdje će platiti račun. Usluga omogućava i korištenje dodatnih pogodnosti Pomoći u kući i Doktor u kući. Još su mogući dodatni mjeseci popusta za dovedene korisnike. https://www.eon.hr/hr/o-nama/dokumenti-i-obrasci.html';
 
 var opskrbljivaci = {
 
@@ -194,9 +194,9 @@ var opskrbljivaci = {
 },
 
 {       'naziv': 'E.ON - IDEAL - samo 1.godina (A-10%)',
-	'kwh_jt_cijena': (0.1289 * (1-0.10)).toFixed(4),	/* poskupljenje od 1.10.2022. */
-	'kwh_vt_cijena': (0.1371 * (1-0.10)).toFixed(4),	/* poskupljenje od 1.10.2022. */
-	'kwh_nt_cijena': (0.0673 * (1-0.10)).toFixed(4),	/* poskupljenje od 1.10.2022. */
+	'kwh_jt_cijena': (0.1605 * (1-0.10)).toFixed(4),	/* poskupljenje od 1.5.2023. */
+	'kwh_vt_cijena': (0.1708 * (1-0.10)).toFixed(4),	/* poskupljenje od 1.5.2023. */
+	'kwh_nt_cijena': (0.0838 * (1-0.10)).toFixed(4),	/* poskupljenje od 1.5.2023. */
 	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
 	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
 	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
@@ -212,15 +212,15 @@ var opskrbljivaci = {
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': 1,  // odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
 	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
-	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenici/16032022_EE_HH_Cjenik.pdf',
-	'notes': 'Promjena cijene od 1.10.2022. Ugovor na 3 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_eon,
+	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenicieuri/cijena_EE_HH_1.5.2023.pdf',
+	'notes': 'Promjena cijene od 1.5.2023. Ugovor na 3 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_eon,
 	'dostupnost': 1,
 },
 
 {       'naziv': 'E.ON - BONUS - samo 1. godina (A-7%)',
-	'kwh_jt_cijena': (0.1289 * (1-0.07)).toFixed(4),	/* poskupljenje od 1.10.2022. */
-	'kwh_vt_cijena': (0.1371 * (1-0.07)).toFixed(4),	/* poskupljenje od 1.10.2022. */
-	'kwh_nt_cijena': (0.0673 * (1-0.07)).toFixed(4),	/* poskupljenje od 1.10.2022. */
+	'kwh_jt_cijena': (0.1605 * (1-0.07)).toFixed(4),	/* poskupljenje od 1.5.2023. */
+	'kwh_vt_cijena': (0.1708 * (1-0.07)).toFixed(4),	/* poskupljenje od 1.5.2023. */
+	'kwh_nt_cijena': (0.0838 * (1-0.07)).toFixed(4),	/* poskupljenje od 1.5.2023. */
 	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
 	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
 	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
@@ -236,15 +236,15 @@ var opskrbljivaci = {
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': 1,  // odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
 	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
-	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenici/16032022_EE_HH_Cjenik.pdf',
-	'notes': 'Promjena cijene od 1.10.2022. Ugovor na 2 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_eon,
+	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenicieuri/cijena_EE_HH_1.5.2023.pdf',
+	'notes': 'Promjena cijene od 1.5.2023. Ugovor na 2 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_eon,
 	'dostupnost': 1,
 },
 
 {       'naziv': 'E.ON - KLASIK (B cjenik)',
-	'kwh_jt_cijena': 0.1216,	/* poskupljenje od 1.10.2022. */
-	'kwh_vt_cijena': 0.1294,	/* poskupljenje od 1.10.2022. */
-	'kwh_nt_cijena': 0.0635,	/* poskupljenje od 1.10.2022. */
+	'kwh_jt_cijena': 0.1514,	/* poskupljenje od 1.5.2023. */
+	'kwh_vt_cijena': 0.1612,	/* poskupljenje od 1.5.2023. */
+	'kwh_nt_cijena': 0.0791,	/* poskupljenje od 1.5.2023. */
 	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
 	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
 	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
@@ -260,8 +260,8 @@ var opskrbljivaci = {
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': 1,  // odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
 	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
-	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenicieuri/cjenik_hh_ee_vrijediod110.pdf',
-	'notes': 'Promjena cijene od 1.10.2022. Bez ugovorne obveze. Ova tarifa se koristi i za 2. i ostale godine IDEAL i BONUS tarifa, kao i za korisnike preuzete od drugih opskrbljivača. ' + extranotes_eon,
+	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenicieuri/cijena_EE_HH_1.5.2023.pdf',
+	'notes': 'Promjena cijene od 1.5.2023. Bez ugovorne obveze. Ova tarifa se koristi i za 2. i ostale godine IDEAL i BONUS tarifa, kao i za korisnike preuzete od drugih opskrbljivača. ' + extranotes_eon,
 	'dostupnost': 1,
 },
 
@@ -284,8 +284,8 @@ var opskrbljivaci = {
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': 1,  // odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
 	'web_site': 'https://www.enna.hr/enna-opskrba-t8',
-	'web_cjenik': 'https://www.enna.hr/storage/userfiles/files/enna-opskrba/Cjenik-elektricne-energije-kucanstva-01122022.pdf',
-	'notes': 'Promjena cijene od 1.12.2021. Pitano 9/2022+, trenutno ne rade opskrbu za kategoriju kućanstvo',
+	'web_cjenik': 'https://www.enna.hr/storage/userfiles/files/enna-opskrba/2023/Cjenik-el-energije-za-kupce-kategorije-kucanstvo_115048.pdf',
+	'notes': 'Promjena cijene od 1.12.2022. Pitano 9/2022+, trenutno ne rade opskrbu za kategoriju kućanstvo',
 	'dostupnost': 0,
 },
 
