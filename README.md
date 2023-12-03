@@ -16,7 +16,7 @@ Ostali pregledani pokušaji i razlozi njihove neprimjerenosti za precizan izrač
 * GEN-I kalkulator (više ne postoji; a i dok je postojao nije uzimao u obzir moguće uštede drugih opskrbljivača)
   http://www.jeftinastruja.hr/za-ku%c4%87anstva/jeftina-struja/izra%c4%8dunajte-svoju-u%c5%a1tedu/precizan-izra%c4%8dun-u%c5%a1tede/
 
-* HERA kalkulator (ne računa moguće uštede, nego ih tek usputno spominje da postoje)
+* HERA kalkulator (više ne postoji, zamijenio ga je HROTE kalkulator; a i dok je postojao nije računao moguće uštede)
   https://www.hera.hr/hr/tarifni-kalkulator-eek/
 
 * HEPI kalkulator (uzima samo osnovnu cijenu, i ne daje mogućnost izračuna ostalih ušteda kao "samočitanje" i "HEPI club")
