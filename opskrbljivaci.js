@@ -51,7 +51,7 @@ var opskrbljivaci = {
 	'web stranice',
 	'web cjenik',
 	'opaska',
-	'da li je jos uvijek dostupan?',
+	'da li je još uvijek dostupan?',
 ],
 
 'cfg': [
