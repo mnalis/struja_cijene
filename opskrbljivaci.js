@@ -194,9 +194,9 @@ var opskrbljivaci = {
 },
 
 {       'naziv': 'E.ON - IDEAL - samo 1.godina (A-10%)',
-	'kwh_jt_cijena': (0.1605 * (1-0.10)).toFixed(4),	/* poskupljenje od 1.5.2023. */
-	'kwh_vt_cijena': (0.1708 * (1-0.10)).toFixed(4),	/* poskupljenje od 1.5.2023. */
-	'kwh_nt_cijena': (0.0838 * (1-0.10)).toFixed(4),	/* poskupljenje od 1.5.2023. */
+	'kwh_jt_cijena': (0.1255 * (1-0.10)).toFixed(4),	/* pojeftinjenje od 1.5.2024. */
+	'kwh_vt_cijena': (0.1335 * (1-0.10)).toFixed(4),	/* pojeftinjenje od 1.5.2024. */
+	'kwh_nt_cijena': (0.0655 * (1-0.10)).toFixed(4),	/* pojeftinjenje od 1.5.2024. */
 	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
 	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
 	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
@@ -212,15 +212,15 @@ var opskrbljivaci = {
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': 1,  // odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
 	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
-	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenicieuri/cijena_EE_HH_1.5.2023.pdf',
-	'notes': 'Promjena cijene od 1.5.2023. Ugovor na 3 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_eon,
+	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenici2024/Cjenik%20kucanstvo%20elektricna%20energija.pdf',
+	'notes': 'Promjena cijene od 1.5.2024. Ugovor na 3 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_eon,
 	'dostupnost': 1,
 },
 
 {       'naziv': 'E.ON - BONUS - samo 1. godina (A-7%)',
-	'kwh_jt_cijena': (0.1605 * (1-0.07)).toFixed(4),	/* poskupljenje od 1.5.2023. */
-	'kwh_vt_cijena': (0.1708 * (1-0.07)).toFixed(4),	/* poskupljenje od 1.5.2023. */
-	'kwh_nt_cijena': (0.0838 * (1-0.07)).toFixed(4),	/* poskupljenje od 1.5.2023. */
+	'kwh_jt_cijena': (0.1255 * (1-0.07)).toFixed(4),	/* pojeftinjenje od 1.5.2024. */
+	'kwh_vt_cijena': (0.1335 * (1-0.07)).toFixed(4),	/* pojeftinjenje od 1.5.2024. */
+	'kwh_nt_cijena': (0.0655 * (1-0.07)).toFixed(4),	/* pojeftinjenje od 1.5.2024. */
 	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
 	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
 	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
@@ -236,15 +236,15 @@ var opskrbljivaci = {
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': 1,  // odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
 	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
-	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenicieuri/cijena_EE_HH_1.5.2023.pdf',
-	'notes': 'Promjena cijene od 1.5.2023. Ugovor na 2 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_eon,
-	'dostupnost': 1,
+	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenici2024/Cjenik%20kucanstvo%20elektricna%20energija.pdf',
+	'notes': 'Promjena cijene od 1.5.2024. Ugovor na 2 godine. Ova cijena je samo za prvu godinu, nakon toga se koristi cjenik B! ' + extranotes_eon,
+	'dostupnost': 0,
 },
 
 {       'naziv': 'E.ON - KLASIK (B cjenik)',
-	'kwh_jt_cijena': 0.1514,	/* poskupljenje od 1.5.2023. */
-	'kwh_vt_cijena': 0.1612,	/* poskupljenje od 1.5.2023. */
-	'kwh_nt_cijena': 0.0791,	/* poskupljenje od 1.5.2023. */
+	'kwh_jt_cijena': 0.1184,	/* pojeftinjenje od 1.5.2024. */
+	'kwh_vt_cijena': 0.1260,	/* pojeftinjenje od 1.5.2024. */
+	'kwh_nt_cijena': 0.0618,	/* pojeftinjenje od 1.5.2024. */
 	'kwh_ods_distribucija_jt_cijena': op_defaults.kwh_ods_distribucija_jt_cijena,
 	'kwh_ods_distribucija_vt_cijena': op_defaults.kwh_ods_distribucija_vt_cijena,
 	'kwh_ods_distribucija_nt_cijena': op_defaults.kwh_ods_distribucija_nt_cijena,
@@ -260,8 +260,8 @@ var opskrbljivaci = {
 	'pct_pdv': op_defaults.pdv,
 	'ima_mj_trosak_uplate': 1,  // odabir samog iznosa npr. PBZ naknada internet bankarstvo 2018/11 = 2.25kn/mj) u index.html
 	'web_site': 'https://www.eon.hr/hr/kucanstva/struja-i-plin.html',
-	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenicieuri/cijena_EE_HH_1.5.2023.pdf',
-	'notes': 'Promjena cijene od 1.5.2023. Bez ugovorne obveze. Ova tarifa se koristi i za 2. i ostale godine IDEAL i BONUS tarifa, kao i za korisnike preuzete od drugih opskrbljivača. ' + extranotes_eon,
+	'web_cjenik': 'https://www.eon.hr/content/dam/eon/eon-hr/documents/cjenici2024/Cjenik%20kucanstvo%20elektricna%20energija.pdf',
+	'notes': 'Promjena cijene od 1.5.2024. Bez ugovorne obveze. Ova tarifa se koristi i za 2. i ostale godine IDEAL i BONUS tarifa, kao i za korisnike preuzete od drugih opskrbljivača. ' + extranotes_eon,
 	'dostupnost': 1,
 },
 
