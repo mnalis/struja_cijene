@@ -2,7 +2,7 @@
 // lista opskrbljivaca sa cijenama i popustima
 //
 
-var last_updated='2023-12-04';	// autoupdated by Makefile
+var last_updated='2024-06-13';	// autoupdated by Makefile
 
 var op_defaults = {
 	'naknada_omm': 1.540,			// poskupljenje od 1.4.2022.
